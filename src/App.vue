@@ -1,5 +1,16 @@
 <template>
-  <nav>APP</nav>
+  <div>
+    <NavbarMain />
+    <router-view />
+  </div>
 </template>
 
-<script></script>
+<script>
+import NavbarMain from "@/components/NavbarMain";
+
+export default {
+  components: {
+    NavbarMain,
+  },
+};
+</script>
