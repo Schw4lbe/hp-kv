@@ -1,0 +1,13 @@
+{
+    "navbarItems": [
+        {
+            "title": "navItem 1"
+        },
+        {
+            "title": "navItem 2"
+        },
+        {
+            "title": "navItem 3"
+        }
+    ]
+}
