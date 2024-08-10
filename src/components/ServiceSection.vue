@@ -1,15 +1,17 @@
 <template>
   <section class="section-service-container">
-    <div class="section-service-header">
-      <h5>example header section service</h5>
-    </div>
-    <div class="section-service-items">
-      <!-- 
+    <div class="section-service-background">
+      <h3 class="section-service-header">
+        example header for section services
+      </h3>
+      <div class="section-service-items">
+        <!-- 
         some service items comming here. 
         potencial for own components.
         consider tiny animations.
         telling a story for each service example.
         -->
+      </div>
     </div>
   </section>
 </template>
@@ -20,4 +22,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+/* temp styling for build */
+.section-service-container {
+  min-height: 300px;
+  width: 100%;
+  border: 1px solid white;
+}
+</style>
