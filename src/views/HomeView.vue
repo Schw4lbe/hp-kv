@@ -1,7 +1,6 @@
 <template>
   <div>
     <NavbarMain />
-    <h3>home view</h3>
   </div>
 </template>
 
