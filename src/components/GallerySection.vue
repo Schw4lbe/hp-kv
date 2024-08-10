@@ -1,17 +1,21 @@
 <template>
   <section class="section-gallery-container">
     <div class="section-gallery-background">
-      <h3 class="section-gallery-header">dummy header gallery</h3>
-
-      <!-- 
-    Create own component for images here.
-    --></div>
+      <!-- <h3 class="section-gallery-header">dummy header gallery</h3> -->
+      <ImgGallery />
+      <!-- Create own component for images here. -->
+    </div>
   </section>
 </template>
 
 <script>
+import ImgGallery from "@/components/ImgGallery";
+
 export default {
   name: "GallerySection",
+  components: {
+    ImgGallery,
+  },
 };
 </script>
 
