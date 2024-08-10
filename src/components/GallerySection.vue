@@ -1,7 +1,7 @@
 <template>
   <section class="section-gallery-container">
     <div class="section-gallery-background">
-      <h3 class="section-gallery-header">dummy header</h3>
+      <h3 class="section-gallery-header">dummy header gallery</h3>
 
       <!-- 
     Create own component for images here.

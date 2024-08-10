@@ -1,5 +1,5 @@
 {
-    "navItems": [
+    "navItemData": [
         {
             "title": "navItem 1"
         },
@@ -11,6 +11,17 @@
         },
         {
             "title": "navItem 4"
+        }
+    ],
+    "bannerItemData": [
+        {
+            "content": "Grünanlagenpflege"
+        },
+        {
+            "content": "Baumschnitt"
+        },
+        {
+            "content": "Industrieklettern"
         }
     ]
 }

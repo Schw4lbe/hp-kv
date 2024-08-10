@@ -1,7 +1,7 @@
 <template>
   <section class="section-contact-container">
     <div class="section-contact-background">
-      <h3 class="section-contact-header">dummy header</h3>
+      <h3 class="section-contact-header">dummy header contact</h3>
       <div class="section-contact-engage">
         <!-- 
         Display cellphone and email.

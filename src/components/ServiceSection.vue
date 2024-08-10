@@ -1,9 +1,7 @@
 <template>
   <section class="section-service-container">
     <div class="section-service-background">
-      <h3 class="section-service-header">
-        example header for section services
-      </h3>
+      <h3 class="section-service-header">dummy header service</h3>
       <div class="section-service-items">
         <!-- 
         some service items comming here. 
