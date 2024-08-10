@@ -1,16 +1,16 @@
 {
     "navItemData": [
         {
-            "title": "navItem 1"
+            "title": "Home"
         },
         {
-            "title": "navItem 2"
+            "title": "Dienstleistung"
         },
         {
-            "title": "navItem 3"
+            "title": "Gallerie"
         },
         {
-            "title": "navItem 4"
+            "title": "Contact"
         }
     ],
     "bannerItemData": [
@@ -22,6 +22,24 @@
         },
         {
             "content": "Industrieklettern"
+        }
+    ],
+    "serviceItemData": [
+        {
+            "header": "service header",
+            "description": "service dummy content."
+        },
+        {
+            "header": "service header",
+            "description": "service dummy content."
+        },
+        {
+            "header": "service header",
+            "description": "service dummy content."
+        },
+        {
+            "header": "service header",
+            "description": "service dummy content."
         }
     ]
 }

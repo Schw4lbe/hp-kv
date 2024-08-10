@@ -22,14 +22,14 @@
 </template>
 
 <script>
-import contentData from "../assets/content.json";
+import bannerData from "../assets/content.json";
 
 export default {
   name: "MainSection",
 
   data() {
     return {
-      bannerContent: contentData.bannerItemData,
+      bannerContent: bannerData.bannerItemData,
     };
   },
 };
