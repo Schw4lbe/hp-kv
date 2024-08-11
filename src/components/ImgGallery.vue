@@ -3,15 +3,13 @@
     <h3 class="gallery-header">dummy header gallery</h3>
     <div class="img-gallery">
       <div v-for="(image, index) in images" :key="index" class="">
-        <img :src="image" alt="" />
+        <img :src="image" alt="Galeriebild" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// import Image from "../../public/img/galleryImg/galleryimg01.png";
-
 export default {
   name: "ImgGallery",
 
@@ -24,9 +22,9 @@ export default {
   methods: {
     importAllImages() {
       const context = require.context(
-        "../../public/img/galleryImg", // path relative to this file
+        "../../public/img/galleryImg",
         false, // don't include subdirectories
-        /\.(png|jpe?g|svg)$/ // regex to match files
+        /\.(png|jpe?g|svg)$/
       );
       return context.keys().map(context);
     },
