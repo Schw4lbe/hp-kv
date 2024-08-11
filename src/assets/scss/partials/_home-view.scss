@@ -1,0 +1,12 @@
+// @use "../abstracts/" as *;
+
+// same base layout for all section containers:
+.section-main-container,
+.section-service-container,
+.section-gallery-container,
+.section-contact-container {
+  /* temp styling for build */
+  min-height: 300px;
+  width: 100%;
+  border: 1px solid white;
+}

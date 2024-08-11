@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import contactData from "../assets/content.json";
+import contactData from "../assets/data/content.json";
 
 export default {
   name: "ContactSection",
@@ -33,12 +33,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-/* temp styling for build */
-.section-contact-container {
-  min-height: 300px;
-  width: 100%;
-  border: 1px solid white;
-}
-</style>

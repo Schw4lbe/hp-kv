@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import bannerData from "../assets/content.json";
+import bannerData from "../assets/data/content.json";
 
 export default {
   name: "MainSection",
@@ -34,12 +34,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-/* temp styling for build */
-.section-main-container {
-  min-height: 300px;
-  width: 100%;
-  border: 1px solid white;
-}
-</style>

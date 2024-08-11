@@ -17,12 +17,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-/* temp styling for build */
-.section-gallery-container {
-  min-height: 300px;
-  width: 100%;
-  border: 1px solid white;
-}
-</style>

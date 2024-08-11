@@ -1,0 +1,35 @@
+.navbar-items {
+  display: flex;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+  border: 1px solid blue;
+}
+.navbar-items .nav-item {
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border: 1px solid yellow;
+  background: #555;
+}
+.navbar-items .nav-item:hover {
+  background: #aaa;
+  color: black;
+}
+
+.section-main-container,
+.section-service-container,
+.section-gallery-container,
+.section-contact-container {
+  /* temp styling for build */
+  min-height: 300px;
+  width: 100%;
+  border: 1px solid white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #333;
+  color: #eee;
+}/*# sourceMappingURL=main.css.map */

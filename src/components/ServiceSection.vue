@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import serviceData from "../assets/content.json";
+import serviceData from "../assets/data/content.json";
 
 export default {
   name: "ServiceSection",
@@ -36,12 +36,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-/* temp styling for build */
-.section-service-container {
-  min-height: 300px;
-  width: 100%;
-  border: 1px solid white;
-}
-</style>
