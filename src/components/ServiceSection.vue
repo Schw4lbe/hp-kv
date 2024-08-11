@@ -13,7 +13,6 @@
         </div>
 
         <!-- 
-        some service items comming here. 
         potential for own components.
         consider tiny animations.
         telling a story for each service example.
