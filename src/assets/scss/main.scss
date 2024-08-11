@@ -2,12 +2,13 @@
 @use "partials/navbar-main";
 @use "partials/footer-main";
 @use "partials/home-view";
+@use "partials/main-section";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
-  background-color: #333;
-  color: #eee;
+  // background-color: #333;
+  color: #666;
 }

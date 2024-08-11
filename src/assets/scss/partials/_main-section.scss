@@ -1,0 +1,22 @@
+// @use "../abstracts/" as *;
+
+.section-main-container {
+  background-image: url("../img/sectionmainbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .section-main-banner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 1rem;
+    background: rgba($color: #000000, $alpha: 0.7);
+  }
+}

@@ -1,7 +1,7 @@
 {
     "navItemData": [
         {
-            "title": "Home"
+            "title": "Startseite"
         },
         {
             "title": "Dienstleistung"
@@ -48,7 +48,7 @@
     },
     "footerItemData": [
         {
-            "title": "Home",
+            "title": "Startseite",
             "url": "#"
         },
         {

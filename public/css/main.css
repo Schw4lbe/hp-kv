@@ -34,13 +34,29 @@
   /* temp styling for build */
   min-height: 800px;
   width: 100%;
-  border: 1px solid white;
+}
+
+.section-main-container {
+  background-image: url("../img/sectionmainbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-main-container .section-main-banner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #333;
-  color: #eee;
+  color: #666;
 }/*# sourceMappingURL=main.css.map */
