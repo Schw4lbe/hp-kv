@@ -1,0 +1,17 @@
+// @use "../abstracts/" as *;
+
+.section-gallery-container {
+  //   background-image: url("../img/sectiongallerybg.jpg");
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   background-position: center;
+
+  background: rgb(216, 255, 216);
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1rem;
+}
