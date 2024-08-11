@@ -21,14 +21,14 @@
 </template>
 
 <script>
-import contactData from "../assets/data/content.json";
+import data from "../assets/data/content.json";
 
 export default {
   name: "ContactSection",
 
   data() {
     return {
-      contactInfo: contactData.contactInfoData,
+      contactInfo: data.contactInfoData,
     };
   },
 };

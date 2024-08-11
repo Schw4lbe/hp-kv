@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import navData from "../assets/data/content.json";
+import data from "../assets/data/content.json";
 
 export default {
   name: "NavbarMain",
 
   data() {
     return {
-      navItems: navData.navItemData,
+      navItems: data.navItemData,
     };
   },
 

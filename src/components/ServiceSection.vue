@@ -24,14 +24,14 @@
 </template>
 
 <script>
-import serviceData from "../assets/data/content.json";
+import data from "../assets/data/content.json";
 
 export default {
   name: "ServiceSection",
 
   data() {
     return {
-      serviceContent: serviceData.serviceItemData,
+      serviceContent: data.serviceItemData,
     };
   },
 };
