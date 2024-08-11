@@ -5,6 +5,7 @@
     <ServiceSection />
     <GallerySection />
     <ContactSection />
+    <FooterMain />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import MainSection from "@/components/MainSection";
 import ServiceSection from "@/components/ServiceSection";
 import GallerySection from "@/components/GallerySection";
 import ContactSection from "@/components/ContactSection";
+import FooterMain from "@/components/FooterMain";
 
 export default {
   name: "HomeView",
@@ -24,6 +26,7 @@ export default {
     ServiceSection,
     GallerySection,
     ContactSection,
+    FooterMain,
   },
 };
 </script>

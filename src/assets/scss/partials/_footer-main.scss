@@ -1,0 +1,14 @@
+// @use "../abstracts/" as *;
+
+.footer-items {
+  display: flex;
+  justify-content: center;
+
+  .footer-item {
+    padding: 0.5rem;
+
+    .footer-url {
+      text-decoration: none;
+    }
+  }
+}
