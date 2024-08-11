@@ -7,7 +7,6 @@
 
         <!-- on button click show captcha -->
         <!-- captcha TBD as own component -->
-        <!-- talk to customer to be sure to create captcha idea -->
         <!-- ideas: https://codepen.io/oliviale/pen/RwWdNRd -->
 
         <div>captcha placeholder</div>
