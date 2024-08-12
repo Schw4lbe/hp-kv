@@ -72,6 +72,24 @@
         {
             "title": "img title 03",
             "description": "you will find a description of the shown image here, to tell you what this image is about."
+        },
+        {
+            "title": "img title 04"
+        },
+        {
+            "title": "img title 05"
+        },
+        {
+            "title": "img title 06"
+        },
+        {
+            "title": "img title 07"
+        },
+        {
+            "title": "img title 08"
+        },
+        {
+            "title": "img title 09"
         }
     ]
 }

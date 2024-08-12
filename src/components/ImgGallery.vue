@@ -21,6 +21,8 @@
     <div v-if="viewModal === true" class="modal-render-container">
       <ImgModal
         @close-modal="onClickCloseModal"
+        @next-image="onClickNextImage"
+        @prev-image="onClickPrevImage"
         :title="modalTitle"
         :description="modalDescription"
         :image="modalImageLink"
@@ -46,6 +48,7 @@ export default {
 
       // Modal info storage:
       viewModal: false,
+      currentIndex: null,
       modalTitle: "",
       modalDescription: "",
       modalImageLink: "",
@@ -65,7 +68,6 @@ export default {
     importAllImagesWithMetaData() {
       const images = this.importAllImages();
       const metadata = imgMetadata.galleryImgData;
-
       return images.map((image, index) => ({
         image,
         title: metadata[index]?.title || "Default Title",
@@ -75,9 +77,10 @@ export default {
 
     onClickShowModal(e) {
       const targetIndex = e.target.id;
-
+      this.currentIndex = targetIndex;
       this.viewModal = true;
       document.body.classList.add("scroll-disabled");
+
       this.modalTitle =
         imgMetadata.galleryImgData[targetIndex]?.title || "Default Title";
       this.modalDescription =
@@ -92,6 +95,35 @@ export default {
       this.modalTitle = "";
       this.modalDescription = "";
       this.modalImageLink = "";
+    },
+
+    onClickNextImage() {
+      if (this.currentIndex + 1 >= this.galleryData.length) {
+        this.currentIndex = 0;
+        this.updateModalImage();
+      } else {
+        this.currentIndex++;
+        this.updateModalImage();
+      }
+    },
+
+    onClickPrevImage() {
+      if (this.currentIndex - 1 < 0) {
+        this.currentIndex = this.galleryData.length - 1;
+        this.updateModalImage();
+      } else {
+        this.currentIndex--;
+        this.updateModalImage();
+      }
+    },
+
+    updateModalImage() {
+      this.modalTitle =
+        imgMetadata.galleryImgData[this.currentIndex]?.title || "Default Title";
+      this.modalDescription =
+        imgMetadata.galleryImgData[this.currentIndex]?.description ||
+        "Default Description";
+      this.modalImageLink = this.importAllImages()[this.currentIndex];
     },
   },
 };

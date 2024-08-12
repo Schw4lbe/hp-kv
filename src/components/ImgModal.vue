@@ -1,13 +1,12 @@
 <template>
   <div class="modal-container">
-    <!-- modal control elements: -->
     <button @click="$emit('closeModal')" class="close-modal-btn">
       <img class="modal-close-icon" :src="close" alt="Schließen Symbol" />
     </button>
-    <button class="next-image">
+    <button @click="$emit('nextImage')" class="next-image">
       <img :src="next" alt="Nächstes Bild Symbol" class="next-icon" />
     </button>
-    <button class="prev-image">
+    <button @click="$emit('prevImage')" class="prev-image">
       <img :src="prev" alt="Vorheriges Bild Symbol" class="pref-icon" />
     </button>
 
