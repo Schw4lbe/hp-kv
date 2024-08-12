@@ -142,10 +142,46 @@
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
   height: 100vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
   color: white;
+}
+.modal-render-container .modal-container .modal-header,
+.modal-render-container .modal-container .modal-description {
+  padding: 1rem;
+}
+.modal-render-container .modal-container .close-modal-btn,
+.modal-render-container .modal-container .next-image,
+.modal-render-container .modal-container .prev-image {
+  height: 50px;
+  width: 50px;
+  background: none;
+  border: none;
+}
+.modal-render-container .modal-container .close-modal-btn:hover,
+.modal-render-container .modal-container .next-image:hover,
+.modal-render-container .modal-container .prev-image:hover {
+  filter: invert(40%);
+}
+.modal-render-container .modal-container .close-modal-btn {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+.modal-render-container .modal-container .next-image {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+}
+.modal-render-container .modal-container .prev-image {
+  position: fixed;
+  top: 50%;
+  left: 50px;
 }
 
 * {
