@@ -78,9 +78,11 @@ export default {
 
       this.viewModal = true;
       document.body.classList.add("scroll-disabled");
-      this.modalTitle = imgMetadata.galleryImgData[targetIndex].title;
+      this.modalTitle =
+        imgMetadata.galleryImgData[targetIndex]?.title || "Default Title";
       this.modalDescription =
-        imgMetadata.galleryImgData[targetIndex].description;
+        imgMetadata.galleryImgData[targetIndex]?.description ||
+        "Default Description";
       this.modalImageLink = this.importAllImages()[targetIndex];
     },
 
