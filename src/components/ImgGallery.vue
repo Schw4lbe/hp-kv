@@ -7,9 +7,9 @@
         :key="index"
         class="gallery-item"
       >
-        <h4>{{ item.title }}</h4>
-        <img :src="item.image" alt="Galeriebild" class="gallery-image" />
-        <p>{{ item.description }}</p>
+        <h4 class="gallery-item-header">{{ item.title }}</h4>
+        <img :src="item.image" alt="Galeriebild" class="gallery-item-image" />
+        <p class="gallery-item-description">{{ item.description }}</p>
       </div>
     </div>
   </div>
@@ -41,7 +41,6 @@ export default {
     importAllImagesWithMetaData() {
       const images = this.importAllImages();
       const metadata = imgMetadata.galleryImgData;
-      console.log(metadata);
 
       return images.map((image, index) => ({
         image,
