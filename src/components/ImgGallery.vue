@@ -2,20 +2,29 @@
   <div class="gallery-container">
     <h3 class="gallery-header">dummy header gallery</h3>
     <div class="img-gallery">
-      <div v-for="(image, index) in images" :key="index" class="">
-        <img :src="image" alt="Galeriebild" />
+      <div
+        v-for="(item, index) in galleryData"
+        :key="index"
+        class="gallery-item"
+      >
+        <h4>{{ item.title }}</h4>
+        <img :src="item.image" alt="Galeriebild" class="gallery-image" />
+        <p>{{ item.description }}</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import imgMetadata from "../assets/data/content.json";
+
 export default {
   name: "ImgGallery",
 
   data() {
     return {
-      images: this.importAllImages(),
+      // images: this.importAllImages(),
+      galleryData: this.importAllImagesWithMetaData(),
     };
   },
 
@@ -28,14 +37,18 @@ export default {
       );
       return context.keys().map(context);
     },
+
+    importAllImagesWithMetaData() {
+      const images = this.importAllImages();
+      const metadata = imgMetadata.galleryImgData;
+      console.log(metadata);
+
+      return images.map((image, index) => ({
+        image,
+        title: metadata[index]?.title || "Default Title",
+        description: metadata[index]?.description || "Default Description",
+      }));
+    },
   },
 };
 </script>
-
-<style scoped>
-img {
-  height: 200px;
-  width: 300px;
-  object-fit: cover;
-}
-</style>

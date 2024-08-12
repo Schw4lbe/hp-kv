@@ -19,5 +19,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
+
+    .gallery-item {
+      .gallery-image {
+        height: 200px;
+        width: 300px;
+        object-fit: cover;
+      }
+    }
   }
 }
