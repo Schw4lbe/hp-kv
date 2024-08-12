@@ -8,23 +8,47 @@
         class="gallery-item"
       >
         <h4 class="gallery-item-header">{{ item.title }}</h4>
-        <img :src="item.image" alt="Galeriebild" class="gallery-item-image" />
+        <img
+          @click="onClickShowModal"
+          :src="item.image"
+          alt="Galeriebild"
+          class="gallery-item-image"
+          :id="index"
+        />
         <p class="gallery-item-description">{{ item.description }}</p>
       </div>
+    </div>
+    <div v-if="viewModal === true" class="modal-render-container">
+      <ImgModal
+        @close-modal="onClickCloseModal"
+        :title="modalTitle"
+        :description="modalDescription"
+        :image="modalImageLink"
+      />
     </div>
   </div>
 </template>
 
 <script>
 import imgMetadata from "../assets/data/content.json";
+import ImgModal from "@/components/ImgModal";
 
 export default {
   name: "ImgGallery",
 
+  components: {
+    ImgModal,
+  },
+
   data() {
     return {
-      // images: this.importAllImages(),
       galleryData: this.importAllImagesWithMetaData(),
+
+      // Modal info storage:
+      viewModal: false,
+      modalTitle: "",
+      modalDescription: "",
+      modalImageLink: "",
     };
   },
 
@@ -47,6 +71,25 @@ export default {
         title: metadata[index]?.title || "Default Title",
         description: metadata[index]?.description || "Default Description",
       }));
+    },
+
+    onClickShowModal(e) {
+      const targetIndex = e.target.id;
+
+      this.viewModal = true;
+      document.body.classList.add("scroll-disabled");
+      this.modalTitle = imgMetadata.galleryImgData[targetIndex].title;
+      this.modalDescription =
+        imgMetadata.galleryImgData[targetIndex].description;
+      this.modalImageLink = this.importAllImages()[targetIndex];
+    },
+
+    onClickCloseModal() {
+      this.viewModal = false;
+      document.body.classList.remove("scroll-disabled");
+      this.modalTitle = "";
+      this.modalDescription = "";
+      this.modalImageLink = "";
     },
   },
 };

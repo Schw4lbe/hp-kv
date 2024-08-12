@@ -27,9 +27,10 @@
       justify-content: center;
       flex-direction: column;
       align-items: center;
+      padding: 1rem;
 
       .gallery-item-header {
-        padding: 0.5rem;
+        padding: 1rem;
       }
 
       .gallery-item-image {
@@ -41,7 +42,7 @@
 
       .gallery-item-description {
         text-align: center;
-        padding: 0.5rem;
+        padding: 1rem;
       }
     }
   }

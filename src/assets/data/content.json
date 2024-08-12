@@ -62,18 +62,15 @@
     ],
     "galleryImgData": [
         {
-            "id": "01",
-            "title": "img title",
+            "title": "img title 01",
             "description": "you will find a description of the shown image here, to tell you what this image is about."
         },
         {
-            "id": "02",
-            "title": "img title",
+            "title": "img title 02",
             "description": "you will find a description of the shown image here, to tell you what this image is about."
         },
         {
-            "id": "03",
-            "title": "img title",
+            "title": "img title 03",
             "description": "you will find a description of the shown image here, to tell you what this image is about."
         }
     ]
