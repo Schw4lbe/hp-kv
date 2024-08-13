@@ -124,7 +124,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 1200px;
-  padding: 0.5rem;
+  padding: 1rem;
   margin-top: 1rem;
   background: rgba(0, 0, 0, 0.4);
 }
@@ -219,7 +219,7 @@
   max-height: 300px;
   max-width: 400px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
@@ -318,7 +318,7 @@
   }
   .section-service-container .section-service-items .service-item {
     grid-template-columns: 1fr;
-    padding: 0px;
+    padding: 0 0 1rem 0;
   }
   .section-service-container .section-service-items .service-item .service-content-container {
     padding: 1rem 0;
@@ -333,6 +333,10 @@
   }
   .section-service-container .section-service-items .service-item .dummy-img-container {
     justify-content: center;
+    width: 100%;
+  }
+  .section-service-container .section-service-items .service-item .dummy-img-container .dummy-img {
+    max-width: 300px;
   }
   .section-gallery-container {
     padding: 0px;
@@ -372,6 +376,34 @@
   .section-gallery-container .gallery-container .modal-render-container .modal-container .prev-image {
     position: fixed;
     top: 80%;
+    left: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .section-gallery-container .gallery-container .img-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section-gallery-container .gallery-container .modal-render-container .modal-container .close-modal-btn,
+  .section-gallery-container .gallery-container .modal-render-container .modal-container .next-image,
+  .section-gallery-container .gallery-container .modal-render-container .modal-container .prev-image {
+    height: 20px;
+    width: 20px;
+    background: none;
+    border: none;
+  }
+  .section-gallery-container .gallery-container .modal-render-container .modal-container .close-modal-btn {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+  }
+  .section-gallery-container .gallery-container .modal-render-container .modal-container .next-image {
+    position: fixed;
+    top: 50%;
+    right: 15px;
+  }
+  .section-gallery-container .gallery-container .modal-render-container .modal-container .prev-image {
+    position: fixed;
+    top: 50%;
     left: 15px;
   }
 }

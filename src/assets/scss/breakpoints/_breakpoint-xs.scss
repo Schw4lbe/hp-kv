@@ -45,7 +45,7 @@ $screen-xs-max: 576px;
     .section-service-items {
       .service-item {
         grid-template-columns: 1fr;
-        padding: 0px;
+        padding: 0 0 1rem 0;
 
         .service-content-container {
           padding: 1rem 0;
@@ -63,6 +63,11 @@ $screen-xs-max: 576px;
 
         .dummy-img-container {
           justify-content: center;
+          width: 100%;
+
+          .dummy-img {
+            max-width: 300px;
+          }
         }
       }
     }
