@@ -1,5 +1,6 @@
 // @use "../abstracts/" as *;
 .modal-render-container {
+  z-index: 99;
   .modal-container {
     position: fixed;
     top: 0;

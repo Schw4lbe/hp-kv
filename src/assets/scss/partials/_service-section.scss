@@ -13,7 +13,6 @@
 
   .section-service-header {
     padding: 1rem;
-    text-transform: uppercase;
   }
 
   .section-service-items {
@@ -52,9 +51,13 @@
       .dummy-img-container {
         display: flex;
         justify-content: flex-end;
+
         .dummy-img {
-          object-fit: cover;
-          max-height: 300px;
+          display: block;
+          object-fit: contain;
+          max-width: 100%;
+          height: auto;
+          flex-shrink: 1;
         }
       }
     }

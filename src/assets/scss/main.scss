@@ -10,6 +10,9 @@
 @use "partials/img-gallery";
 @use "partials/img-modal";
 
+// Breakpoints:
+@use "breakpoints/breakpoint-xs";
+
 // Top Level Stylings:
 * {
   margin: 0;

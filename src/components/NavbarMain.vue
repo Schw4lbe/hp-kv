@@ -1,9 +1,11 @@
 <template>
-  <nav class="navbar-items">
-    <div v-for="(item, index) in navItems" :key="index" class="nav-item">
-      {{ item.title }}
-    </div>
-  </nav>
+  <div class="navbar-container">
+    <nav class="navbar-items">
+      <div v-for="(item, index) in navItems" :key="index" class="nav-item">
+        {{ item.title }}
+      </div>
+    </nav>
+  </div>
 </template>
 
 <script>
