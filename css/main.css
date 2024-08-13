@@ -260,8 +260,8 @@
 .modal-render-container .modal-container .close-modal-btn,
 .modal-render-container .modal-container .next-image,
 .modal-render-container .modal-container .prev-image {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   background: none;
   border: none;
 }
@@ -382,6 +382,38 @@
 @media (max-width: 768px) {
   .section-gallery-container .gallery-container .img-gallery {
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .section-gallery-container .gallery-container .modal-render-container .modal-container .close-modal-btn,
+  .section-gallery-container .gallery-container .modal-render-container .modal-container .next-image,
+  .section-gallery-container .gallery-container .modal-render-container .modal-container .prev-image {
+    height: 20px;
+    width: 20px;
+    background: none;
+    border: none;
+  }
+  .section-gallery-container .gallery-container .modal-render-container .modal-container .close-modal-btn {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+  }
+  .section-gallery-container .gallery-container .modal-render-container .modal-container .next-image {
+    position: fixed;
+    top: 50%;
+    right: 15px;
+  }
+  .section-gallery-container .gallery-container .modal-render-container .modal-container .prev-image {
+    position: fixed;
+    top: 50%;
+    left: 15px;
+  }
+}
+@media (max-width: 992px) {
+  .section-gallery-container .gallery-container .img-gallery {
+    gap: 1rem;
+  }
+  .section-gallery-container .gallery-container .img-gallery .gallery-item {
+    padding: 1rem 0;
   }
   .section-gallery-container .gallery-container .modal-render-container .modal-container .close-modal-btn,
   .section-gallery-container .gallery-container .modal-render-container .modal-container .next-image,
