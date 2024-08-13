@@ -7,28 +7,30 @@
         :key="index"
         class="service-item"
       >
-        <h4 class="service-item-header">{{ item.header }}</h4>
-        <p class="service-item-description">{{ item.description }}</p>
+        <div class="service-content-container">
+          <h4 class="service-item-header">{{ item.header }}</h4>
+          <p class="service-item-description">{{ item.description }}</p>
+        </div>
+        <!-- later on img render on loop like in gallery -->
+        <div class="dummy-img-container">
+          <img class="dummy-img" :src="dummy" alt="dummy" />
+        </div>
       </div>
-
-      <!-- 
-        potential for own components.
-        consider tiny animations.
-        telling a story for each service example.
-        -->
     </div>
   </section>
 </template>
 
 <script>
 import data from "../assets/data/content.json";
+import dummyImg from "../../public/img/serviceImg/serviceimg01.png";
 
 export default {
   name: "ServiceSection",
 
   data() {
     return {
-      serviceContent: data.serviceItemData,
+      serviceContent: data.serviceSection.itemData,
+      dummy: dummyImg,
     };
   },
 };

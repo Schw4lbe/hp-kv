@@ -1,95 +1,107 @@
 {
-    "navItemData": [
-        {
-            "title": "Startseite"
-        },
-        {
-            "title": "Dienstleistung"
-        },
-        {
-            "title": "Gallerie"
-        },
-        {
-            "title": "Contact"
-        }
-    ],
-    "bannerItemData": [
-        {
-            "content": "Grünanlagenpflege"
-        },
-        {
-            "content": "Baumschnitt"
-        },
-        {
-            "content": "Industrieklettern"
-        }
-    ],
-    "serviceItemData": [
-        {
-            "header": "service header",
-            "description": "service dummy content."
-        },
-        {
-            "header": "service header",
-            "description": "service dummy content."
-        },
-        {
-            "header": "service header",
-            "description": "service dummy content."
-        },
-        {
-            "header": "service header",
-            "description": "service dummy content."
-        }
-    ],
-    "contactInfoData": {
-        "phone": "0170 - 00 00 00 00",
-        "email": "some@one.de"
+    "navbarMain": {
+        "itemData": [
+            {
+                "title": "Startseite"
+            },
+            {
+                "title": "Dienstleistung"
+            },
+            {
+                "title": "Gallerie"
+            },
+            {
+                "title": "Contact"
+            }
+        ]
     },
-    "footerItemData": [
-        {
-            "title": "Startseite",
-            "url": "#"
-        },
-        {
-            "title": "Impressum",
-            "url": "#"
-        },
-        {
-            "title": "Datenschutz",
-            "url": "#"
+    "mainSection": {
+        "bannerItemData": [
+            {
+                "content": "Grünanlagenpflege"
+            },
+            {
+                "content": "Baumschnitt"
+            },
+            {
+                "content": "Industrieklettern"
+            }
+        ]
+    },
+    "serviceSection": {
+        "itemData": [
+            {
+                "header": "service header",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
+            },
+            {
+                "header": "service header",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
+            },
+            {
+                "header": "service header",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
+            },
+            {
+                "header": "service header",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
+            }
+        ]
+    },
+    "imgGallery": {
+        "galleryImgData": [
+            {
+                "title": "img title 01",
+                "description": "you will find a description of the shown image here, to tell you what this image is about."
+            },
+            {
+                "title": "img title 02",
+                "description": "you will find a description of the shown image here, to tell you what this image is about."
+            },
+            {
+                "title": "img title 03",
+                "description": "you will find a description of the shown image here, to tell you what this image is about."
+            },
+            {
+                "title": "img title 04"
+            },
+            {
+                "title": "img title 05"
+            },
+            {
+                "title": "img title 06"
+            },
+            {
+                "title": "img title 07"
+            },
+            {
+                "title": "img title 08"
+            },
+            {
+                "title": "img title 09"
+            }
+        ]
+    },
+    "contactSection": {
+        "contactInfoData": {
+            "phone": "0170 - 00 00 00 00",
+            "email": "some@one.de"
         }
-    ],
-    "galleryImgData": [
-        {
-            "title": "img title 01",
-            "description": "you will find a description of the shown image here, to tell you what this image is about."
-        },
-        {
-            "title": "img title 02",
-            "description": "you will find a description of the shown image here, to tell you what this image is about."
-        },
-        {
-            "title": "img title 03",
-            "description": "you will find a description of the shown image here, to tell you what this image is about."
-        },
-        {
-            "title": "img title 04"
-        },
-        {
-            "title": "img title 05"
-        },
-        {
-            "title": "img title 06"
-        },
-        {
-            "title": "img title 07"
-        },
-        {
-            "title": "img title 08"
-        },
-        {
-            "title": "img title 09"
-        }
-    ]
+    },
+    "footer": {
+        "itemData": [
+            {
+                "title": "Startseite",
+                "url": "#"
+            },
+            {
+                "title": "Impressum",
+                "url": "#"
+            },
+            {
+                "title": "Datenschutz",
+                "url": "#"
+            }
+        ]
+    }
 }

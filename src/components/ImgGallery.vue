@@ -67,7 +67,7 @@ export default {
 
     importAllImagesWithMetaData() {
       const images = this.importAllImages();
-      const metadata = imgMetadata.galleryImgData;
+      const metadata = imgMetadata.imgGallery.galleryImgData;
       return images.map((image, index) => ({
         image,
         title: metadata[index]?.title || "Default Title",
@@ -113,9 +113,10 @@ export default {
 
     updateModalData(index) {
       this.modalTitle =
-        imgMetadata.galleryImgData[index]?.title || "Default Title";
+        imgMetadata.imgGallery.galleryImgData[index]?.title || "Default Title";
       this.modalDescription =
-        imgMetadata.galleryImgData[index]?.description || "Default Description";
+        imgMetadata.imgGallery.galleryImgData[index]?.description ||
+        "Default Description";
       this.modalImageLink = this.importAllImages()[index];
     },
   },

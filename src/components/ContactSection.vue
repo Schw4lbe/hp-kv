@@ -36,7 +36,7 @@ export default {
 
   data() {
     return {
-      contactInfo: data.contactInfoData,
+      contactInfo: data.contactSection.contactInfoData,
 
       // dummy captcha data:
       captchaEnabled: false,

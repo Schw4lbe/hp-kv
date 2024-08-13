@@ -29,7 +29,7 @@ export default {
 
   data() {
     return {
-      bannerContent: data.bannerItemData,
+      bannerContent: data.mainSection.bannerItemData,
       logo: Logo,
     };
   },

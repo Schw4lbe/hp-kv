@@ -14,7 +14,7 @@ export default {
 
   data() {
     return {
-      navItems: data.navItemData,
+      navItems: data.navbarMain.itemData,
     };
   },
 
