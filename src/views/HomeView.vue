@@ -1,10 +1,12 @@
 <template>
-  <div>
+  <div class="page-wrapper">
     <NavbarMain />
-    <MainSection />
-    <ServiceSection />
-    <GallerySection />
-    <ContactSection />
+    <div class="content-wrapper">
+      <MainSection />
+      <ServiceSection />
+      <GallerySection />
+      <ContactSection />
+    </div>
     <FooterMain />
   </div>
 </template>
@@ -30,3 +32,18 @@ export default {
   },
 };
 </script>
+<style scoped>
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.content-wrapper {
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>

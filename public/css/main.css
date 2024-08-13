@@ -25,6 +25,7 @@
   flex-direction: column;
   background: #333;
   height: 100px;
+  width: 100%;
 }
 .footer-container .footer-items {
   display: flex;
