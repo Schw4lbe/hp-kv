@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  filter: sepia(50%);
   height: 100vh;
 
   display: flex;
@@ -19,7 +20,8 @@
     color: beige;
     width: 100%;
     padding: 1rem;
-    background: rgba($color: #000000, $alpha: 0.7);
+    background: rgba($color: #000000, $alpha: 0.4);
+    backdrop-filter: blur(4px) grayscale(100%);
 
     .section-main-logo {
       .logo {
@@ -43,7 +45,7 @@
     .section-main-options {
       .main-option-btn {
         padding: 0.5rem 1rem;
-        background: beige;
+        background: darken(beige, 40%);
         border: none;
         border-radius: 0.5rem;
       }
