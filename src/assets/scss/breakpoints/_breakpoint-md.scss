@@ -1,11 +1,14 @@
-$screen-sm-max: 768px;
+$screen-md-max: 992px;
 
-@media (max-width: $screen-sm-max) {
+@media (max-width: $screen-md-max) {
   .section-gallery-container {
     .gallery-container {
       .img-gallery {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        gap: 1rem;
+
+        .gallery-item {
+          padding: 1rem 0;
+        }
       }
 
       .modal-render-container {
