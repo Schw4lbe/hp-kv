@@ -1,8 +1,9 @@
 <template>
   <div class="navbar-container">
     <nav class="navbar-items">
-      <div v-for="(item, index) in navItems" :key="index" class="nav-item">
-        {{ item.title }}
+      <div v-for="(item, index) in navItemData" :key="index" class="nav-item">
+        <img :src="item.icon" alt="Icon" class="nav-item-icon" />
+        <span>{{ item.title }}</span>
       </div>
     </nav>
   </div>
@@ -16,10 +17,28 @@ export default {
 
   data() {
     return {
-      navItems: data.navbarMain.itemData,
+      navItemData: this.importAllIconsWithData(),
     };
   },
 
-  methods: {},
+  methods: {
+    importAllIcons() {
+      const context = require.context(
+        "../../public/img/icons/navIcons",
+        false,
+        /\.(png|jpe?g|svg)$/
+      );
+      return context.keys().map(context);
+    },
+
+    importAllIconsWithData() {
+      const icons = this.importAllIcons();
+      const navData = data.navbarMain.itemData;
+      return icons.map((icon, index) => ({
+        icon,
+        title: navData[index].title,
+      }));
+    },
+  },
 };
 </script>

@@ -12,16 +12,26 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
   max-width: max-content;
-  padding: 0.5rem;
 }
 .navbar-container .navbar-items .nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 0.5rem;
   text-align: center;
-  color: beige;
+  color: #fade82;
+  font-size: 14px;
+  transition: all 0.3s;
 }
 .navbar-container .navbar-items .nav-item:hover {
-  background: #222;
-  color: beige;
+  background: #111;
+  color: white;
+}
+.navbar-container .navbar-items .nav-item .nav-item-icon {
+  padding: 0.5rem;
+  height: 40px;
+  width: 40px;
 }
 
 .footer-container {
