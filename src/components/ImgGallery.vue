@@ -80,13 +80,7 @@ export default {
       this.currentIndex = targetIndex;
       this.viewModal = true;
       document.body.classList.add("scroll-disabled");
-
-      this.modalTitle =
-        imgMetadata.galleryImgData[targetIndex]?.title || "Default Title";
-      this.modalDescription =
-        imgMetadata.galleryImgData[targetIndex]?.description ||
-        "Default Description";
-      this.modalImageLink = this.importAllImages()[targetIndex];
+      this.updateModalData(targetIndex);
     },
 
     onClickCloseModal() {
@@ -100,30 +94,29 @@ export default {
     onClickNextImage() {
       if (this.currentIndex + 1 >= this.galleryData.length) {
         this.currentIndex = 0;
-        this.updateModalImage();
+        this.updateModalData(this.currentIndex);
       } else {
         this.currentIndex++;
-        this.updateModalImage();
+        this.updateModalData(this.currentIndex);
       }
     },
 
     onClickPrevImage() {
       if (this.currentIndex - 1 < 0) {
         this.currentIndex = this.galleryData.length - 1;
-        this.updateModalImage();
+        this.updateModalData(this.currentIndex);
       } else {
         this.currentIndex--;
-        this.updateModalImage();
+        this.updateModalData(this.currentIndex);
       }
     },
 
-    updateModalImage() {
+    updateModalData(index) {
       this.modalTitle =
-        imgMetadata.galleryImgData[this.currentIndex]?.title || "Default Title";
+        imgMetadata.galleryImgData[index]?.title || "Default Title";
       this.modalDescription =
-        imgMetadata.galleryImgData[this.currentIndex]?.description ||
-        "Default Description";
-      this.modalImageLink = this.importAllImages()[this.currentIndex];
+        imgMetadata.galleryImgData[index]?.description || "Default Description";
+      this.modalImageLink = this.importAllImages()[index];
     },
   },
 };
