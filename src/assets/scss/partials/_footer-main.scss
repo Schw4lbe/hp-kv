@@ -1,14 +1,24 @@
 // @use "../abstracts/" as *;
 
-.footer-items {
+.footer-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  background: #333;
+  height: 100px;
 
-  .footer-item {
-    padding: 0.5rem;
+  .footer-items {
+    display: flex;
+    justify-content: center;
+    color: beige;
 
-    .footer-url {
-      text-decoration: none;
+    .footer-item {
+      padding: 0.5rem;
+
+      .footer-url {
+        text-decoration: none;
+        color: beige;
+      }
     }
   }
 }

@@ -1,9 +1,15 @@
 <template>
-  <footer class="footer-items">
-    <div v-for="(item, index) in footerItems" :key="index" class="footer-item">
-      <a href="" class="footer-url">{{ item.title }}</a>
-    </div>
-  </footer>
+  <div class="footer-container">
+    <footer class="footer-items">
+      <div
+        v-for="(item, index) in footerItems"
+        :key="index"
+        class="footer-item"
+      >
+        <a href="" class="footer-url">{{ item.title }}</a>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script>

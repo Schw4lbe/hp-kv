@@ -18,15 +18,24 @@
   color: beige;
 }
 
-.footer-items {
+.footer-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  background: #333;
+  height: 100px;
 }
-.footer-items .footer-item {
+.footer-container .footer-items {
+  display: flex;
+  justify-content: center;
+  color: beige;
+}
+.footer-container .footer-items .footer-item {
   padding: 0.5rem;
 }
-.footer-items .footer-item .footer-url {
+.footer-container .footer-items .footer-item .footer-url {
   text-decoration: none;
+  color: beige;
 }
 
 .section-main-container,
@@ -34,7 +43,6 @@
 .section-gallery-container,
 .section-contact-container {
   /* temp styling for build */
-  min-height: 800px;
   width: 100%;
 }
 
@@ -43,6 +51,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,6 +65,26 @@
   width: 100%;
   padding: 1rem;
   background: rgba(0, 0, 0, 0.7);
+}
+.section-main-container .section-main-banner-container .section-main-logo .logo {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  padding: 1rem;
+}
+.section-main-container .section-main-banner-container .section-main-banner {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid beige;
+}
+.section-main-container .section-main-banner-container .section-main-banner .banner-content {
+  padding: 1rem;
+}
+.section-main-container .section-main-banner-container .section-main-options .main-option-btn {
+  padding: 0.5rem 1rem;
+  background: beige;
+  border: none;
+  border-radius: 0.5rem;
 }
 
 .section-service-container {
@@ -94,6 +123,42 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
+}
+
+.section-contact-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 0;
+  background: beige;
+}
+.section-contact-container .section-contact-header {
+  width: 100%;
+  padding: 1rem;
+}
+.section-contact-container .section-contact-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.section-contact-container button {
+  background: #333;
+  color: beige;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+.section-contact-container button:hover {
+  background: #555;
+  color: white;
+}
+.section-contact-container h5,
+.section-contact-container p {
   padding: 1rem;
 }
 

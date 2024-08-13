@@ -1,16 +1,22 @@
 <template>
   <section class="section-contact-container">
-    <div class="section-contact-background">
-      <h3 class="section-contact-header">dummy header contact</h3>
-      <div class="section-contact-info">
-        <button class="enable-contact-info-btn">get in contact</button>
+    <h3 class="section-contact-header">dummy header contact</h3>
 
-        <!-- on button click show captcha -->
-        <!-- captcha TBD as own component -->
-        <!-- ideas: https://codepen.io/oliviale/pen/RwWdNRd -->
+    <div class="section-contact-content">
+      <div v-if="captchaEnabled === false">
+        <button @click="enableCaptcha" class="enable-contact-info-btn">
+          get in contact
+        </button>
+      </div>
 
-        <div>captcha placeholder</div>
+      <div v-if="captchaEnabled === true && contactInfoVissible === false">
+        <h5>captcha placeholder</h5>
+        <button @click="showContactInfo" class="placeholder-button">
+          yes, i am human!
+        </button>
+      </div>
 
+      <div v-if="contactInfoVissible === true" class="section-contact-info">
         <p>
           Phone: <span>{{ contactInfo.phone }}</span>
         </p>
@@ -31,7 +37,21 @@ export default {
   data() {
     return {
       contactInfo: data.contactInfoData,
+
+      // dummy captcha data:
+      captchaEnabled: false,
+      contactInfoVissible: false,
     };
+  },
+
+  methods: {
+    enableCaptcha() {
+      this.captchaEnabled = true;
+    },
+
+    showContactInfo() {
+      this.contactInfoVissible = true;
+    },
   },
 };
 </script>

@@ -1,9 +1,10 @@
 <template>
   <section class="section-main-container">
     <div class="section-main-banner-container">
-      <h3 class="section-main-header">dummy header main</h3>
-      <div class="section-main-logo"></div>
-      <div class="section-main-content">
+      <div class="section-main-logo">
+        <img class="logo" :src="logo" alt="Firmenlogo" />
+      </div>
+      <div class="section-main-banner">
         <div
           v-for="(item, index) in bannerContent"
           :key="index"
@@ -21,6 +22,7 @@
 
 <script>
 import data from "../assets/data/content.json";
+import Logo from "../../public/img/logo.png";
 
 export default {
   name: "MainSection",
@@ -28,6 +30,7 @@ export default {
   data() {
     return {
       bannerContent: data.bannerItemData,
+      logo: Logo,
     };
   },
 };
