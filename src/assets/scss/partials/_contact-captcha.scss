@@ -1,0 +1,70 @@
+@use "../abstracts/" as *;
+
+.captcha-container {
+  width: max-content;
+  height: auto;
+  padding: 2rem;
+  margin: 2rem;
+  background: $clr-secondary;
+  color: $clr-primary-light-1;
+
+  .captcha {
+    padding-left: 2em;
+    text-align: center;
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+    letter-spacing: 8px;
+    font-weight: bold;
+    &::first-letter {
+      position: relative;
+      margin-right: -3.6em;
+    }
+  }
+
+  .description {
+    display: block;
+    padding: 0.5rem;
+    color: $clr-primary-dark-1;
+  }
+
+  #captcha-repeat {
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  input[type="text"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  input[type="submit"] {
+    background: $clr-primary-dark-4;
+    color: $clr-secondary;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 5px 10px;
+  }
+
+  .captcha-result {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    overflow: hidden;
+    .success {
+      color: #6dfc6d;
+    }
+    .error {
+      color: tomato;
+    }
+  }
+}

@@ -14,10 +14,7 @@
       </div>
 
       <div v-if="contactVissible === true" class="section-contact-info">
-        <p>
-          Phone: <span>{{ contactInfo.phone }}</span>
-        </p>
-        <p>
+        <p class="contact-email">
           Email: <span>{{ contactInfo.email }}</span>
         </p>
       </div>
@@ -39,8 +36,6 @@ export default {
   data() {
     return {
       contactInfo: data.contactSection.contactInfoData,
-
-      // dummy captcha data:
       captchaEnabled: false,
       contactVissible: false,
     };

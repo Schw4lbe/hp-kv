@@ -1,18 +1,22 @@
 @use "../abstracts/" as *;
 
 .section-contact-container {
+  background-image: url("../img/sectioncontactbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding-top: $navbar-scroll-buffer;
-  padding-bottom: 2rem;
 
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   text-align: center;
-  background: $clr-primary-dark-2;
 
   .section-contact-header {
     width: 100%;
     padding: 1rem;
+    background: rgba($color: $clr-primary-light-1, $alpha: 0.8);
+    color: $clr-secondary-dark-1;
   }
 
   .section-contact-content {
@@ -23,18 +27,32 @@
 
     width: 100%;
     height: 100%;
+
+    div .enable-contact-info-btn {
+      background: $clr-secondary-light-1;
+      color: $clr-primary;
+      padding: 0.5rem 1rem;
+      margin: 2rem;
+      font-size: 16px;
+      border: none;
+      border-radius: 0.5rem;
+    }
+
+    .section-contact-info {
+      width: 100%;
+      .contact-email {
+        width: 100%;
+        padding: 1rem;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        background: rgba($color: $clr-primary-light-1, $alpha: 0.8);
+        margin: 2rem 0;
+      }
+    }
   }
 
-  button {
-    background: $clr-secondary-light-1;
-    color: $clr-primary;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 0.5rem;
-  }
-
-  h5,
-  p {
+  h5 {
     padding: 1rem;
   }
 }
