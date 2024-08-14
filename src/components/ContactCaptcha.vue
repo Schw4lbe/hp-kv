@@ -42,6 +42,7 @@ export default {
       if (solution === "blau" && honeypot === "") {
         console.log("captcha solved.");
         this.captchaSolved = true;
+        this.$emit("show-contact", "some data");
       } else {
         console.log("do it again!");
         this.captchaSolved = false;
@@ -53,13 +54,6 @@ export default {
 </script>
 
 <style scoped>
-body {
-  background: #335778;
-}
-* {
-  box-sizing: border-box;
-}
-
 form {
   width: 320px;
   border: 1px solid #fafafa;

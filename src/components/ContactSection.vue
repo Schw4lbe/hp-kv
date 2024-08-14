@@ -9,15 +9,11 @@
         </button>
       </div>
 
-      <div v-if="captchaEnabled === true && contactInfoVissible === false">
-        <ContactCaptcha />
-        <!-- <h5>captcha placeholder</h5>
-        <button @click="showContactInfo" class="placeholder-button">
-          yes, i am human!
-        </button> -->
+      <div v-if="captchaEnabled === true && contactVissible === false">
+        <ContactCaptcha @show-contact="showContactInfo" />
       </div>
 
-      <div v-if="contactInfoVissible === true" class="section-contact-info">
+      <div v-if="contactVissible === true" class="section-contact-info">
         <p>
           Phone: <span>{{ contactInfo.phone }}</span>
         </p>
@@ -46,7 +42,7 @@ export default {
 
       // dummy captcha data:
       captchaEnabled: false,
-      contactInfoVissible: false,
+      contactVissible: false,
     };
   },
 
@@ -56,7 +52,8 @@ export default {
     },
 
     showContactInfo() {
-      this.contactInfoVissible = true;
+      console.log("showContactInfo");
+      this.contactVissible = true;
     },
   },
 };
