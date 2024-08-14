@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand/Quicksand-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .navbar-container {
   z-index: 1;
   position: fixed;
@@ -455,7 +461,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Quicksand";
 }
 
 .scroll-disabled {

@@ -32,3 +32,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 - Knowledgebase as new own Component
 - Make Modal Images be swipeable
+- Contact popup once first time somebody enters the page after 30 - 45 sec.
+- Intro Animation scene
+- navbar on active scroll allmost fully transparent
+- navbar mobile collapse view on breakpoint xs
