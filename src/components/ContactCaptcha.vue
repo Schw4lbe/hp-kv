@@ -1,7 +1,7 @@
 <template>
-  <form class="captcha-container">
+  <form class="captcha-container" id="contact-captcha">
     <span class="captcha"> UBLA </span>
-    <span class="description">Lösungswort in Textfeld schreiben</span>
+    <span class="description">Lösungswort eintragen</span>
     <input
       v-model="solution"
       id="captcha"
@@ -17,8 +17,8 @@
     <input @click="onSubmitCaptcha" type="submit" value="senden" />
 
     <div v-if="captchaSolved != null" class="captcha-result">
-      <span v-if="captchaSolved === true" class="success">success</span>
-      <span v-if="captchaSolved === false" class="error">error</span>
+      <span v-if="captchaSolved === true" class="success">Erfolg</span>
+      <span v-if="captchaSolved === false" class="error">Fehler</span>
     </div>
   </form>
 </template>
@@ -41,12 +41,15 @@ export default {
       const solution = document.querySelector("#captcha").value.toLowerCase();
       const honeypot = document.querySelector("#captcha-repeat").value;
       if (solution === "blau" && honeypot === "") {
-        console.log("captcha solved.");
         this.captchaSolved = true;
-        this.$emit("show-contact");
+        setTimeout(() => {
+          this.$emit("show-contact");
+        }, 1500);
       } else {
-        console.log("do it again!");
         this.captchaSolved = false;
+        setTimeout(() => {
+          this.captchaSolved = null;
+        }, 1500);
       }
       this.solution = "";
     },

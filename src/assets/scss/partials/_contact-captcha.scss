@@ -1,12 +1,15 @@
 @use "../abstracts/" as *;
 
 .captcha-container {
+  position: relative;
   width: max-content;
   height: auto;
-  padding: 2rem;
+  padding: 3rem;
   margin: 2rem;
   background: $clr-secondary;
   color: $clr-primary-light-1;
+  transition: all 0.3s;
+  animation: slideInCaptcha 0.2s linear 1 forwards;
 
   .captcha {
     padding-left: 2em;
@@ -55,16 +58,24 @@
   }
 
   .captcha-result {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
     width: 100%;
     text-align: center;
     padding: 0.5rem;
+    font-size: 16px;
     font-weight: bold;
     overflow: hidden;
+
     .success {
       color: #6dfc6d;
+      animation: msgPulse 0.3s linear 1 forwards;
     }
+
     .error {
       color: tomato;
+      animation: msgPulse 0.3s linear 1 forwards;
     }
   }
 }

@@ -38,3 +38,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - navbar mobile collapse view on breakpoint xs
 - gallery update with thumbnails and full images only in modal for faster loading
 - modal fullscreen images need to be crompessed a litte bit more
+
+for captcha:
+
+- define different 4 diggit colors in content.json and automate solution in component

@@ -44,6 +44,10 @@ export default {
   methods: {
     enableCaptcha() {
       this.captchaEnabled = true;
+      setTimeout(() => {
+        const target = document.querySelector("#section4");
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, "300");
     },
 
     showContactInfo() {
