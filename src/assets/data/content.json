@@ -90,7 +90,14 @@
         "contactInfoData": {
             "phone": "0170 - 00 00 00 00",
             "email": "some@one.de"
-        }
+        },
+        "captchaPhrases": [
+            "blau",
+            "grün",
+            "gelb",
+            "grau",
+            "gold"
+        ]
     },
     "footer": {
         "itemData": [

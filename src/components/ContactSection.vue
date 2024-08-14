@@ -51,7 +51,6 @@ export default {
     },
 
     showContactInfo() {
-      console.log("showContactInfo");
       this.contactVissible = true;
     },
   },

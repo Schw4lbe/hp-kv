@@ -2,7 +2,7 @@
 
 .captcha-container {
   position: relative;
-  width: max-content;
+  width: 320px;
   height: auto;
   padding: 3rem;
   margin: 2rem;
@@ -20,7 +20,7 @@
     letter-spacing: 8px;
     font-weight: bold;
     &::first-letter {
-      position: relative;
+      position: absolute;
       margin-right: -3.6em;
     }
   }
