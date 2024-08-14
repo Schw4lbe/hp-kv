@@ -1,4 +1,4 @@
-// @use "../abstracts/" as *;
+@use "../abstracts/" as *;
 
 .navbar-container {
   z-index: 1;
@@ -7,7 +7,7 @@
   justify-content: center;
   height: max-content;
   width: 100%;
-  background: rgba($color: #000000, $alpha: 0.8);
+  background: rgba($color: $clr-secondary-dark-2, $alpha: 0.8);
 
   .navbar-items {
     display: grid;
@@ -23,13 +23,13 @@
       height: 70px;
       padding: 5px;
       text-align: center;
-      color: #fade82;
+      color: $clr-primary-dark-2;
       font-size: 14px;
       transition: all 0.3s;
 
       &:hover {
-        background: #111;
-        color: white;
+        background: $clr-secondary-dark-1;
+        color: $clr-primary-light-1;
       }
 
       .nav-item-icon {

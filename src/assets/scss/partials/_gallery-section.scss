@@ -1,4 +1,4 @@
-// @use "../abstracts/" as *;
+@use "../abstracts/" as *;
 
 .section-gallery-container {
   // background-image: url("../img/sectiongallerybg.jpg");
@@ -6,8 +6,7 @@
   // background-size: cover;
   // background-position: center;
 
-  // scroll padding:
-  padding: 70px 1rem 1rem 1rem;
+  padding: $navbar-scroll-buffer;
 
   display: flex;
   justify-content: center;
