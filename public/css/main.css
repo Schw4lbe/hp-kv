@@ -75,6 +75,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
   filter: sepia(50%);
   height: 100vh;
   width: 100%;
@@ -114,14 +115,25 @@
   border-radius: 0.5rem;
 }
 
+.section-main-separator {
+  position: relative;
+  background: linear-gradient(0deg, rgb(34, 34, 34) 5%, rgba(255, 255, 255, 0) 100%);
+  height: 200px;
+  width: 100%;
+  margin-top: -200px;
+}
+
 .section-service-container {
   padding: 80px;
+  background: #222;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 .section-service-container .section-service-header {
+  color: #f5f5dc;
+  font-size: 20px;
   padding: 1rem;
 }
 .section-service-container .section-service-items {
@@ -131,7 +143,6 @@
   align-items: center;
   padding-bottom: 1rem;
   width: 100%;
-  background: rgba(0, 0, 0, 0.3);
   color: #f5f5dc;
 }
 .section-service-container .section-service-items .service-item {
@@ -139,8 +150,8 @@
   grid-template-columns: 1fr 1fr;
   max-width: 1200px;
   padding: 1rem;
-  margin-top: 1rem;
-  background: rgba(0, 0, 0, 0.4);
+  margin-top: 2rem;
+  background: #444444;
 }
 .section-service-container .section-service-items .service-item .service-content-container {
   display: flex;
@@ -168,6 +179,7 @@
 }
 
 .section-gallery-container {
+  background: #222;
   padding: 80px;
   display: flex;
   justify-content: center;
@@ -182,7 +194,7 @@
   justify-content: flex-start;
   flex-direction: column;
   text-align: center;
-  background: #fff;
+  background: #ffec7e;
 }
 .section-contact-container .section-contact-header {
   width: 100%;
@@ -213,13 +225,14 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  color: #f5f5dc;
   height: 100%;
   width: 100%;
 }
 .gallery-container .gallery-header {
   width: 100%;
   text-align: center;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 .gallery-container .img-gallery {
   display: grid;
@@ -227,7 +240,7 @@
   gap: 2rem;
 }
 .gallery-container .img-gallery .gallery-item {
-  max-height: 300px;
+  max-height: auto;
   max-width: 400px;
   display: flex;
   justify-content: flex-start;
