@@ -10,10 +10,11 @@
       </div>
 
       <div v-if="captchaEnabled === true && contactInfoVissible === false">
-        <h5>captcha placeholder</h5>
+        <ContactCaptcha />
+        <!-- <h5>captcha placeholder</h5>
         <button @click="showContactInfo" class="placeholder-button">
           yes, i am human!
-        </button>
+        </button> -->
       </div>
 
       <div v-if="contactInfoVissible === true" class="section-contact-info">
@@ -30,9 +31,14 @@
 
 <script>
 import data from "../assets/data/content.json";
+import ContactCaptcha from "../components/ContactCaptcha.vue";
 
 export default {
   name: "ContactSection",
+
+  components: {
+    ContactCaptcha,
+  },
 
   data() {
     return {

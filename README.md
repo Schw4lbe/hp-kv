@@ -36,3 +36,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - Intro Animation scene
 - navbar on active scroll allmost fully transparent
 - navbar mobile collapse view on breakpoint xs
+- gallery update with thumbnails and full images only in modal for faster loading
+- modal fullscreen images need to be crompessed a litte bit more
