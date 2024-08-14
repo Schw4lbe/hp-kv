@@ -365,7 +365,7 @@
 
 .captcha-container {
   position: relative;
-  width: max-content;
+  width: 320px;
   height: auto;
   padding: 3rem;
   margin: 2rem;
@@ -384,7 +384,7 @@
   font-weight: bold;
 }
 .captcha-container .captcha::first-letter {
-  position: relative;
+  position: absolute;
   margin-right: -3.6em;
 }
 .captcha-container .description {
