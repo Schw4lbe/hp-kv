@@ -1,6 +1,9 @@
 // @use "../abstracts/" as *;
 
 .section-contact-container {
+  // scroll padding:
+  padding-top: 70px;
+
   display: flex;
   justify-content: flex-start;
   flex-direction: column;

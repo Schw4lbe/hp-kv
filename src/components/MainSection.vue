@@ -1,5 +1,5 @@
 <template>
-  <section class="section-main-container">
+  <section class="section-main-container" id="section1">
     <div class="section-main-banner-container">
       <div class="section-main-logo">
         <img class="logo" :src="logo" alt="Firmenlogo" />

@@ -1,6 +1,9 @@
 // @use "../abstracts/" as *;
 
 .section-service-container {
+  // scroll padding:
+  padding-top: 70px;
+
   background-image: url("../img/sectionservicebg.jpg");
   background-repeat: no-repeat;
   background-size: cover;

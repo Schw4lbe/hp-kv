@@ -1,5 +1,5 @@
 <template>
-  <section class="section-service-container">
+  <section class="section-service-container" id="section2">
     <h3 class="section-service-header">dummy header service</h3>
     <div class="section-service-items">
       <div

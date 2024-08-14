@@ -2,16 +2,20 @@
     "navbarMain": {
         "itemData": [
             {
-                "title": "Startseite"
+                "title": "Startseite",
+                "sectionId": "section1"
             },
             {
-                "title": "Service"
+                "title": "Service",
+                "sectionId": "section2"
             },
             {
-                "title": "Gallerie"
+                "title": "Gallerie",
+                "sectionId": "section3"
             },
             {
-                "title": "Contact"
+                "title": "Contact",
+                "sectionId": "section4"
             }
         ]
     },
