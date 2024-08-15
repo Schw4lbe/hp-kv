@@ -6,7 +6,9 @@
         :key="index"
         class="footer-item"
       >
-        <a href="" class="footer-url">{{ item.title }}</a>
+        <RouterLink :to="item.url" class="footer-url">{{
+          item.title
+        }}</RouterLink>
       </div>
     </footer>
   </div>

@@ -102,16 +102,12 @@
     "footer": {
         "itemData": [
             {
-                "title": "Startseite",
-                "url": "#"
-            },
-            {
                 "title": "Impressum",
-                "url": "#"
+                "url": "/imprint"
             },
             {
                 "title": "Datenschutz",
-                "url": "#"
+                "url": "/privacy"
             }
         ]
     }

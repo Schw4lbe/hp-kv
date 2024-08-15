@@ -59,7 +59,7 @@ export default {
     importAllImages() {
       const context = require.context(
         "../../public/img/galleryImg",
-        false, // don't include subdirectories
+        false,
         /\.(png|jpe?g|svg)$/
       );
       return context.keys().map(context);
@@ -68,7 +68,7 @@ export default {
     importAllThumbnails() {
       const context = require.context(
         "../../public/img/galleryThumbnail",
-        false, // don't include subdirectories
+        false,
         /\.(png|jpe?g|svg)$/
       );
       return context.keys().map(context);

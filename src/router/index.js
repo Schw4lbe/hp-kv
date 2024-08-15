@@ -1,11 +1,23 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import ImprintView from "@/views/ImprintView.vue";
+import PrivacyView from "@/views/PrivacyView.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
     component: HomeView,
+  },
+  {
+    path: "/imprint",
+    name: "imprint",
+    component: ImprintView,
+  },
+  {
+    path: "/privacy",
+    name: "privacy",
+    component: PrivacyView,
   },
 ];
 

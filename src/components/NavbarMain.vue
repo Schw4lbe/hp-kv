@@ -1,16 +1,18 @@
 <template>
   <div class="navbar-container">
     <nav class="navbar-items">
-      <div
+      <RouterLink
         @click="onClickScrollIntoView(item.sectionId)"
         v-for="(item, index) in navItemData"
         :key="index"
+        to="/"
         class="nav-item"
         :data-section="item.sectionId"
       >
         <img :src="item.icon" alt="Icon" class="nav-item-icon" />
         <span>{{ item.title }}</span>
-      </div>
+        <RouterLink to="/"></RouterLink>
+      </RouterLink>
     </nav>
   </div>
 </template>
@@ -49,7 +51,11 @@ export default {
 
     onClickScrollIntoView(sectionId) {
       const targetElement = document.getElementById(sectionId);
-      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (targetElement === null) {
+        return;
+      } else {
+        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     },
   },
 };
