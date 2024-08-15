@@ -14,7 +14,9 @@
           repellendus architecto in sequi pariatur culpa autem modi commodi
           sapiente optio quos voluptates!
         </p>
-        <button class="contact-btn">go to contact</button>
+        <button @click="visitContactSection" class="contact-btn">
+          go to contact
+        </button>
       </div>
     </div>
   </div>
@@ -52,6 +54,14 @@ export default {
       setTimeout(() => {
         this.popupVissible = false;
       }, 500);
+    },
+
+    visitContactSection() {
+      this.closePopup();
+      setTimeout(() => {
+        const section = document.querySelector("#section4");
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 700);
     },
   },
 };

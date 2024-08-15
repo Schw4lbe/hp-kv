@@ -28,10 +28,11 @@
 
     background: red;
     height: 100%;
-    max-height: 200px;
+    max-height: 250px;
     width: 100%;
     min-width: 300px;
     max-width: 650px;
+    padding-bottom: 1rem;
 
     .close-popup {
       position: absolute;
@@ -49,7 +50,7 @@
       width: 100%;
 
       .contact-popup-header {
-        padding: 1rem;
+        padding: 1rem 0 0 0;
       }
 
       .contact-popup-description {
