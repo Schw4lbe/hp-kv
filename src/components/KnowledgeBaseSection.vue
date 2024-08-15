@@ -1,11 +1,59 @@
 <template>
   <section class="section-knowledge-container" id="section5">
-    <h3>knowledge base dummy header</h3>
+    <h3 class="section-knowledge-header">knowledge base dummy header</h3>
+
+    <div class="section-knowledge-items">
+      <div
+        v-for="(item, index) in knowledgeBaseData"
+        :key="index"
+        class="knowledge-item"
+      >
+        <img
+          class="knowledge-item-image"
+          :src="item.image"
+          alt="Beschreibungsbild"
+        />
+        <div class="knowledge-item-content">
+          <h4 class="knowledge-item-header">{{ item.header }}</h4>
+          <p class="knowledge-item-description">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
+import data from "../assets/data/content.json";
+
 export default {
   name: "KnowledgeBaseSection",
+
+  data() {
+    return {
+      knowledgeBaseData: this.importKnowledgeBaseData(),
+    };
+  },
+
+  methods: {
+    importAllImages() {
+      const context = require.context(
+        "../../public/img/knowledgeImg",
+        false,
+        /\.(png|jpe?g|svg)$/
+      );
+      return context.keys().map(context);
+    },
+
+    importKnowledgeBaseData() {
+      const images = this.importAllImages();
+      const content = data.knowledgeSection.knowledgeData;
+
+      return images.map((image, index) => ({
+        image,
+        header: content[index]?.header || "Default Title",
+        description: content[index]?.description || "Default Description",
+      }));
+    },
+  },
 };
 </script>

@@ -11,28 +11,46 @@
           <h4 class="service-item-header">{{ item.header }}</h4>
           <p class="service-item-description">{{ item.description }}</p>
         </div>
-        <!-- later on img render on loop like in gallery -->
         <div class="dummy-img-container">
-          <img class="dummy-img" :src="dummy" alt="dummy" />
+          <img class="dummy-img" :src="item.image" alt="Bild Dienstleistung" />
         </div>
       </div>
     </div>
   </section>
-  <!-- <div class="section-service-separator"></div> -->
 </template>
 
 <script>
 import data from "../assets/data/content.json";
-import dummyImg from "../../public/img/serviceImg/serviceimg01.png";
 
 export default {
   name: "ServiceSection",
 
   data() {
     return {
-      serviceContent: data.serviceSection.itemData,
-      dummy: dummyImg,
+      serviceContent: this.importKnowledgeBaseData(),
     };
+  },
+
+  methods: {
+    importAllImages() {
+      const context = require.context(
+        "../../public/img/serviceImg",
+        false,
+        /\.(png|jpe?g|svg)$/
+      );
+      return context.keys().map(context);
+    },
+
+    importKnowledgeBaseData() {
+      const images = this.importAllImages();
+      const content = data.serviceSection.itemData;
+
+      return images.map((image, index) => ({
+        image,
+        header: content[index]?.header || "Default Title",
+        description: content[index]?.description || "Default Description",
+      }));
+    },
   },
 };
 </script>
