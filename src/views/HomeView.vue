@@ -6,6 +6,9 @@
   <ContactSection />
   <KnowledgeBaseSection />
   <FooterMain />
+  <div class="contact-popup-container">
+    <ContactPopup />
+  </div>
 </template>
 
 <script>
@@ -16,6 +19,7 @@ import GallerySection from "@/components/GallerySection";
 import ContactSection from "@/components/ContactSection";
 import KnowledgeBaseSection from "@/components/KnowledgeBaseSection";
 import FooterMain from "@/components/FooterMain";
+import ContactPopup from "@/components/ContactPopup";
 
 export default {
   name: "HomeView",
@@ -28,6 +32,7 @@ export default {
     ContactSection,
     KnowledgeBaseSection,
     FooterMain,
+    ContactPopup,
   },
 };
 </script>
