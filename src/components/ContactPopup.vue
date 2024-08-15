@@ -7,12 +7,8 @@
     <div class="contact-popup popup-slide-in-bottom" id="contact-popup">
       <button @click="closePopup" class="close-popup">close</button>
       <div class="contact-popup-content">
-        <h3 class="contact-popup-header">dummy contact popup header</h3>
         <p class="contact-popup-description">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit incidunt
-          cupiditate laudantium, atque debitis consequuntur velit, at
-          repellendus architecto in sequi pariatur culpa autem modi commodi
-          sapiente optio quos voluptates!
+          Schon einen Termin vereinbart? Nehmen Sie kontakt mit mir auf.
         </p>
         <button @click="visitContactSection" class="contact-btn">
           go to contact
