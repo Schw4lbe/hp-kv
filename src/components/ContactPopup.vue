@@ -1,7 +1,11 @@
 <template>
-  <div v-if="popupVissible === true" class="contact-popup-container">
-    <div class="contact-popup">
-      <button class="close-popup">close</button>
+  <div
+    v-if="popupVissible === true"
+    class="contact-popup-container bgBlur"
+    id="contact-popup-container"
+  >
+    <div class="contact-popup popup-slide-in" id="contact-popup">
+      <button @click="closePopup" class="close-popup">close</button>
       <div class="contact-popup-content">
         <h3 class="contact-popup-header">dummy popup header</h3>
         <p class="contact-popup-description">
@@ -24,6 +28,31 @@ export default {
     return {
       popupVissible: false,
     };
+  },
+
+  created() {
+    setTimeout(() => {
+      this.showPopup();
+    }, 2000);
+  },
+
+  methods: {
+    showPopup() {
+      this.popupVissible = true;
+    },
+
+    closePopup() {
+      const container = document.querySelector("#contact-popup-container");
+      const popup = document.querySelector("#contact-popup");
+      container.classList.remove("bgBlur");
+      container.classList.add("bgBlurReverse");
+      popup.classList.remove("popup-slide-in");
+      popup.classList.add("popup-slide-out");
+
+      setTimeout(() => {
+        this.popupVissible = false;
+      }, 500);
+    },
   },
 };
 </script>
