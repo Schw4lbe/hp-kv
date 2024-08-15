@@ -40,3 +40,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 - refactor components and outsource duplicate functions into utils.js
 - refactor scss and create global styling partial for repeating element stylings
+
+# flow for popups
+
+1. privacy popup
+2. on click ok start timer second popup
+3. on click close or contact no more popups
+4. disable timer while in modal img
+5. after closing modal activate contact popup directly

@@ -7,6 +7,7 @@
   <KnowledgeBaseSection />
   <FooterMain />
   <ContactPopup />
+  <PrivacyPopup />
 </template>
 
 <script>
@@ -18,6 +19,7 @@ import ContactSection from "@/components/ContactSection";
 import KnowledgeBaseSection from "@/components/KnowledgeBaseSection";
 import FooterMain from "@/components/FooterMain";
 import ContactPopup from "@/components/ContactPopup";
+import PrivacyPopup from "@/components/PrivacyPopup";
 
 export default {
   name: "HomeView",
@@ -31,6 +33,7 @@ export default {
     KnowledgeBaseSection,
     FooterMain,
     ContactPopup,
+    PrivacyPopup,
   },
 };
 </script>

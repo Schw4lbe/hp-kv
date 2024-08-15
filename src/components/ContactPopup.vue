@@ -1,13 +1,13 @@
 <template>
   <div
     v-if="popupVissible === true"
-    class="contact-popup-container bgBlur"
+    class="contact-popup-container"
     id="contact-popup-container"
   >
-    <div class="contact-popup popup-slide-in" id="contact-popup">
+    <div class="contact-popup popup-slide-in-bottom" id="contact-popup">
       <button @click="closePopup" class="close-popup">close</button>
       <div class="contact-popup-content">
-        <h3 class="contact-popup-header">dummy popup header</h3>
+        <h3 class="contact-popup-header">dummy contact popup header</h3>
         <p class="contact-popup-description">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit incidunt
           cupiditate laudantium, atque debitis consequuntur velit, at
@@ -32,11 +32,11 @@ export default {
     };
   },
 
-  created() {
-    setTimeout(() => {
-      this.showPopup();
-    }, 2000);
-  },
+  //   created() {
+  //     setTimeout(() => {
+  //       this.showPopup();
+  //     }, 2000);
+  //   },
 
   methods: {
     showPopup() {
@@ -44,12 +44,9 @@ export default {
     },
 
     closePopup() {
-      const container = document.querySelector("#contact-popup-container");
       const popup = document.querySelector("#contact-popup");
-      container.classList.remove("bgBlur");
-      container.classList.add("bgBlurReverse");
-      popup.classList.remove("popup-slide-in");
-      popup.classList.add("popup-slide-out");
+      popup.classList.remove("popup-slide-in-bottom");
+      popup.classList.add("popup-slide-out-bottom");
 
       setTimeout(() => {
         this.popupVissible = false;

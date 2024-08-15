@@ -18,7 +18,7 @@
       </div>
     </div>
   </section>
-  <div class="section-main-separator"></div>
+  <!-- <div class="section-main-separator"></div> -->
 </template>
 
 <script>
