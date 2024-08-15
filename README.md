@@ -28,13 +28,12 @@ npm run lint
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### Ideas
+### Backlock
 
-- Knowledgebase as new own Component
+- KnowledgeBaseSection as new own Component
 - Make Modal Images be swipeable
 - Contact popup once first time somebody enters the page after 30 - 45 sec.
+- privacy popup upon first pageload with persistant state on check
 - Intro Animation scene
 - navbar on active scroll allmost fully transparent
 - navbar mobile collapse view on breakpoint xs
-- gallery update with thumbnails and full images only in modal for faster loading
-- modal fullscreen images need to be crompessed a litte bit more

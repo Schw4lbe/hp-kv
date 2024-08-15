@@ -4,6 +4,7 @@
   <ServiceSection />
   <GallerySection />
   <ContactSection />
+  <KnowledgeBaseSection />
   <FooterMain />
 </template>
 
@@ -13,6 +14,7 @@ import MainSection from "@/components/MainSection";
 import ServiceSection from "@/components/ServiceSection";
 import GallerySection from "@/components/GallerySection";
 import ContactSection from "@/components/ContactSection";
+import KnowledgeBaseSection from "@/components/KnowledgeBaseSection";
 import FooterMain from "@/components/FooterMain";
 
 export default {
@@ -24,6 +26,7 @@ export default {
     ServiceSection,
     GallerySection,
     ContactSection,
+    KnowledgeBaseSection,
     FooterMain,
   },
 };
