@@ -10,7 +10,7 @@
         <h4 class="gallery-item-header">{{ item.title }}</h4>
         <img
           @click="onClickShowModal"
-          :src="item.image"
+          :src="item.thumbnail"
           alt="Galeriebild"
           class="gallery-item-image"
           :id="index"
@@ -65,11 +65,23 @@ export default {
       return context.keys().map(context);
     },
 
+    importAllThumbnails() {
+      const context = require.context(
+        "../../public/img/galleryThumbnail",
+        false, // don't include subdirectories
+        /\.(png|jpe?g|svg)$/
+      );
+      return context.keys().map(context);
+    },
+
     importAllImagesWithMetaData() {
+      const thumbnails = this.importAllThumbnails();
       const images = this.importAllImages();
       const metadata = imgMetadata.imgGallery.galleryImgData;
+
       return images.map((image, index) => ({
         image,
+        thumbnail: thumbnails[index],
         title: metadata[index]?.title || "Default Title",
         description: metadata[index]?.description || "Default Description",
       }));
