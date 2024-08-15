@@ -513,7 +513,7 @@
   position: relative;
   bottom: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   background: red;
@@ -522,7 +522,7 @@
   width: 100%;
   min-width: 300px;
   max-width: 650px;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 .contact-popup-container .contact-popup .close-popup {
   position: absolute;
