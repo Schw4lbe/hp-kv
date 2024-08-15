@@ -1,9 +1,60 @@
 @use "../abstracts/" as *;
 
 .section-knowledge-container {
-  h3 {
+  padding-top: $navbar-scroll-buffer;
+
+  background: $clr-secondary;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  .section-knowledge-header {
+    color: $clr-primary;
+    font-size: 20px;
+    padding: 1rem;
+  }
+
+  .section-knowledge-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    padding-bottom: 1rem;
     width: 100%;
-    text-align: center;
-    padding: 3rem;
+    color: $clr-primary;
+
+    .knowledge-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      color: $clr-primary;
+      max-width: 1200px;
+      padding: 1rem;
+      margin-top: 2rem;
+      background: rgba($color: $clr-secondary-light-2, $alpha: 1);
+
+      .knowledge-item-image {
+        padding: 1rem;
+      }
+
+      .knowledge-item-content {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .knowledge-item-header {
+          font-size: 1.5rem;
+          padding: 1rem;
+        }
+
+        .knowledge-item-description {
+          line-height: 1.7;
+          padding: 0 1rem 1rem 1rem;
+        }
+      }
+    }
   }
 }

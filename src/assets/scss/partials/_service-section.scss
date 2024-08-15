@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 .section-service-container {
-  padding: $navbar-scroll-buffer;
+  padding-top: $navbar-scroll-buffer;
 
   background: $clr-secondary;
   display: flex;
