@@ -6,13 +6,15 @@
       <div
         v-for="(item, index) in knowledgeBaseData"
         :key="index"
-        class="knowledge-item"
+        class="section-knowledge-item"
       >
-        <img
-          class="knowledge-item-image"
-          :src="item.image"
-          alt="Beschreibungsbild"
-        />
+        <div class="knowledge-item-image-container">
+          <img
+            class="knowledge-item-image"
+            :src="item.image"
+            alt="Beschreibungsbild"
+          />
+        </div>
         <div class="knowledge-item-content">
           <h4 class="knowledge-item-header">{{ item.header }}</h4>
           <p class="knowledge-item-description">{{ item.description }}</p>

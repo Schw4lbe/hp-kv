@@ -28,6 +28,7 @@
     .service-item {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      width: 100%;
       max-width: 1200px;
       padding: 1rem;
       margin-top: 2rem;
@@ -47,11 +48,11 @@
           line-height: 1.7;
         }
       }
-      .dummy-img-container {
+      .service-item-image-container {
         display: flex;
         justify-content: flex-end;
 
-        .dummy-img {
+        .service-item-image {
           display: block;
           object-fit: contain;
           max-width: 100%;

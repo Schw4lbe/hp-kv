@@ -25,17 +25,27 @@
     width: 100%;
     color: $clr-primary;
 
-    .knowledge-item {
+    .section-knowledge-item {
       display: grid;
       grid-template-columns: 1fr 1fr;
       color: $clr-primary;
+      width: 100%;
       max-width: 1200px;
       padding: 1rem;
       margin-top: 2rem;
       background: rgba($color: $clr-secondary-light-2, $alpha: 1);
 
-      .knowledge-item-image {
-        padding: 1rem;
+      .knowledge-item-image-container {
+        display: flex;
+        justify-content: flex-start;
+
+        .knowledge-item-image {
+          display: block;
+          object-fit: contain;
+          max-width: 100%;
+          height: auto;
+          flex-shrink: 1;
+        }
       }
 
       .knowledge-item-content {

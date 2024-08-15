@@ -11,8 +11,12 @@
           <h4 class="service-item-header">{{ item.header }}</h4>
           <p class="service-item-description">{{ item.description }}</p>
         </div>
-        <div class="dummy-img-container">
-          <img class="dummy-img" :src="item.image" alt="Bild Dienstleistung" />
+        <div class="service-item-image-container">
+          <img
+            class="service-item-image"
+            :src="item.image"
+            alt="Bild Dienstleistung"
+          />
         </div>
       </div>
     </div>

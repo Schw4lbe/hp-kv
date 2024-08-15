@@ -1,6 +1,7 @@
 $screen-xs-max: 576px;
 
 @media (max-width: $screen-xs-max) {
+  // navbar
   .navbar-container {
     .navbar-items {
       gap: 0px;
@@ -12,6 +13,7 @@ $screen-xs-max: 576px;
     }
   }
 
+  // section main
   .section-main-container {
     .section-main-banner-container {
       padding: 0;
@@ -37,6 +39,7 @@ $screen-xs-max: 576px;
     }
   }
 
+  //section service
   .section-service-container {
     .section-service-header {
       font-size: 20px;
@@ -61,12 +64,47 @@ $screen-xs-max: 576px;
           }
         }
 
-        .dummy-img-container {
+        .service-item-image-container {
           justify-content: center;
           width: 100%;
 
-          .dummy-img {
+          .service-item-image {
             max-width: 300px;
+          }
+        }
+      }
+    }
+  }
+
+  // section knowledge
+  .section-knowledge-container {
+    .section-knowledge-header {
+      font-size: 20px;
+    }
+
+    .section-knowledge-items {
+      .section-knowledge-item {
+        grid-template-columns: 1fr;
+        padding: 1rem 0 0 0;
+
+        .knowledge-item-image-container {
+          justify-content: center;
+          width: 100%;
+
+          .knowledge-item-image {
+            max-width: 300px;
+          }
+        }
+
+        .knowledge-item-content {
+          padding: 1rem 0;
+
+          .knowledge-item-header {
+            padding: 0 0 1rem 0;
+          }
+
+          .knowledge-item-description {
+            padding: 0 0.5rem;
           }
         }
       }
