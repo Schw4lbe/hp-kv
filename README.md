@@ -30,16 +30,23 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Backlock
 
-- Contact popup once first time somebody enters the page after 30 - 45 sec.
-- privacy popup upon first pageload with persistant state on check
-- Intro Animation scene
+- Intro Animation scene? even wanted?
 
 - Make Modal Images be swipeable
 - navbar on active scroll allmost fully transparent
 - navbar mobile collapse view on breakpoint xs
+- navbar current item highlight
 
 - refactor components and outsource duplicate functions into utils.js
-- refactor scss and create global styling partial for repeating element stylings
+- refactor scss and create global styling partial for repeating element stylings (header, container)
+
+# knowledge base
+
+- have cards with image and short header displayed
+- on hover rotate to backside with short text and button "see more info"
+- in desktop view auto rotate first item infinite/2 - 3 times (15sec intervall)
+- on mobile always rotate image in viewport middle (Intersection Observer API)
+- remove/add certain classes whenever a breakpoint is reached (window.matchMedia())
 
 # flow for popups
 
