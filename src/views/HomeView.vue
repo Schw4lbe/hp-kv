@@ -6,9 +6,7 @@
   <ContactSection />
   <KnowledgeBaseSection />
   <FooterMain />
-  <div class="contact-popup-container">
-    <ContactPopup />
-  </div>
+  <ContactPopup />
 </template>
 
 <script>
