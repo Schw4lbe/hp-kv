@@ -32,11 +32,11 @@ export default {
     };
   },
 
-  //   created() {
-  //     setTimeout(() => {
-  //       this.showPopup();
-  //     }, 2000);
-  //   },
+  created() {
+    setTimeout(() => {
+      this.showPopup();
+    }, 20000);
+  },
 
   methods: {
     showPopup() {
