@@ -1,5 +1,8 @@
 @use "abstracts/" as *;
 
+// dev only
+@use "partials/dev";
+
 @use "partials/navbar-main";
 @use "partials/footer-main";
 @use "partials/home-view";

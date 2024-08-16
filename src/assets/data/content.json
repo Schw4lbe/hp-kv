@@ -109,10 +109,12 @@
         "knowledgeData": [
             {
                 "header": "header 1",
+                "teaser": "This is a short teaser.",
                 "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, adratione iusto, numquam ab obcaecati consequuntur fugiat consequatur nam beatae mollitia ipsam esse illo? Sit doloribus quod iure necessitatibus maiores."
             },
             {
                 "header": "header 2",
+                "teaser": "This is a short teaser.",
                 "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, adratione iusto, numquam ab obcaecati consequuntur fugiat consequatur nam beatae mollitia ipsam esse illo? Sit doloribus quod iure necessitatibus maiores."
             }
         ]
