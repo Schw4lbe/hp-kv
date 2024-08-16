@@ -6,9 +6,8 @@
   >
     <div class="contact-popup popup-slide-in-bottom" id="contact-popup">
       <div class="contact-popup-content">
-        <p class="contact-popup-description">
-          Schon einen Termin vereinbart? Nehmen Sie kontakt mit mir auf.
-        </p>
+        <p class="contact-popup-description">Schon einen Termin vereinbart?</p>
+        <p class="contact-popup-description">Nehmen Sie Kontakt mit mir auf.</p>
         <div class="contact-popup-btn-container">
           <button @click="visitContactSection" class="contact-btn">
             zum Kontakt
