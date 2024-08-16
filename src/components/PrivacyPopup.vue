@@ -6,12 +6,20 @@
   >
     <div class="privacy-popup popup-slide-in-left" id="privacy-popup">
       <div class="privacy-popup-content">
-        <h3 class="privacy-popup-header">dummy privacy popup header</h3>
+        <div class="privacy-popup-header-container">
+          <h3 class="privacy-popup-header">Wo sind die Cookies?</h3>
+          <img class="privacy-popup-icon" :src="icon" alt="Cookie Icon" />
+        </div>
+
         <p class="privacy-popup-description">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit incidunt
-          cupiditate laudantium, atque debitis consequuntur velit, at
-          repellendus architecto in sequi pariatur culpa autem modi commodi
-          sapiente optio quos voluptates!
+          Diese Homepage kommt ohne <strong>Tracking Cookies</strong> und
+          <strong>Analysetools</strong> von Drittanbietern aus.
+        </p>
+        <p class="privacy-popup-description">
+          Weitere Informationen unter
+          <router-link class="description-link" to="/privacy"
+            >Datenschutz</router-link
+          >
         </p>
         <button @click="closePopup" class="privacy-accept-btn">
           Los gehts!
@@ -22,12 +30,15 @@
 </template>
 
 <script>
+import popupIcon from "../../public/img/icons/cookie-bite.svg";
+
 export default {
   name: "PrivacyPopup",
 
   data() {
     return {
       popupVissible: false,
+      icon: popupIcon,
     };
   },
 
