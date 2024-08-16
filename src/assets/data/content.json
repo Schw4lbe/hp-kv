@@ -126,6 +126,10 @@
             {
                 "title": "Datenschutz",
                 "url": "/privacy"
+            },
+            {
+                "title": "DEVELOPMENT",
+                "url": "/dev"
             }
         ]
     },
