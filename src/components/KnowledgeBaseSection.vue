@@ -1,6 +1,6 @@
 <template>
   <section class="section-knowledge-container" id="section5">
-    <h3 class="section-knowledge-header">knowledge base dummy header</h3>
+    <h3 class="section-knowledge-header">{{ header }}</h3>
 
     <div class="section-knowledge-items">
       <div
@@ -32,6 +32,7 @@ export default {
 
   data() {
     return {
+      header: data.knowledgeSection.header,
       knowledgeBaseData: this.importKnowledgeBaseData(),
     };
   },

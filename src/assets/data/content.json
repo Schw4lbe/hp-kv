@@ -37,6 +37,7 @@
         ]
     },
     "serviceSection": {
+        "header": "Meine Dienste & Services",
         "itemData": [
             {
                 "header": "service header",
@@ -49,6 +50,7 @@
         ]
     },
     "imgGallery": {
+        "header": "Lassen Sie sich inspirieren",
         "galleryImgData": [
             {
                 "title": "img title 01",
@@ -83,19 +85,27 @@
         ]
     },
     "contactSection": {
+        "content": {
+            "header": "Kontaktieren Sie mich",
+            "button": "Kontaktinfo anzeigen"
+        },
         "contactInfoData": {
             "phone": "0170 - 00 00 00 00",
             "email": "some@one.de"
         },
-        "captchaPhrases": [
-            "blau",
-            "grün",
-            "gelb",
-            "grau",
-            "gold"
-        ]
+        "captcha": {
+            "phrases": [
+                "blau",
+                "grün",
+                "gelb",
+                "grau",
+                "gold"
+            ],
+            "description": "Name der Farbe?"
+        }
     },
     "knowledgeSection": {
+        "header": "Für alle Pflanzenfreunde",
         "knowledgeData": [
             {
                 "header": "header 1",
@@ -129,7 +139,8 @@
             "button2": "später"
         },
         "privacy": {
-            "header": "Wo sind die Cookies?"
+            "header": "Wo sind die Cookies?",
+            "button": "Los gehts!"
         }
     }
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="gallery-container">
-    <h3 class="gallery-header">dummy header gallery</h3>
+    <h3 class="gallery-header">{{ header }}</h3>
     <div class="img-gallery">
       <div
         v-for="(item, index) in galleryData"
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import imgMetadata from "../assets/data/content.json";
+import data from "../assets/data/content.json";
 import ImgModal from "@/components/ImgModal";
 
 export default {
@@ -44,6 +44,7 @@ export default {
 
   data() {
     return {
+      header: data.imgGallery.header,
       galleryData: this.importAllImagesWithMetaData(),
 
       // Modal info storage:
@@ -77,7 +78,7 @@ export default {
     importAllImagesWithMetaData() {
       const thumbnails = this.importAllThumbnails();
       const images = this.importAllImages();
-      const metadata = imgMetadata.imgGallery.galleryImgData;
+      const metadata = data.imgGallery.galleryImgData;
 
       return images.map((image, index) => ({
         image,
@@ -125,9 +126,9 @@ export default {
 
     updateModalData(index) {
       this.modalTitle =
-        imgMetadata.imgGallery.galleryImgData[index]?.title || "Default Title";
+        data.imgGallery.galleryImgData[index]?.title || "Default Title";
       this.modalDescription =
-        imgMetadata.imgGallery.galleryImgData[index]?.description ||
+        data.imgGallery.galleryImgData[index]?.description ||
         "Default Description";
       this.modalImageLink = this.importAllImages()[index];
     },

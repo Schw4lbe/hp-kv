@@ -1,11 +1,11 @@
 <template>
   <section class="section-contact-container" id="section4">
-    <h3 class="section-contact-header">dummy header contact</h3>
+    <h3 class="section-contact-header">{{ header }}</h3>
 
     <div class="section-contact-content">
       <div v-if="captchaEnabled === false">
         <button @click="enableCaptcha" class="enable-contact-info-btn">
-          get in contact
+          {{ button }}
         </button>
       </div>
 
@@ -36,6 +36,8 @@ export default {
   data() {
     return {
       contactInfo: data.contactSection.contactInfoData,
+      header: data.contactSection.content.header,
+      button: data.contactSection.content.button,
       captchaEnabled: false,
       contactVissible: false,
     };

@@ -1,7 +1,7 @@
 <template>
   <form class="captcha-container" id="contact-captcha">
     <span class="captcha"> {{ phraseForHmtl }} </span>
-    <span class="description">Name der Farbe?</span>
+    <span class="description">{{ captchaDescription }}</span>
     <input
       v-model="solution"
       id="captcha"
@@ -34,7 +34,8 @@ export default {
       solution: "",
       honeypot: "",
       captchaSolved: null,
-      captchaPhrases: data.contactSection.captchaPhrases,
+      captchaPhrases: data.contactSection.captcha.phrases,
+      captchaDescription: data.contactSection.captcha.description,
       captchaPhrase: "",
       phraseForHmtl: "",
     };

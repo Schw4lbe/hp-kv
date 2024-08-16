@@ -1,6 +1,6 @@
 <template>
   <section class="section-service-container" id="section2">
-    <h3 class="section-service-header">dummy header service</h3>
+    <h3 class="section-service-header">{{ header }}</h3>
     <div class="section-service-items">
       <div
         v-for="(item, index) in serviceContent"
@@ -31,6 +31,7 @@ export default {
 
   data() {
     return {
+      header: data.serviceSection.header,
       serviceContent: this.importKnowledgeBaseData(),
     };
   },
