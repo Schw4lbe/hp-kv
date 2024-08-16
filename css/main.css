@@ -610,9 +610,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: tomato;
-  height: 100%;
-  max-height: 250px;
+  background: rgba(17, 17, 17, 0.9);
+  color: #fff;
+  height: max-content;
+  padding: 1rem;
+  max-height: 300px;
   width: 100%;
   min-width: 300px;
   max-width: 650px;
@@ -624,17 +626,52 @@
   flex-direction: column;
   width: 100%;
 }
-.privacy-popup-container .privacy-popup .privacy-popup-content .privacy-popup-header {
+.privacy-popup-container .privacy-popup .privacy-popup-content .privacy-popup-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.privacy-popup-container .privacy-popup .privacy-popup-content .privacy-popup-header-container .privacy-popup-header {
+  font-size: 20px;
+  color: #ffd13c;
   padding: 1rem 0 0 0;
 }
+.privacy-popup-container .privacy-popup .privacy-popup-content .privacy-popup-header-container .privacy-popup-icon {
+  padding-left: 1rem;
+  height: 50px;
+  width: 50px;
+}
 .privacy-popup-container .privacy-popup .privacy-popup-content .privacy-popup-description {
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   text-align: center;
 }
+.privacy-popup-container .privacy-popup .privacy-popup-content .privacy-popup-description:nth-of-type(2) {
+  padding-bottom: 1rem;
+}
+.privacy-popup-container .privacy-popup .privacy-popup-content .privacy-popup-description strong {
+  color: #fdfda5;
+}
+.privacy-popup-container .privacy-popup .privacy-popup-content .privacy-popup-description .description-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fdfda5;
+  transition: all 0.2sec;
+}
+.privacy-popup-container .privacy-popup .privacy-popup-content .privacy-popup-description .description-link:hover {
+  color: #ffd13c;
+}
 .privacy-popup-container .privacy-popup .privacy-popup-content .privacy-accept-btn {
-  margin-top: 1rem;
   padding: 0.5rem 1rem;
   border: none;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0.5rem;
+  width: 120px;
+  transition: all 0.2s;
+  background: #fdfda5;
+}
+.privacy-popup-container .privacy-popup .privacy-popup-content .privacy-accept-btn:hover {
+  background-color: #ffd13c;
 }
 
 .scroll-disabled {
