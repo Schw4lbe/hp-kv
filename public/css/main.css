@@ -261,8 +261,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
-  filter: sepia(50%);
+  filter: sepia(60%);
   height: 100vh;
   min-height: 500px;
   width: 100%;
@@ -278,21 +277,25 @@
   color: #f5f5dc;
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px) grayscale(100%);
+  filter: none;
+  backdrop-filter: blur(5px) grayscale(100%) brightness(80%);
 }
 .section-main-container .section-main-banner-container .section-main-logo .logo {
   object-fit: cover;
   height: 200px;
   width: 200px;
   padding: 1rem;
+  filter: none;
 }
 .section-main-container .section-main-banner-container .section-main-banner {
   display: flex;
   justify-content: center;
-  border-top: 1px solid #f5f5dc;
+  border-top: 1px solid #fdfda5;
 }
 .section-main-container .section-main-banner-container .section-main-banner .banner-content {
   padding: 1rem;
+  color: #ffd13c;
+  font-size: 18px;
 }
 
 .section-service-container {
@@ -1029,4 +1032,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand";
+}
+
+body {
+  background: #111;
 }/*# sourceMappingURL=main.css.map */
