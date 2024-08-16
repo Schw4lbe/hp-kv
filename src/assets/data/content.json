@@ -118,5 +118,18 @@
                 "url": "/privacy"
             }
         ]
+    },
+    "popups": {
+        "contact": {
+            "content": [
+                "Schon einen Termin vereinbart?",
+                "Nehmen Sie Kontakt mit mir auf."
+            ],
+            "button1": "zum Kontakt",
+            "button2": "später"
+        },
+        "privacy": {
+            "header": "Wo sind die Cookies?"
+        }
     }
 }

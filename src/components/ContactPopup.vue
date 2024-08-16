@@ -6,13 +6,18 @@
   >
     <div class="contact-popup popup-slide-in-bottom" id="contact-popup">
       <div class="contact-popup-content">
-        <p class="contact-popup-description">Schon einen Termin vereinbart?</p>
-        <p class="contact-popup-description">Nehmen Sie Kontakt mit mir auf.</p>
+        <p
+          v-for="(item, index) in texts"
+          :key="index"
+          class="contact-popup-description"
+        >
+          {{ item }}
+        </p>
         <div class="contact-popup-btn-container">
           <button @click="visitContactSection" class="contact-btn">
-            zum Kontakt
+            {{ button1 }}
           </button>
-          <button @click="closePopup" class="close-btn">später</button>
+          <button @click="closePopup" class="close-btn">{{ button2 }}</button>
         </div>
       </div>
     </div>
@@ -20,12 +25,17 @@
 </template>
 
 <script>
+import data from "../assets/data/content.json";
+
 export default {
   name: "ContactPopup",
 
   data() {
     return {
       popupVissible: false,
+      texts: data.popups.contact.content,
+      button1: data.popups.contact.button1,
+      button2: data.popups.contact.button2,
     };
   },
 

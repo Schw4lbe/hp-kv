@@ -22,7 +22,6 @@
 
 ### ContactPopup
 
-- create propper styling
 - assign contact popup state for persistant reaction
 - create timer (tbd with costumer)
 
@@ -75,7 +74,6 @@
 
 ### PrivacyPopup
 
-- create propper styling for popup
 - add icon with cookie to it (no cookie save data page slogan)
 - add privacy link to view privacy section
 
