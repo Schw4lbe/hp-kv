@@ -174,7 +174,6 @@
   align-items: center;
   color: #f5f5dc;
   width: 100%;
-  padding: 1rem;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(4px) grayscale(100%);
 }
