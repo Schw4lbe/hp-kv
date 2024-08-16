@@ -27,7 +27,6 @@
 
 ### ContactSection
 
-- header style change for dark background
 - add desc. text for contact section
 - add desc. text to explain purpose of captcha
 - position text on captcha position
@@ -68,14 +67,11 @@
 
 ### NavbarMain
 
-- navbar on active scroll allmost fully transparent
-- navbar mobile collapse view on breakpoint xs
 - navbar current item highlight
 
 ### PrivacyPopup
 
-- add icon with cookie to it (no cookie save data page slogan)
-- add privacy link to view privacy section
+- ok
 
 ### ServiceSection
 
@@ -93,7 +89,10 @@
 
 - create full content
 
-### General
+### General for Production
 
+- embedd post css and gulp
+- create compressed css
+- consider using uglyfier
 - refactor components and outsource duplicate functions into utils.js
 - refactor scss and create global styling partial for repeating element stylings (header, container)
