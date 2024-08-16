@@ -1,6 +1,6 @@
 <template>
   <section class="section-contact-container" id="section4">
-    <h3 class="section-contact-header">{{ header }}</h3>
+    <h3 class="section-contact-header section-header">{{ header }}</h3>
 
     <div class="section-contact-content">
       <div v-if="captchaEnabled === false">

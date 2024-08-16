@@ -7,7 +7,7 @@
     <div class="privacy-popup popup-slide-in-left" id="privacy-popup">
       <div class="privacy-popup-content">
         <div class="privacy-popup-header-container">
-          <h3 class="privacy-popup-header">{{ header }}</h3>
+          <h3 class="privacy-popup-header popup-header">{{ header }}</h3>
           <img class="privacy-popup-icon" :src="icon" alt="Cookie Icon" />
         </div>
 

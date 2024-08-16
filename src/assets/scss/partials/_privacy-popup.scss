@@ -46,7 +46,6 @@
         justify-content: space-between;
 
         .privacy-popup-header {
-          font-size: 20px;
           color: $clr-primary-dark-4;
           padding: 1rem 0 0 0;
         }
@@ -85,7 +84,7 @@
         border: none;
         font-size: 14px;
         font-weight: bold;
-        margin: 0 0.5rem;
+        margin: 1rem;
         width: 120px;
         transition: all 0.2s;
         background: $clr-primary-dark-1;

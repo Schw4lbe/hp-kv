@@ -1,6 +1,6 @@
 <template>
   <section class="section-knowledge-container" id="section5">
-    <h3 class="section-knowledge-header">{{ header }}</h3>
+    <h3 class="section-knowledge-header section-header">{{ header }}</h3>
 
     <div class="section-knowledge-items">
       <div
@@ -16,7 +16,9 @@
           />
         </div>
         <div class="knowledge-item-content">
-          <h4 class="knowledge-item-header">{{ item.header }}</h4>
+          <h4 class="knowledge-item-header">
+            {{ item.header }}
+          </h4>
           <p class="knowledge-item-description">{{ item.description }}</p>
         </div>
       </div>

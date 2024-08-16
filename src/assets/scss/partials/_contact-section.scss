@@ -13,13 +13,6 @@
   flex-direction: column;
   text-align: center;
 
-  .section-contact-header {
-    width: 100%;
-    padding: 1rem;
-    background: rgba($color: $clr-primary-light-1, $alpha: 0.8);
-    color: $clr-secondary-dark-1;
-  }
-
   .section-contact-content {
     display: flex;
     justify-content: center;

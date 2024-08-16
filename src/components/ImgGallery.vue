@@ -1,6 +1,6 @@
 <template>
   <div class="gallery-container">
-    <h3 class="gallery-header">{{ header }}</h3>
+    <h3 class="gallery-header section-header">{{ header }}</h3>
     <div class="img-gallery">
       <div
         v-for="(item, index) in galleryData"

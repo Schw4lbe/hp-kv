@@ -1,6 +1,12 @@
 $screen-xs-max: 576px;
 
 @media (max-width: $screen-xs-max) {
+  // globals
+  .section-header {
+    font-size: 35px;
+    letter-spacing: 4px;
+  }
+
   // navbar
   .navbar-container {
     .navbar-items {
@@ -37,10 +43,6 @@ $screen-xs-max: 576px;
 
   //section service
   .section-service-container {
-    .section-service-header {
-      font-size: 20px;
-    }
-
     .section-service-items {
       .service-item {
         grid-template-columns: 1fr;
@@ -74,10 +76,6 @@ $screen-xs-max: 576px;
 
   // section knowledge
   .section-knowledge-container {
-    .section-knowledge-header {
-      font-size: 20px;
-    }
-
     .section-knowledge-items {
       .section-knowledge-item {
         grid-template-columns: 1fr;
@@ -111,10 +109,6 @@ $screen-xs-max: 576px;
     padding: 70px 0px 0px 0px;
 
     .gallery-container {
-      .gallery-header {
-        font-size: 20px;
-      }
-
       .img-gallery {
         gap: 0.5rem;
         grid-template-columns: 1fr;

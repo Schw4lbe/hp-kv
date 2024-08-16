@@ -21,16 +21,16 @@
     pointer-events: all;
 
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 
     background: rgba($color: $clr-secondary-dark-1, $alpha: 1);
-    height: 100%;
+    height: max-content;
     max-height: 200px;
     width: 100%;
     max-width: 320px;
-    padding-bottom: 2rem;
+    padding: 1rem 1rem 2rem 1rem;
 
     .contact-popup-content {
       display: flex;

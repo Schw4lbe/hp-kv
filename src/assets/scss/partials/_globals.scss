@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+
+.section-header {
+  text-align: center;
+  width: 100%;
+  color: $clr-primary-dark-2;
+  background: $clr-secondary;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Amatic";
+  letter-spacing: 5px;
+  padding: 0.5rem;
+}
+
+.popup-header {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Amatic";
+  letter-spacing: 4px;
+}
