@@ -1,18 +1,20 @@
 <template>
-  <div class="section-dev">
-    <div
-      @mouseenter="flipCard"
-      @mouseleave="flipCard"
-      v-for="(item, index) in knowledgeBaseData"
-      :key="index"
-      class="card"
-    >
+  <div class="section-knowledge-container">
+    <div v-for="(item, index) in knowledgeBaseData" :key="index" class="card">
       <div class="card-inner">
         <div class="card-front">
+          <p class="item-teaser">{{ item.teaser }}</p>
           <img class="item-image" :src="item.image" alt="dummy" />
+          <button @click="flipCard" class="show-details-btn">
+            Mehr erfahren...
+          </button>
         </div>
         <div class="card-back">
-          <p class="item-teaser">{{ item.teaser }}</p>
+          <h3 class="item-header">{{ item.header }}</h3>
+          <p class="item-description">{{ item.description }}</p>
+          <button @click="flipCard" class="hide-details-btn">
+            verstanden.
+          </button>
         </div>
       </div>
     </div>
@@ -54,7 +56,7 @@ export default {
     },
 
     flipCard(e) {
-      const card = e.target;
+      const card = e.target.closest(".card");
       card.classList.toggle("flipped");
     },
   },

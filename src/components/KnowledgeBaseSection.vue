@@ -1,25 +1,25 @@
 <template>
-  <section class="section-knowledge-container" id="section5">
-    <h3 class="section-knowledge-header section-header">{{ header }}</h3>
-
-    <div class="section-knowledge-items">
-      <div
-        v-for="(item, index) in knowledgeBaseData"
-        :key="index"
-        class="section-knowledge-item"
-      >
-        <div class="knowledge-item-image-container">
-          <img
-            class="knowledge-item-image"
-            :src="item.image"
-            alt="Beschreibungsbild"
-          />
-        </div>
-        <div class="knowledge-item-content">
-          <h4 class="knowledge-item-header">
-            {{ item.header }}
-          </h4>
-          <p class="knowledge-item-description">{{ item.description }}</p>
+  <section class="section-knowledge-container">
+    <h3 class="section-knowledge-header section-header" id="section5">
+      {{ header }}
+    </h3>
+    <div class="card-container">
+      <div v-for="(item, index) in knowledgeBaseData" :key="index" class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <p class="item-teaser">{{ item.teaser }}</p>
+            <img class="item-image" :src="item.image" alt="dummy" />
+            <button @click="flipCard" class="show-details-btn">
+              Mehr erfahren...
+            </button>
+          </div>
+          <div class="card-back">
+            <h3 class="item-header">{{ item.header }}</h3>
+            <p class="item-description">{{ item.description }}</p>
+            <button @click="flipCard" class="hide-details-btn">
+              verstanden.
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
 import data from "../assets/data/content.json";
 
 export default {
-  name: "KnowledgeBaseSection",
+  name: "devDummy",
 
   data() {
     return {
@@ -56,8 +56,14 @@ export default {
       return images.map((image, index) => ({
         image,
         header: content[index]?.header || "Default Title",
+        teaser: content[index]?.teaser || "Default Teaser",
         description: content[index]?.description || "Default Description",
       }));
+    },
+
+    flipCard(e) {
+      const card = e.target.closest(".card");
+      card.classList.toggle("flipped");
     },
   },
 };

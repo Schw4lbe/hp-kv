@@ -4,9 +4,10 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: $clr-secondary;
+  background: $clr-secondary-dark-1;
   height: 100px;
   width: 100%;
+  border-top: 1px solid $clr-primary;
 
   .footer-items {
     display: flex;

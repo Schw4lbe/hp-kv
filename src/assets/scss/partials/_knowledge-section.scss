@@ -2,62 +2,115 @@
 
 .section-knowledge-container {
   padding-top: $navbar-scroll-buffer;
+  padding-bottom: $navbar-scroll-buffer;
 
   background: $clr-secondary;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  text-align: center;
+  flex-wrap: wrap;
 
-  .section-knowledge-items {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  .card-container {
+    height: max-content;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 2rem 0;
 
-    padding-bottom: 1rem;
-    width: 100%;
-    color: $clr-primary;
+    .card {
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
 
-    .section-knowledge-item {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      color: $clr-primary;
-      width: 100%;
-      max-width: 1200px;
-      padding: 1rem;
-      margin-top: 2rem;
-      background: rgba($color: $clr-secondary-light-2, $alpha: 1);
+      .card-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 1s;
 
-      .knowledge-item-image-container {
-        display: flex;
-        justify-content: flex-start;
-
-        .knowledge-item-image {
-          display: block;
-          object-fit: contain;
-          max-width: 100%;
-          height: auto;
-          flex-shrink: 1;
-        }
-      }
-
-      .knowledge-item-content {
-        padding: 1rem;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-
-        .knowledge-item-header {
-          padding: 1rem;
+        .card-front,
+        .card-back {
+          height: 300px;
+          width: 300px;
+          position: absolute;
+          backface-visibility: hidden; /* Hide the back side during the rotation */
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          object-fit: cover;
         }
 
-        .knowledge-item-description {
-          line-height: 1.7;
-          padding: 0 1rem 1rem 1rem;
+        .card-front {
+          .item-image {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+          }
+
+          .item-teaser {
+            position: absolute;
+            top: 0;
+            color: $clr-primary-light-1;
+            background: rgba($color: $clr-secondary-dark-1, $alpha: 0.8);
+            padding: 0.5rem;
+            text-align: center;
+            height: auto;
+            width: 100%;
+            font-size: 20px;
+          }
+
+          .show-details-btn {
+            position: absolute;
+            bottom: 0;
+            margin: 1rem;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            background: $clr-primary-dark-1;
+            transition: all 0.2s;
+            &:hover {
+              background: $clr-primary-dark-4;
+            }
+          }
+        }
+
+        .card-back {
+          background: $clr-secondary-dark-1;
+
+          .item-header {
+            color: $clr-primary-dark-4;
+          }
+
+          .item-description {
+            padding: 1rem;
+            color: $clr-primary-light-1;
+          }
+
+          .hide-details-btn {
+            border: none;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            background: $clr-primary-dark-1;
+            transition: all 0.2s;
+            &:hover {
+              background: $clr-primary-dark-4;
+            }
+          }
         }
       }
     }
   }
+}
+
+/* Back side styling */
+.card-back {
+  transform: rotateX(180deg); /* Initially hide the back side */
+}
+
+/* Flip effect */
+.card.flipped .card-inner {
+  transform: rotateX(180deg); /* Flip the card */
 }

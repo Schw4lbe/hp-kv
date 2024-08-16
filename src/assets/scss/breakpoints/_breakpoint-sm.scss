@@ -40,4 +40,10 @@ $screen-sm-max: 768px;
       }
     }
   }
+
+  .section-knowledge-container {
+    .card-container {
+      grid-template-columns: 1fr !important;
+    }
+  }
 }

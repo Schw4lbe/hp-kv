@@ -43,4 +43,10 @@ $screen-md-max: 992px;
       }
     }
   }
+
+  .section-knowledge-container {
+    .card-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 }

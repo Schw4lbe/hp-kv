@@ -1,66 +1,106 @@
 @use "../abstracts/" as *;
 
-.section-dev {
-  height: max-content;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-  border: 1px solid tomato;
+.section-knowledge-container {
+  display: flex;
+  justify-content: center;
 
-  .card {
-    width: 300px;
-    height: 300px;
-    perspective: 1000px;
+  .card-container {
+    height: max-content;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
 
-    .card-inner {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transform-style: preserve-3d;
-      transition: transform 0.6s;
+    .card {
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
 
-      .card-front,
-      .card-back {
-        height: 300px;
-        width: 300px;
-        position: absolute;
-        backface-visibility: hidden; /* Hide the back side during the rotation */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 24px;
-        color: white;
-        object-fit: cover;
-      }
+      .card-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 1s;
 
-      .card-front {
-        .item-image {
+        .card-front,
+        .card-back {
           height: 300px;
           width: 300px;
+          position: absolute;
+          backface-visibility: hidden; /* Hide the back side during the rotation */
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
           object-fit: cover;
         }
-      }
-      .card-back {
-        .item-teaser {
-          text-align: center;
-          height: 100%;
-          width: 100%;
+
+        .card-front {
+          .item-image {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+          }
+
+          .item-teaser {
+            position: absolute;
+            top: 0;
+            color: $clr-primary-light-1;
+            background: rgba($color: $clr-secondary-dark-1, $alpha: 0.8);
+            padding: 0.5rem;
+            text-align: center;
+            height: auto;
+            width: 100%;
+            font-size: 20px;
+          }
+
+          .show-details-btn {
+            position: absolute;
+            bottom: 0;
+            margin: 1rem;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            background: $clr-primary-dark-1;
+            transition: all 0.2s;
+            &:hover {
+              background: $clr-primary-dark-4;
+            }
+          }
+        }
+
+        .card-back {
+          background: $clr-secondary-dark-1;
+
+          .item-header {
+            color: $clr-primary-dark-4;
+          }
+
+          .item-description {
+            padding: 1rem;
+            color: $clr-primary-light-1;
+          }
+
+          .hide-details-btn {
+            border: none;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            background: $clr-primary-dark-1;
+            transition: all 0.2s;
+            &:hover {
+              background: $clr-primary-dark-4;
+            }
+          }
         }
       }
     }
   }
 }
 
-/* Front side styling */
-.card-front {
-  background-color: #007bff;
-}
-
 /* Back side styling */
 .card-back {
-  background-color: #28a745;
   transform: rotateX(180deg); /* Initially hide the back side */
 }
 
