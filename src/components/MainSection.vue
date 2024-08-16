@@ -13,12 +13,8 @@
           {{ item.content }}
         </div>
       </div>
-      <div class="section-main-options">
-        <button class="main-option-btn">OPTION BUTTON</button>
-      </div>
     </div>
   </section>
-  <!-- <div class="section-main-separator"></div> -->
 </template>
 
 <script>

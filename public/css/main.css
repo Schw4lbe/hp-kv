@@ -192,12 +192,6 @@
 .section-main-container .section-main-banner-container .section-main-banner .banner-content {
   padding: 1rem;
 }
-.section-main-container .section-main-banner-container .section-main-options .main-option-btn {
-  padding: 0.5rem 1rem;
-  background: #ffd13c;
-  border: none;
-  border-radius: 0.5rem;
-}
 
 .section-service-container {
   padding-top: 80px;
@@ -690,9 +684,6 @@
   .section-main-container .section-main-banner-container .section-main-banner .banner-content {
     padding: 5px;
     font-size: 13px;
-  }
-  .section-main-container .section-main-banner-container .section-main-options {
-    padding-bottom: 0.5rem;
   }
   .section-service-container .section-service-header {
     font-size: 20px;
