@@ -25,21 +25,13 @@
     align-items: center;
     flex-direction: column;
 
-    background: tomato;
+    background: rgba($color: $clr-secondary-dark-1, $alpha: 1);
     height: 100%;
     max-height: 150px;
-    width: 100%;
+    width: max-content;
     min-width: 300px;
     max-width: 650px;
     padding-bottom: 2rem;
-
-    .close-popup {
-      position: absolute;
-      top: 0;
-      right: 0;
-      border: none;
-      padding: 0.5rem;
-    }
 
     .contact-popup-content {
       display: flex;
@@ -49,13 +41,27 @@
       width: 100%;
 
       .contact-popup-description {
-        padding: 1rem;
+        padding: 1.5rem;
         text-align: center;
+        color: $clr-primary;
       }
 
-      .contact-btn {
-        padding: 0.5rem 1rem;
-        border: none;
+      .contact-popup-btn-container {
+        .contact-btn,
+        .close-btn {
+          padding: 0.5rem 1rem;
+          border: none;
+          font-size: 14px;
+          font-weight: bold;
+          margin: 0 0.5rem;
+          width: 120px;
+          transition: all 0.2s;
+          background: $clr-primary-dark-1;
+
+          &:hover {
+            background-color: $clr-primary-dark-4;
+          }
+        }
       }
     }
   }

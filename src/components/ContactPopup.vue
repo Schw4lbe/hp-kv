@@ -5,14 +5,16 @@
     id="contact-popup-container"
   >
     <div class="contact-popup popup-slide-in-bottom" id="contact-popup">
-      <button @click="closePopup" class="close-popup">close</button>
       <div class="contact-popup-content">
         <p class="contact-popup-description">
           Schon einen Termin vereinbart? Nehmen Sie kontakt mit mir auf.
         </p>
-        <button @click="visitContactSection" class="contact-btn">
-          go to contact
-        </button>
+        <div class="contact-popup-btn-container">
+          <button @click="visitContactSection" class="contact-btn">
+            zum Kontakt
+          </button>
+          <button @click="closePopup" class="close-btn">später</button>
+        </div>
       </div>
     </div>
   </div>
