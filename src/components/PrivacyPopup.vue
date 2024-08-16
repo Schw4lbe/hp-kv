@@ -40,9 +40,13 @@ export default {
   methods: {
     showPopup() {
       this.popupVissible = true;
+      setTimeout(() => {
+        document.body.classList.add("scroll-disabled");
+      }, 500);
     },
 
     closePopup() {
+      document.body.classList.remove("scroll-disabled");
       const container = document.querySelector("#privacy-popup-container");
       const popup = document.querySelector("#privacy-popup");
       container.classList.remove("bgBlur");

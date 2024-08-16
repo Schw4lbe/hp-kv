@@ -4,6 +4,7 @@
   z-index: 99;
   position: fixed;
   bottom: 0;
+  pointer-events: none;
 
   display: flex;
   justify-content: flex-end;
@@ -16,9 +17,8 @@
 
   .contact-popup {
     position: relative;
-    // later on final value of -200px to have propper default
-    // bottom 0 only for dev reasons
     bottom: 0;
+    pointer-events: all;
 
     display: flex;
     justify-content: flex-start;
@@ -58,13 +58,5 @@
         border: none;
       }
     }
-  }
-
-  .popup-slide-in-bottom {
-    animation: popupSlideInBottom 0.5s ease-in 1 forwards;
-  }
-
-  .popup-slide-out-bottom {
-    animation: popupSlideOutBottom 0.5s ease-in 1 forwards;
   }
 }

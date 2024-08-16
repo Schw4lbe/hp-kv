@@ -31,7 +31,7 @@ export default {
   created() {
     setTimeout(() => {
       this.showPopup();
-    }, 20000);
+    }, 5000);
   },
 
   methods: {

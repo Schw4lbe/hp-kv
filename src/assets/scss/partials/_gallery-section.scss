@@ -1,14 +1,8 @@
 @use "../abstracts/" as *;
 
 .section-gallery-container {
-  // background-image: url("../img/sectiongallerybg.jpg");
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center;
-  background: $clr-secondary;
-
   padding: $navbar-scroll-buffer;
-
+  background: $clr-secondary;
   display: flex;
   justify-content: center;
   flex-direction: column;

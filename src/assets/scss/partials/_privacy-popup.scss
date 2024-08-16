@@ -16,8 +16,6 @@
 
   .privacy-popup {
     position: relative;
-    // later on final value of -200px to have propper default
-    // left 0 only for dev reasons
     bottom: 50%;
     left: 0;
 
@@ -56,20 +54,4 @@
       }
     }
   }
-
-  .popup-slide-in-left {
-    animation: popupSlideInLeft 0.5s ease-in 1 forwards;
-  }
-
-  .popup-slide-out-left {
-    animation: popupSlideOutLeft 0.5s ease-in 1 forwards;
-  }
-}
-
-.bgBlur {
-  animation: bgBlur 0.5s ease-in 1 forwards;
-}
-
-.bgBlurReverse {
-  animation: bgBlurReverse 0.5s ease-in 1 forwards;
 }

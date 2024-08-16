@@ -69,12 +69,12 @@
     overflow: hidden;
 
     .success {
-      color: #6dfc6d;
+      color: $clr-success;
       animation: msgPulse 0.3s linear 1 forwards;
     }
 
     .error {
-      color: tomato;
+      color: $clr-error;
       animation: msgPulse 0.3s linear 1 forwards;
     }
   }

@@ -1,0 +1,32 @@
+@use "../abstracts/" as *;
+
+// disable scroll for all elements
+.scroll-disabled {
+  overflow: hidden;
+}
+
+// contact popup
+.popup-slide-in-bottom {
+  animation: popupSlideInBottom 0.5s ease-in 1 forwards;
+}
+
+.popup-slide-out-bottom {
+  animation: popupSlideOutBottom 0.5s ease-in 1 forwards;
+}
+
+// privacy popup
+.popup-slide-in-left {
+  animation: popupSlideInLeft 0.5s ease-in 1 forwards;
+}
+
+.popup-slide-out-left {
+  animation: popupSlideOutLeft 0.5s ease-in 1 forwards;
+}
+
+.bgBlur {
+  animation: bgBlur 0.5s ease-in 1 forwards;
+}
+
+.bgBlurReverse {
+  animation: bgBlurReverse 0.5s ease-in 1 forwards;
+}
