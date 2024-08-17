@@ -302,7 +302,7 @@
 
 .section-service-container {
   padding-top: 80px;
-  background: #222;
+  background: #333;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -355,7 +355,7 @@
 .section-gallery-container {
   padding-top: 80px;
   padding-bottom: 3rem;
-  background: #222;
+  background: #333;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -418,7 +418,7 @@
 .section-knowledge-container {
   padding-top: 80px;
   padding-bottom: 80px;
-  background: #222;
+  background: #333;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -825,7 +825,7 @@
   text-align: center;
   width: 100%;
   color: #ffec7e;
-  background: #222;
+  background: #333;
   font-size: 45px;
   font-weight: bold;
   font-family: "Amatic";
