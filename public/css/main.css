@@ -376,7 +376,7 @@
   background-size: cover;
   background-position: center;
   padding-top: 80px;
-  min-height: 80vh;
+  min-height: 85vh;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -402,7 +402,7 @@
   backdrop-filter: sepia(100%);
   width: 100%;
   max-width: 850px;
-  margin: 2rem 0;
+  margin-top: 2rem;
 }
 .section-contact-container .section-contact-content .enable-contanct-info-container .enable-contact-info-description {
   color: #222;
@@ -448,7 +448,7 @@
   width: 100%;
   max-width: 850px;
   height: 100%;
-  margin: 2rem 0;
+  margin-top: 2rem;
 }
 .section-contact-container .section-contact-content .captcha-render-container .captcha-render-description {
   color: #222;
@@ -467,7 +467,7 @@
   flex-wrap: wrap;
   width: 100%;
   max-width: 850px;
-  margin: 2rem 0;
+  margin-top: 2rem;
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: sepia(100%);
 }
@@ -479,9 +479,8 @@
   line-height: 1.7;
   font-weight: bolder;
 }
-.section-contact-container .section-contact-content .contact-info-container .contact-info-description:nth-of-type(3) {
+.section-contact-container .section-contact-content .contact-info-container .contact-info-description:nth-of-type(2) {
   padding-bottom: 1rem;
-  margin-top: 2rem;
 }
 .section-contact-container .section-contact-content .contact-info-container .contact-info-list {
   display: flex;
@@ -490,21 +489,20 @@
   align-items: center;
   width: 100%;
   font-size: 18px;
-  margin-bottom: 2rem;
+  padding: 1rem;
 }
 .section-contact-container .section-contact-content .contact-info-container .contact-info-list li {
   list-style: none;
   line-height: 1.5;
   padding-bottom: 0.5rem;
-  margin-left: 3rem;
   width: 320px;
   font-size: 18px;
-  text-align: left;
   display: flex;
   align-items: center;
 }
 .section-contact-container .section-contact-content .contact-info-container .contact-info-list li .list-icon-front {
   margin-right: 0.5rem;
+  margin-left: 1rem;
   height: 18px;
   width: 18px;
   flex-shrink: 0;
@@ -810,13 +808,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   background: #111111;
   height: max-content;
   max-height: 200px;
   width: 100%;
-  max-width: 320px;
-  padding: 1rem 1rem 2rem 1rem;
+  max-width: 400px;
+  padding: 1rem;
 }
 .contact-popup-container .contact-popup .contact-popup-content {
   display: flex;
@@ -828,6 +825,7 @@
   padding: 0.5rem 0.5rem 0 0.5rem;
   text-align: center;
   color: #f5f5dc;
+  width: 100%;
 }
 .contact-popup-container .contact-popup .contact-popup-content .contact-popup-description:nth-of-type(2) {
   padding-bottom: 1rem;
@@ -836,10 +834,10 @@
 .contact-popup-container .contact-popup .contact-popup-content .contact-popup-btn-container .close-btn {
   padding: 0.5rem 1rem;
   border: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   margin: 0 0.5rem;
-  width: 120px;
+  width: 100px;
   transition: all 0.2s;
   background: #fdfda5;
 }
@@ -862,7 +860,7 @@
 }
 .privacy-popup-container .privacy-popup {
   position: relative;
-  bottom: 50%;
+  bottom: 20%;
   left: 0;
   display: flex;
   justify-content: center;
@@ -1002,6 +1000,10 @@
     margin: 0 3px;
     padding: 0.5rem 3px;
   }
+  .contact-popup-container .contact-popup {
+    border-top: 5px solid #ffd13c;
+    max-width: 100%;
+  }
   .section-main-container .section-main-banner-container {
     padding: 0;
   }
@@ -1011,15 +1013,26 @@
     padding: 0.5rem;
   }
   .section-main-container .section-main-banner-container .section-main-banner {
-    padding-bottom: 0.5rem;
+    padding: 1rem;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    background: none;
   }
   .section-main-container .section-main-banner-container .section-main-banner .banner-content {
+    text-align: center;
     padding: 5px;
-    font-size: 13px;
+    font-size: 30px;
   }
   .section-service-container .section-service-items .service-item {
     grid-template-columns: 1fr;
-    padding: 0 0 1rem 0;
+    gap: 0px;
+    padding: 2rem 1rem;
+    margin: 0 !important;
+    border-bottom: 1px solid #f5f5dc;
+  }
+  .section-service-container .section-service-items .service-item:nth-last-of-type(1) {
+    border: none;
   }
   .section-service-container .section-service-items .service-item .service-content-container {
     padding: 1rem 0;
@@ -1039,39 +1052,20 @@
   .section-service-container .section-service-items .service-item .service-item-image-container .service-item-image {
     max-width: 300px;
   }
-  .section-knowledge-container .section-knowledge-items .section-knowledge-item {
-    grid-template-columns: 1fr;
-    padding: 1rem 0 0 0;
-  }
-  .section-knowledge-container .section-knowledge-items .section-knowledge-item .knowledge-item-image-container {
-    justify-content: center;
-    width: 100%;
-  }
-  .section-knowledge-container .section-knowledge-items .section-knowledge-item .knowledge-item-image-container .knowledge-item-image {
-    max-width: 300px;
-  }
-  .section-knowledge-container .section-knowledge-items .section-knowledge-item .knowledge-item-content {
-    padding: 1rem 0;
-  }
-  .section-knowledge-container .section-knowledge-items .section-knowledge-item .knowledge-item-content .knowledge-item-header {
-    padding: 0 0 1rem 0;
-  }
-  .section-knowledge-container .section-knowledge-items .section-knowledge-item .knowledge-item-content .knowledge-item-description {
-    padding: 0 0.5rem;
-  }
   .section-gallery-container {
     padding: 70px 0px 0px 0px;
   }
   .section-gallery-container .gallery-container .img-gallery {
     gap: 0.5rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    padding: 1rem;
   }
   .section-gallery-container .gallery-container .img-gallery .gallery-item {
-    padding: 0.5rem;
+    padding: 1rem;
   }
   .section-gallery-container .gallery-container .img-gallery .gallery-item .gallery-item-header,
   .section-gallery-container .gallery-container .img-gallery .gallery-item .gallery-item-description {
-    padding: 0.5rem 0;
+    padding: 1rem;
   }
   .section-gallery-container .gallery-container .modal-render-container .modal-container .close-modal-btn,
   .section-gallery-container .gallery-container .modal-render-container .modal-container .next-image,
@@ -1095,6 +1089,56 @@
     position: fixed;
     top: 80%;
     left: 15px;
+  }
+  .section-contact-container .section-subheader {
+    font-size: 30px;
+    padding: 1rem 1rem 0 1rem;
+  }
+  .section-contact-container .section-contact-content .enable-contanct-info-container .enable-contact-info-description {
+    padding: 1rem 0.5rem 0 0.5rem;
+    font-size: 16px;
+  }
+  .section-contact-container .section-contact-content .captcha-render-container .captcha-render-description {
+    font-size: 16px;
+  }
+  .section-contact-container .section-contact-content .contact-info-container {
+    text-align: left;
+  }
+  .section-contact-container .section-contact-content .contact-info-container .contact-info-description {
+    font-size: 16px;
+    margin: 0 !important;
+  }
+  .section-contact-container .section-contact-content .contact-info-container .contact-info-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+  }
+  .section-contact-container .section-contact-content .contact-info-container .contact-info-list li {
+    font-size: 14px;
+  }
+  .section-contact-container .section-contact-content .contact-info-container .contact-email {
+    justify-content: flex-start;
+  }
+  .section-knowledge-container .section-knowledge-items .section-knowledge-item {
+    grid-template-columns: 1fr;
+    padding: 1rem 0 0 0;
+  }
+  .section-knowledge-container .section-knowledge-items .section-knowledge-item .knowledge-item-image-container {
+    justify-content: center;
+    width: 100%;
+  }
+  .section-knowledge-container .section-knowledge-items .section-knowledge-item .knowledge-item-image-container .knowledge-item-image {
+    max-width: 300px;
+  }
+  .section-knowledge-container .section-knowledge-items .section-knowledge-item .knowledge-item-content {
+    padding: 1rem 0;
+  }
+  .section-knowledge-container .section-knowledge-items .section-knowledge-item .knowledge-item-content .knowledge-item-header {
+    padding: 0 0 1rem 0;
+  }
+  .section-knowledge-container .section-knowledge-items .section-knowledge-item .knowledge-item-content .knowledge-item-description {
+    padding: 0 0.5rem;
   }
 }
 @media (max-width: 768px) {

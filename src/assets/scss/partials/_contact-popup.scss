@@ -23,26 +23,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 
     background: rgba($color: $clr-secondary-dark-1, $alpha: 1);
     height: max-content;
     max-height: 200px;
     width: 100%;
-    max-width: 320px;
-    padding: 1rem 1rem 2rem 1rem;
+    max-width: 400px;
+    padding: 1rem;
 
     .contact-popup-content {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      // width: 100%;
 
       .contact-popup-description {
         padding: 0.5rem 0.5rem 0 0.5rem;
         text-align: center;
         color: $clr-primary;
+        width: 100%;
         &:nth-of-type(2) {
           padding-bottom: 1rem;
         }
@@ -53,10 +52,10 @@
         .close-btn {
           padding: 0.5rem 1rem;
           border: none;
-          font-size: 14px;
+          font-size: 16px;
           font-weight: bold;
           margin: 0 0.5rem;
-          width: 120px;
+          width: 100px;
           transition: all 0.2s;
           background: $clr-primary-dark-1;
 

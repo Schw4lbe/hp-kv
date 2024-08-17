@@ -1,3 +1,5 @@
+@use "../abstracts/" as *;
+
 $screen-xs-max: 576px;
 
 @media (max-width: $screen-xs-max) {
@@ -19,6 +21,14 @@ $screen-xs-max: 576px;
     }
   }
 
+  // popups
+  .contact-popup-container {
+    .contact-popup {
+      border-top: 5px solid $clr-primary-dark-4;
+      max-width: 100%;
+    }
+  }
+
   // section main
   .section-main-container {
     .section-main-banner-container {
@@ -32,10 +42,16 @@ $screen-xs-max: 576px;
       }
 
       .section-main-banner {
-        padding-bottom: 0.5rem;
+        padding: 1rem;
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        background: none;
+
         .banner-content {
+          text-align: center;
           padding: 5px;
-          font-size: 13px;
+          font-size: 30px;
         }
       }
     }
@@ -46,8 +62,13 @@ $screen-xs-max: 576px;
     .section-service-items {
       .service-item {
         grid-template-columns: 1fr;
-        padding: 0 0 1rem 0;
-
+        gap: 0px;
+        padding: 2rem 1rem;
+        margin: 0 !important;
+        border-bottom: 1px solid $clr-primary;
+        &:nth-last-of-type(1) {
+          border: none;
+        }
         .service-content-container {
           padding: 1rem 0;
           text-align: center;
@@ -74,51 +95,22 @@ $screen-xs-max: 576px;
     }
   }
 
-  // section knowledge
-  .section-knowledge-container {
-    .section-knowledge-items {
-      .section-knowledge-item {
-        grid-template-columns: 1fr;
-        padding: 1rem 0 0 0;
-
-        .knowledge-item-image-container {
-          justify-content: center;
-          width: 100%;
-
-          .knowledge-item-image {
-            max-width: 300px;
-          }
-        }
-
-        .knowledge-item-content {
-          padding: 1rem 0;
-
-          .knowledge-item-header {
-            padding: 0 0 1rem 0;
-          }
-
-          .knowledge-item-description {
-            padding: 0 0.5rem;
-          }
-        }
-      }
-    }
-  }
-
+  // section gallery
   .section-gallery-container {
     padding: 70px 0px 0px 0px;
 
     .gallery-container {
       .img-gallery {
         gap: 0.5rem;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        padding: 1rem;
 
         .gallery-item {
-          padding: 0.5rem;
+          padding: 1rem;
 
           .gallery-item-header,
           .gallery-item-description {
-            padding: 0.5rem 0;
+            padding: 1rem;
           }
         }
       }
@@ -150,6 +142,83 @@ $screen-xs-max: 576px;
             position: fixed;
             top: 80%;
             left: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  // section contact
+  .section-contact-container {
+    // global
+    .section-subheader {
+      font-size: 30px;
+      padding: 1rem 1rem 0 1rem;
+    }
+
+    .section-contact-content {
+      .enable-contanct-info-container {
+        .enable-contact-info-description {
+          padding: 1rem 0.5rem 0 0.5rem;
+          font-size: 16px;
+        }
+      }
+
+      .captcha-render-container {
+        .captcha-render-description {
+          font-size: 16px;
+        }
+      }
+
+      .contact-info-container {
+        text-align: left;
+        .contact-info-description {
+          font-size: 16px;
+          margin: 0 !important;
+        }
+
+        .contact-info-list {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: start;
+          li {
+            font-size: 14px;
+          }
+        }
+
+        .contact-email {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+
+  // section knowledge
+  .section-knowledge-container {
+    .section-knowledge-items {
+      .section-knowledge-item {
+        grid-template-columns: 1fr;
+        padding: 1rem 0 0 0;
+
+        .knowledge-item-image-container {
+          justify-content: center;
+          width: 100%;
+
+          .knowledge-item-image {
+            max-width: 300px;
+          }
+        }
+
+        .knowledge-item-content {
+          padding: 1rem 0;
+
+          .knowledge-item-header {
+            padding: 0 0 1rem 0;
+          }
+
+          .knowledge-item-description {
+            padding: 0 0.5rem;
           }
         }
       }

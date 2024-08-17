@@ -39,11 +39,11 @@ export default {
     };
   },
 
-  // created() {
-  //   setTimeout(() => {
-  //     this.showPopup();
-  //   }, 5000);
-  // },
+  created() {
+    setTimeout(() => {
+      this.showPopup();
+    }, 10000);
+  },
 
   methods: {
     showPopup() {

@@ -24,5 +24,6 @@ h3 {
   padding-bottom: 10px;
   width: 100%;
   text-align: center;
+  background: beige;
 }
 </style>

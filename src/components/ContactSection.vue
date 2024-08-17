@@ -39,10 +39,8 @@
         <h4 class="section-subheader">Die nächsten Schritte</h4>
 
         <p class="contact-info-description">
-          Vorstellungen und Wünschen können sehr individuell ausfallen.
-        </p>
-        <p class="contact-info-description">
-          Lassen Sie uns gern im Vorfeld unverbindlich miteinander sprechen.
+          Vorstellungen und Wünschen können sehr individuell ausfallen. Lassen
+          Sie uns gern im Vorfeld unverbindlich miteinander sprechen.
         </p>
         <p class="contact-info-description">
           Für eine optimale Gesprächsvorbereitung, benötige ich im besten Fall
