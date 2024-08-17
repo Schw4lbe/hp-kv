@@ -55,11 +55,7 @@
 
 ### KnowledgeBaseSection
 
-- have cards with image and short header displayed
-- on hover rotate to backside with short text and button "see more info"
-- in desktop view auto rotate first item infinite/2 - 3 times (15sec intervall)
-- on mobile always rotate image in viewport middle (Intersection Observer API)
-- remove/add certain classes whenever a breakpoint is reached (window.matchMedia())
+- ok
 
 ### MainSection
 
@@ -68,6 +64,7 @@
 ### NavbarMain
 
 - navbar current item highlight
+- navbar in desktop making text bigger and icon next to text (feels strange having this small of a navbar in desktop view right now)
 
 ### PrivacyPopup
 
