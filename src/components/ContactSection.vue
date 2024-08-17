@@ -7,16 +7,21 @@
         class="enable-contanct-info-container"
         v-if="captchaEnabled === false"
       >
-        <h4 class="section-subheader">Haben Sie Fragen?</h4>
-        <p class="enable-contact-info-description">
-          Schreiben Sie mir gern eine E-Mail.
-        </p>
-        <p class="enable-contact-info-description">
-          Nutzen Sie die folgende Schaltfläche zur Anzeige meiner Kontaktdaten.
+        <h4 class="section-subheader">{{ enableCaptchaData.header }}</h4>
+        <p
+          v-for="(item, index) in enableCaptchaData.description"
+          :key="index"
+          class="enable-contact-info-description"
+        >
+          {{ item }}
         </p>
         <button @click="enableCaptcha" class="enable-contact-info-btn">
-          <img class="btn-icon" :src="btnIcon" alt="Kontakt Icon" />
-          {{ button }}
+          <img
+            class="enable-contact-btn-icon"
+            :src="enableBtnIcon"
+            alt="Kontakt Icon"
+          />
+          {{ enableCaptchaData.button }}
         </button>
       </div>
 
@@ -24,61 +29,36 @@
         class="captcha-render-container"
         v-if="captchaEnabled === true && contactVissible === false"
       >
-        <h4 class="section-subheader">Verifizierung</h4>
-
-        <p class="captcha-render-description">
-          Bitte lösen Sie die folgende Aufgabe zur Verifizierung.
-        </p>
-        <p class="captcha-render-description">
-          Groß- und Kleinschreibung spielt dabei keine Rolle.
+        <h4 class="section-subheader">{{ verificationData.header }}</h4>
+        <p
+          v-for="(item, index) in verificationData.description"
+          :key="index"
+          class="captcha-render-description"
+        >
+          {{ item }}
         </p>
         <ContactCaptcha @show-contact="showContactInfo" />
       </div>
 
       <div v-if="contactVissible === true" class="contact-info-container">
-        <h4 class="section-subheader">Die nächsten Schritte</h4>
-
-        <p class="contact-info-description">
-          Vorstellungen und Wünschen können sehr individuell ausfallen. Lassen
-          Sie uns gern im Vorfeld unverbindlich miteinander sprechen.
-        </p>
-        <p class="contact-info-description">
-          Für eine optimale Gesprächsvorbereitung, benötige ich im besten Fall
-          die folgenden Infos.
+        <h4 class="section-subheader">{{ infoData.header }}</h4>
+        <p
+          v-for="(item, index) in infoData.description"
+          :key="index"
+          class="contact-info-description"
+        >
+          {{ item }}
         </p>
         <ul class="contact-info-list">
-          <li>
-            <img
-              :src="listIcon"
-              alt="List Icon"
-              class="list-icon-front"
-            />präzise Beschreibung der Arbeit
-          </li>
-          <li>
-            <img
-              :src="listIcon"
-              alt="List Icon"
-              class="list-icon-front"
-            />Bilder, Pläne & Co. der Szenerie
-          </li>
-          <li>
-            <img
-              :src="listIcon"
-              alt="List Icon"
-              class="list-icon-front"
-            />geschätze Preisvorstellung
-          </li>
-          <li>
-            <img
-              :src="listIcon"
-              alt="List Icon"
-              class="list-icon-front"
-            />Anschrift und Parkmöglichkeit
+          <li v-for="(item, index) in infoData.infoOptions" :key="index">
+            <img :src="listIcon" alt="List Icon" class="list-icon-front" />{{
+              item
+            }}
           </li>
         </ul>
         <div class="contact-email">
           <img class="contact-email-icon" :src="mailIcon" alt="" />
-          Email: <span>{{ contactInfo.email }}</span>
+          <span>{{ infoData.email }}</span>
         </div>
       </div>
     </div>
@@ -86,10 +66,11 @@
 </template>
 
 <script>
-import ButtonIcon from "../../public/img/icons/contact-btn-icon.svg";
+import data from "../assets/data/content.json";
+import EnableBtnIcon from "../../public/img/icons/contact-btn-icon.svg";
 import ListIcon from "../../public/img/icons/list-icon.svg";
 import MailIcon from "../../public/img/icons/navIcons/04nav-contact.svg";
-import data from "../assets/data/content.json";
+
 import ContactCaptcha from "../components/ContactCaptcha.vue";
 
 export default {
@@ -101,12 +82,20 @@ export default {
 
   data() {
     return {
-      btnIcon: ButtonIcon,
+      header: data.contactSection.content.header,
+
+      // enable captcha
+      enableCaptchaData: data.contactSection.content.enableCaptcha,
+      enableBtnIcon: EnableBtnIcon,
+
+      // verification
+      verificationData: data.contactSection.content.verification,
+
+      // contact info
+      infoData: data.contactSection.content.infoData,
       listIcon: ListIcon,
       mailIcon: MailIcon,
-      contactInfo: data.contactSection.contactInfoData,
-      header: data.contactSection.content.header,
-      button: data.contactSection.content.button,
+
       captchaEnabled: false,
       contactVissible: false,
     };
