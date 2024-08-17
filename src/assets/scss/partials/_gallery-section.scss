@@ -1,7 +1,9 @@
 @use "../abstracts/" as *;
 
 .section-gallery-container {
-  padding: $navbar-scroll-buffer;
+  padding-top: $navbar-scroll-buffer;
+  padding-bottom: 3rem;
+
   background: $clr-secondary;
   display: flex;
   justify-content: center;

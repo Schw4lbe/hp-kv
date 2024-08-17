@@ -92,31 +92,31 @@
   font-weight: normal;
   font-style: normal;
 }
-.section-knowledge-container {
+.section-dev {
   display: flex;
   justify-content: center;
 }
-.section-knowledge-container .card-container {
+.section-dev .card-container {
   height: max-content;
   max-width: 1200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
 }
-.section-knowledge-container .card-container .card {
+.section-dev .card-container .card {
   width: 300px;
   height: 300px;
   perspective: 1000px;
 }
-.section-knowledge-container .card-container .card .card-inner {
+.section-dev .card-container .card .card-inner {
   width: 100%;
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 1s;
 }
-.section-knowledge-container .card-container .card .card-inner .card-front,
-.section-knowledge-container .card-container .card .card-inner .card-back {
+.section-dev .card-container .card .card-inner .card-front,
+.section-dev .card-container .card .card-inner .card-back {
   height: 300px;
   width: 300px;
   position: absolute;
@@ -128,12 +128,12 @@
   text-align: center;
   object-fit: cover;
 }
-.section-knowledge-container .card-container .card .card-inner .card-front .item-image {
+.section-dev .card-container .card .card-inner .card-front .item-image {
   height: 300px;
   width: 300px;
   object-fit: cover;
 }
-.section-knowledge-container .card-container .card .card-inner .card-front .item-teaser {
+.section-dev .card-container .card .card-inner .card-front .item-teaser {
   position: absolute;
   top: 0;
   color: #fff;
@@ -144,7 +144,7 @@
   width: 100%;
   font-size: 20px;
 }
-.section-knowledge-container .card-container .card .card-inner .card-front .show-details-btn {
+.section-dev .card-container .card .card-inner .card-front .show-details-btn {
   position: absolute;
   bottom: 0;
   margin: 1rem;
@@ -154,27 +154,27 @@
   background: #fdfda5;
   transition: all 0.2s;
 }
-.section-knowledge-container .card-container .card .card-inner .card-front .show-details-btn:hover {
+.section-dev .card-container .card .card-inner .card-front .show-details-btn:hover {
   background: #ffd13c;
 }
-.section-knowledge-container .card-container .card .card-inner .card-back {
+.section-dev .card-container .card .card-inner .card-back {
   background: #111;
 }
-.section-knowledge-container .card-container .card .card-inner .card-back .item-header {
+.section-dev .card-container .card .card-inner .card-back .item-header {
   color: #ffd13c;
 }
-.section-knowledge-container .card-container .card .card-inner .card-back .item-description {
+.section-dev .card-container .card .card-inner .card-back .item-description {
   padding: 1rem;
   color: #fff;
 }
-.section-knowledge-container .card-container .card .card-inner .card-back .hide-details-btn {
+.section-dev .card-container .card .card-inner .card-back .hide-details-btn {
   border: none;
   padding: 0.5rem 1rem;
   font-weight: bold;
   background: #fdfda5;
   transition: all 0.2s;
 }
-.section-knowledge-container .card-container .card .card-inner .card-back .hide-details-btn:hover {
+.section-dev .card-container .card .card-inner .card-back .hide-details-btn:hover {
   background: #ffd13c;
 }
 
@@ -278,7 +278,7 @@
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
   filter: none;
-  backdrop-filter: blur(5px) grayscale(100%) brightness(80%);
+  backdrop-filter: blur(5px) grayscale(100%) brightness(150%);
 }
 .section-main-container .section-main-banner-container .section-main-logo .logo {
   object-fit: cover;
@@ -290,6 +290,8 @@
 .section-main-container .section-main-banner-container .section-main-banner {
   display: flex;
   justify-content: center;
+  width: 100%;
+  background: #111;
   border-top: 1px solid #fdfda5;
 }
 .section-main-container .section-main-banner-container .section-main-banner .banner-content {
@@ -321,8 +323,8 @@
   width: 100%;
   max-width: 1200px;
   padding: 1rem;
-  margin-top: 2rem;
-  background: #444444;
+  margin-bottom: 2rem;
+  background: #111111;
 }
 .section-service-container .section-service-items .service-item .service-content-container {
   display: flex;
@@ -347,10 +349,12 @@
   max-width: 100%;
   height: auto;
   flex-shrink: 1;
+  border-radius: 2rem;
 }
 
 .section-gallery-container {
-  padding: 80px;
+  padding-top: 80px;
+  padding-bottom: 3rem;
   background: #222;
   display: flex;
   justify-content: center;
@@ -369,6 +373,9 @@
   justify-content: flex-start;
   flex-direction: column;
   text-align: center;
+}
+.section-contact-container .section-contact-header {
+  padding: 0.5rem;
 }
 .section-contact-container .section-contact-content {
   display: flex;
@@ -422,7 +429,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
-  padding: 2rem 0;
 }
 .section-knowledge-container .card-container .card {
   width: 300px;
@@ -517,6 +523,7 @@
   color: #f5f5dc;
   height: 100%;
   width: 100%;
+  max-width: 1200px;
 }
 .gallery-container .img-gallery {
   display: grid;
@@ -533,15 +540,23 @@
   padding: 1rem;
 }
 .gallery-container .img-gallery .gallery-item .gallery-item-header {
+  width: 100%;
+  text-align: center;
   padding: 1rem;
+  background: #111;
+  color: #f5f5dc;
+  font-size: 18px;
 }
 .gallery-container .img-gallery .gallery-item .gallery-item-image {
   width: 100%;
   object-fit: cover;
 }
 .gallery-container .img-gallery .gallery-item .gallery-item-description {
+  width: 100%;
   text-align: center;
   padding: 1rem;
+  background: #111;
+  color: #fff;
 }
 
 .modal-render-container {
@@ -815,7 +830,7 @@
   font-weight: bold;
   font-family: "Amatic";
   letter-spacing: 5px;
-  padding: 0.5rem;
+  padding: 2rem;
 }
 
 .popup-header {

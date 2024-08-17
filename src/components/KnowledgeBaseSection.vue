@@ -1,6 +1,6 @@
 <template>
-  <section class="section-knowledge-container">
-    <h3 class="section-knowledge-header section-header" id="section5">
+  <section class="section-knowledge-container" id="section5">
+    <h3 class="section-knowledge-header section-header">
       {{ header }}
     </h3>
     <div class="card-container">

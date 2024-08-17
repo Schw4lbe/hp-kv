@@ -9,6 +9,7 @@
   color: $clr-primary;
   height: 100%;
   width: 100%;
+  max-width: 1200px;
 
   .img-gallery {
     display: grid;
@@ -25,7 +26,12 @@
       padding: 1rem;
 
       .gallery-item-header {
+        width: 100%;
+        text-align: center;
         padding: 1rem;
+        background: $clr-secondary-dark-1;
+        color: $clr-primary;
+        font-size: 18px;
       }
 
       .gallery-item-image {
@@ -34,8 +40,11 @@
       }
 
       .gallery-item-description {
+        width: 100%;
         text-align: center;
         padding: 1rem;
+        background: $clr-secondary-dark-1;
+        color: $clr-primary-light-1;
       }
     }
   }

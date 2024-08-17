@@ -23,7 +23,7 @@
     width: 100%;
     background: rgba($color: $clr-secondary-dark-2, $alpha: 0.4);
     filter: none;
-    backdrop-filter: blur(5px) grayscale(100%) brightness(80%);
+    backdrop-filter: blur(5px) grayscale(100%) brightness(150%);
 
     .section-main-logo {
       .logo {
@@ -38,6 +38,8 @@
     .section-main-banner {
       display: flex;
       justify-content: center;
+      width: 100%;
+      background: #111;
       border-top: 1px solid $clr-primary-dark-1;
 
       .banner-content {
