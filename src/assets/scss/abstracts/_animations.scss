@@ -3,13 +3,16 @@
 // contact info pulse in
 @keyframes pulse {
   0% {
-    background: rgba($color: $clr-primary-light-1, $alpha: 0.8);
+    background: rgba($color: $clr-primary-light-1, $alpha: 0);
   }
-  50% {
+  33% {
     background: $clr-primary-dark-4;
   }
+  66% {
+    background: rgba($color: $clr-primary-light-1, $alpha: 0);
+  }
   100% {
-    background: rgba($color: $clr-primary-light-1, $alpha: 0.8);
+    background: $clr-primary-dark-4;
   }
 }
 
