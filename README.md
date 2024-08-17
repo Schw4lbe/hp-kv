@@ -27,12 +27,7 @@
 
 ### ContactSection
 
-- add desc. text for contact section
-- add desc. text to explain purpose of captcha
-- position text on captcha position
-- make text disapear on captcha activate
-- after captcha display new text
-- new text content gives advice on e-mail info for better help
+- ok
 
 ### FooterMain
 
