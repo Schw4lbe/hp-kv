@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 import data from "../assets/data/content.json";
 
 export default {
@@ -45,6 +46,8 @@ export default {
   },
 
   methods: {
+    ...mapMutations(["setUserVerified"]),
+
     checkSolutionLength() {
       if (this.solution.length >= 4) {
         this.submitCaptcha();
@@ -56,6 +59,7 @@ export default {
       const honeypot = document.querySelector("#captcha-repeat").value;
 
       if (solution === this.captchaPhrase && honeypot === "") {
+        this.setUserVerified(true);
         this.captchaSolved = true;
         setTimeout(() => {
           this.$emit("show-contact");

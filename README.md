@@ -10,8 +10,6 @@
 
 ### ContactCaptcha
 
-- cut out last empty string in captcha
-- check why typing on enter on smartphone leads to scrool up to top instead of assigning the captcha phrase correctly
 - assign captcha state for solving persistant
 
 ### ContactPopup

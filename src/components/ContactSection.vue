@@ -66,6 +66,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import data from "../assets/data/content.json";
 import EnableBtnIcon from "../../public/img/icons/contact-btn-icon.svg";
 import ListIcon from "../../public/img/icons/list-icon.svg";
@@ -101,7 +102,24 @@ export default {
     };
   },
 
+  computed: {
+    ...mapGetters(["getUserVerifiedStatus"]),
+  },
+
+  created() {
+    this.checkVerificationStatus(this.getUserVerifiedStatus);
+  },
+
   methods: {
+    checkVerificationStatus(bool) {
+      if (bool === true) {
+        this.captchaEnabled = true;
+        this.contactVissible = true;
+      } else {
+        return;
+      }
+    },
+
     enableCaptcha() {
       this.captchaEnabled = true;
       setTimeout(() => {

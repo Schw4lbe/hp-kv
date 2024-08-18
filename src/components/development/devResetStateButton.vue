@@ -11,10 +11,11 @@ export default {
   name: "devResetStateButton",
 
   methods: {
-    ...mapMutations(["resetPrivacyPopupStatus"]),
+    ...mapMutations(["resetPrivacyPopupStatus", "resetUserVerified"]),
 
     onClickResetStates() {
       this.resetPrivacyPopupStatus(false);
+      this.resetUserVerified(false);
     },
   },
 };
