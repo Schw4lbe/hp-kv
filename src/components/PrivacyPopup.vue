@@ -45,11 +45,11 @@ export default {
     };
   },
 
-  created() {
-    setTimeout(() => {
-      this.showPopup();
-    }, 1000);
-  },
+  // created() {
+  //   setTimeout(() => {
+  //     this.showPopup();
+  //   }, 1000);
+  // },
 
   methods: {
     showPopup() {

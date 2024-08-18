@@ -26,7 +26,6 @@ h2 {
 .dev-container {
   background: #222;
   color: beige;
-  height: 1800px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

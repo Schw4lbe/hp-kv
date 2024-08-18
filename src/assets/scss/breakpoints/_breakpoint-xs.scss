@@ -115,36 +115,36 @@ $screen-xs-max: 576px;
         }
       }
 
-      .modal-render-container {
-        .modal-container {
-          .close-modal-btn,
-          .next-image,
-          .prev-image {
-            height: 20px;
-            width: 20px;
-            background: none;
-            border: none;
-          }
+      // .modal-render-container {
+      //   .modal-container {
+      //     .close-modal-btn,
+      //     .next-image,
+      //     .prev-image {
+      //       height: 20px;
+      //       width: 20px;
+      //       background: none;
+      //       border: none;
+      //     }
 
-          .close-modal-btn {
-            position: fixed;
-            top: 25px;
-            right: 25px;
-          }
+      //     .close-modal-btn {
+      //       position: fixed;
+      //       top: 25px;
+      //       right: 25px;
+      //     }
 
-          .next-image {
-            position: fixed;
-            top: 80%;
-            right: 15px;
-          }
+      //     .next-image {
+      //       position: fixed;
+      //       top: 80%;
+      //       right: 15px;
+      //     }
 
-          .prev-image {
-            position: fixed;
-            top: 80%;
-            left: 15px;
-          }
-        }
-      }
+      //     .prev-image {
+      //       position: fixed;
+      //       top: 80%;
+      //       left: 15px;
+      //     }
+      //   }
+      // }
     }
   }
 

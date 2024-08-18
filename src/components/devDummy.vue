@@ -1,65 +1,51 @@
 <template>
   <div class="section-dev">
-    <div class="card-container">
-      <div v-for="(item, index) in knowledgeBaseData" :key="index" class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <p class="item-teaser">{{ item.teaser }}</p>
-            <img class="item-image" :src="item.image" alt="dummy" />
-            <button @click="flipCard" class="show-details-btn">
-              Mehr erfahren...
-            </button>
-          </div>
-          <div class="card-back">
-            <h3 class="item-header">{{ item.header }}</h3>
-            <p class="item-description">{{ item.description }}</p>
-            <button @click="flipCard" class="hide-details-btn">
-              verstanden.
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <img
+      @touchstart="touchStart"
+      @touchmove="touchMove"
+      @touchend="touchEnd"
+      src="../../public/img/galleryImg/galleryimg01.jpg"
+      alt=""
+    />
   </div>
 </template>
 
 <script>
-import data from "../assets/data/content.json";
-
 export default {
   name: "devDummy",
 
   data() {
     return {
-      knowledgeBaseData: this.importKnowledgeBaseData(),
+      startX: 0,
+      endX: 0,
     };
   },
 
   methods: {
-    importAllImages() {
-      const context = require.context(
-        "../../public/img/knowledgeImg",
-        false,
-        /\.(png|jpe?g|svg)$/
-      );
-      return context.keys().map(context);
+    touchStart(e) {
+      this.startX = e.touches[0].clientX;
     },
 
-    importKnowledgeBaseData() {
-      const images = this.importAllImages();
-      const content = data.knowledgeSection.knowledgeData;
-
-      return images.map((image, index) => ({
-        image,
-        header: content[index]?.header || "Default Title",
-        teaser: content[index]?.teaser || "Default Teaser",
-        description: content[index]?.description || "Default Description",
-      }));
+    touchMove(e) {
+      e.preventDefault();
     },
 
-    flipCard(e) {
-      const card = e.target.closest(".card");
-      card.classList.toggle("flipped");
+    touchEnd(e) {
+      this.endX = e.changedTouches[0].clientX;
+      this.handleSwipe();
+    },
+
+    handleSwipe() {
+      const minX = 50;
+      const diffX = this.startX - this.endX;
+
+      if (diffX > minX) {
+        console.log("swipe left.");
+      } else if (diffX < -minX) {
+        console.log("swipe right.");
+      } else {
+        console.log("no action.");
+      }
     },
   },
 };

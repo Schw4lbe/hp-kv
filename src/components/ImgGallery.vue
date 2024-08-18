@@ -92,7 +92,7 @@ export default {
       const targetIndex = e.target.id;
       this.currentIndex = targetIndex;
       this.viewModal = true;
-      document.body.classList.add("scroll-disabled");
+      // document.body.classList.add("scroll-disabled");
       this.updateModalData(targetIndex);
     },
 

@@ -95,100 +95,11 @@
   font-weight: normal;
   font-style: normal;
 }
-.section-dev {
-  display: flex;
-  justify-content: center;
-}
-.section-dev .card-container {
-  height: max-content;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-}
-.section-dev .card-container .card {
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-}
-.section-dev .card-container .card .card-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-}
-.section-dev .card-container .card .card-inner .card-front,
-.section-dev .card-container .card .card-inner .card-back {
-  height: 300px;
-  width: 300px;
-  position: absolute;
-  backface-visibility: hidden; /* Hide the back side during the rotation */
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.section-dev img {
+  padding: 4rem;
+  height: 400px;
+  width: auto;
   object-fit: cover;
-}
-.section-dev .card-container .card .card-inner .card-front .item-image {
-  height: 300px;
-  width: 300px;
-  object-fit: cover;
-}
-.section-dev .card-container .card .card-inner .card-front .item-teaser {
-  position: absolute;
-  top: 0;
-  color: #fff;
-  background: rgba(17, 17, 17, 0.8);
-  padding: 0.5rem;
-  text-align: center;
-  height: auto;
-  width: 100%;
-  font-size: 20px;
-}
-.section-dev .card-container .card .card-inner .card-front .show-details-btn {
-  position: absolute;
-  bottom: 0;
-  margin: 1rem;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  background: #fdfda5;
-  transition: all 0.2s;
-}
-.section-dev .card-container .card .card-inner .card-front .show-details-btn:hover {
-  background: #ffd13c;
-}
-.section-dev .card-container .card .card-inner .card-back {
-  background: #111;
-}
-.section-dev .card-container .card .card-inner .card-back .item-header {
-  color: #ffd13c;
-}
-.section-dev .card-container .card .card-inner .card-back .item-description {
-  padding: 1rem;
-  color: #fff;
-}
-.section-dev .card-container .card .card-inner .card-back .hide-details-btn {
-  border: none;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  background: #fdfda5;
-  transition: all 0.2s;
-}
-.section-dev .card-container .card .card-inner .card-back .hide-details-btn:hover {
-  background: #ffd13c;
-}
-
-/* Back side styling */
-.card-back {
-  transform: rotateX(180deg); /* Initially hide the back side */
-}
-
-/* Flip effect */
-.card.flipped .card-inner {
-  transform: rotateX(180deg); /* Flip the card */
 }
 
 .navbar-container {
@@ -667,53 +578,94 @@
   color: #fff;
 }
 
-.modal-render-container {
-  z-index: 99;
-}
-.modal-render-container .modal-container {
+.modal-container {
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  text-align: center;
-  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.9);
   color: #fff;
+  z-index: 99;
 }
-.modal-render-container .modal-container .modal-header,
-.modal-render-container .modal-container .modal-description {
-  padding: 1rem;
-}
-.modal-render-container .modal-container .close-modal-btn,
-.modal-render-container .modal-container .next-image,
-.modal-render-container .modal-container .prev-image {
-  height: 30px;
-  width: 30px;
+.modal-container .modal-control-btn {
+  position: fixed;
   background: none;
   border: none;
+  cursor: pointer;
 }
-.modal-render-container .modal-container .close-modal-btn:hover,
-.modal-render-container .modal-container .next-image:hover,
-.modal-render-container .modal-container .prev-image:hover {
+.modal-container .modal-control-btn:hover .modal-control-icon {
   filter: invert(40%);
 }
-.modal-render-container .modal-container .close-modal-btn {
-  position: fixed;
-  top: 50px;
-  right: 50px;
+.modal-container .close-modal-btn {
+  height: 30px;
+  width: 30px;
 }
-.modal-render-container .modal-container .next-image {
-  position: fixed;
+.modal-container .next-image-btn,
+.modal-container .prev-image-btn {
   top: 50%;
-  right: 50px;
+  height: 70px;
+  width: 70px;
 }
-.modal-render-container .modal-container .prev-image {
+.modal-container .close-modal-btn,
+.modal-container .next-image-btn,
+.modal-container .prev-image-btn {
   position: fixed;
-  top: 50%;
-  left: 50px;
+  padding: 2rem;
+  background: rgba(17, 17, 17, 0.9);
+  border-radius: 100%;
+}
+.modal-container .close-modal-btn {
+  background-image: url("../img/icons/close.svg");
+  background-repeat: no-repeat;
+  background-size: 70% 70%;
+  background-position: center center;
+  top: 25px;
+  right: 25px;
+}
+.modal-container .next-image-btn {
+  background-image: url("../img/icons/arrow-next.svg");
+  background-repeat: no-repeat;
+  background-size: 70% 70%;
+  background-position: center center;
+  right: 25px;
+  transform: translateY(-50%);
+}
+.modal-container .prev-image-btn {
+  background-image: url("../img/icons/arrow-prev.svg");
+  background-repeat: no-repeat;
+  background-size: 70% 70%;
+  background-position: center center;
+  left: 25px;
+  transform: translateY(-50%);
+}
+.modal-container .modal-header {
+  padding: 0.5rem;
+  text-align: center;
+}
+.modal-container .modal-image-wrapper {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.modal-container .modal-gallery-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.modal-container .modal-description {
+  padding: 0.5rem;
+  text-align: center;
 }
 
 .captcha-container {
@@ -1067,29 +1019,6 @@
   .section-gallery-container .gallery-container .img-gallery .gallery-item .gallery-item-description {
     padding: 1rem;
   }
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .close-modal-btn,
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .next-image,
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .prev-image {
-    height: 20px;
-    width: 20px;
-    background: none;
-    border: none;
-  }
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .close-modal-btn {
-    position: fixed;
-    top: 25px;
-    right: 25px;
-  }
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .next-image {
-    position: fixed;
-    top: 80%;
-    right: 15px;
-  }
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .prev-image {
-    position: fixed;
-    top: 80%;
-    left: 15px;
-  }
   .section-contact-container .section-subheader {
     font-size: 30px;
     padding: 1rem 1rem 0 1rem;
@@ -1146,29 +1075,6 @@
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .close-modal-btn,
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .next-image,
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .prev-image {
-    height: 20px;
-    width: 20px;
-    background: none;
-    border: none;
-  }
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .close-modal-btn {
-    position: fixed;
-    top: 25px;
-    right: 25px;
-  }
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .next-image {
-    position: fixed;
-    top: 50%;
-    right: 15px;
-  }
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .prev-image {
-    position: fixed;
-    top: 50%;
-    left: 15px;
-  }
   .section-knowledge-container .card-container {
     grid-template-columns: 1fr !important;
   }
@@ -1179,29 +1085,6 @@
   }
   .section-gallery-container .gallery-container .img-gallery .gallery-item {
     padding: 1rem 0;
-  }
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .close-modal-btn,
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .next-image,
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .prev-image {
-    height: 20px;
-    width: 20px;
-    background: none;
-    border: none;
-  }
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .close-modal-btn {
-    position: fixed;
-    top: 25px;
-    right: 25px;
-  }
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .next-image {
-    position: fixed;
-    top: 50%;
-    right: 15px;
-  }
-  .section-gallery-container .gallery-container .modal-render-container .modal-container .prev-image {
-    position: fixed;
-    top: 50%;
-    left: 15px;
   }
   .section-knowledge-container .card-container {
     grid-template-columns: 1fr 1fr;

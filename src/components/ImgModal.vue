@@ -1,17 +1,13 @@
 <template>
   <div class="modal-container">
-    <button @click="$emit('closeModal')" class="close-modal-btn">
-      <img class="modal-close-icon" :src="close" alt="Schließen Symbol" />
-    </button>
-    <button @click="$emit('nextImage')" class="next-image">
-      <img :src="next" alt="Nächstes Bild Symbol" class="next-icon" />
-    </button>
-    <button @click="$emit('prevImage')" class="prev-image">
-      <img :src="prev" alt="Vorheriges Bild Symbol" class="pref-icon" />
-    </button>
+    <div @click="$emit('closeModal')" class="close-modal-btn"></div>
+    <div @click="$emit('nextImage')" class="next-image-btn"></div>
+    <div @click="$emit('prevImage')" class="prev-image-btn"></div>
 
     <h4 class="modal-header">{{ title }}</h4>
-    <img :src="image" alt="Galeriebild" class="modal-gallery-image" />
+    <div class="modal-image-wrapper">
+      <img :src="image" alt="Galeriebild" class="modal-gallery-image" />
+    </div>
     <p class="modal-description">{{ description }}</p>
   </div>
 </template>

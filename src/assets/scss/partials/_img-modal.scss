@@ -1,55 +1,101 @@
 @use "../abstracts/" as *;
 
-.modal-render-container {
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: rgba($clr-secondary-dark-2, 0.9);
+  color: $clr-primary-light-1;
   z-index: 99;
-  .modal-container {
-    position: fixed;
-    top: 0;
-    left: 0;
 
+  .modal-control-btn {
+    position: fixed;
+    background: none;
+    border: none;
+    cursor: pointer;
+    &:hover .modal-control-icon {
+      filter: invert(40%);
+    }
+  }
+
+  .close-modal-btn {
+    height: 30px;
+    width: 30px;
+  }
+
+  .next-image-btn,
+  .prev-image-btn {
+    top: 50%;
+    height: 70px;
+    width: 70px;
+  }
+  .close-modal-btn,
+  .next-image-btn,
+  .prev-image-btn {
+    position: fixed;
+    padding: 2rem;
+    background: rgba($color: $clr-secondary-dark-1, $alpha: 0.9);
+    border-radius: 100%;
+  }
+
+  .close-modal-btn {
+    background-image: url("../img/icons/close.svg");
+    background-repeat: no-repeat;
+    background-size: 70% 70%;
+    background-position: center center;
+    top: 25px;
+    right: 25px;
+  }
+
+  .next-image-btn {
+    background-image: url("../img/icons/arrow-next.svg");
+    background-repeat: no-repeat;
+    background-size: 70% 70%;
+    background-position: center center;
+    right: 25px;
+    transform: translateY(-50%);
+  }
+
+  .prev-image-btn {
+    background-image: url("../img/icons/arrow-prev.svg");
+    background-repeat: no-repeat;
+    background-size: 70% 70%;
+    background-position: center center;
+    left: 25px;
+    transform: translateY(-50%);
+  }
+
+  .modal-header {
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .modal-image-wrapper {
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .modal-gallery-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .modal-description {
+    padding: 0.5rem;
     text-align: center;
-
-    height: 100vh;
-    width: 100%;
-    background: rgba($color: $clr-secondary-dark-2, $alpha: 0.9);
-    color: $clr-primary-light-1;
-
-    .modal-header,
-    .modal-description {
-      padding: 1rem;
-    }
-
-    .close-modal-btn,
-    .next-image,
-    .prev-image {
-      height: 30px;
-      width: 30px;
-      background: none;
-      border: none;
-      &:hover {
-        filter: invert(40%);
-      }
-    }
-
-    .close-modal-btn {
-      position: fixed;
-      top: 50px;
-      right: 50px;
-    }
-
-    .next-image {
-      position: fixed;
-      top: 50%;
-      right: 50px;
-    }
-
-    .prev-image {
-      position: fixed;
-      top: 50%;
-      left: 50px;
-    }
   }
 }
