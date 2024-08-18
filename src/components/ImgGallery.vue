@@ -9,7 +9,7 @@
       >
         <h4 class="gallery-item-header">{{ item.title }}</h4>
         <img
-          @click="onClickShowModal"
+          @click="showModal"
           :src="item.thumbnail"
           alt="Galeriebild"
           class="gallery-item-image"
@@ -20,9 +20,11 @@
     </div>
     <div v-if="viewModal === true" class="modal-render-container">
       <ImgModal
-        @close-modal="onClickCloseModal"
-        @next-image="onClickNextImage"
-        @prev-image="onClickPrevImage"
+        @close-modal="closeModal"
+        @next-image="nextImage"
+        @prev-image="prevImage"
+        @touch-start="setTouchStartX"
+        @touch-end="setTouchEndX"
         :title="modalTitle"
         :description="modalDescription"
         :image="modalImageLink"
@@ -53,6 +55,10 @@ export default {
       modalTitle: "",
       modalDescription: "",
       modalImageLink: "",
+
+      // touch events
+      touchStartX: 0,
+      touchEndX: 0,
     };
   },
 
@@ -88,7 +94,26 @@ export default {
       }));
     },
 
-    onClickShowModal(e) {
+    setTouchStartX(e) {
+      this.touchStartX = e.touches[0].clientX;
+    },
+
+    setTouchEndX(e) {
+      this.touchEndX = e.changedTouches[0].clientX;
+      this.handleSwipe();
+    },
+
+    handleSwipe() {
+      const minMoveX = 50;
+      const diffX = this.touchStartX - this.touchEndX;
+      if (diffX > minMoveX) {
+        this.nextImage();
+      } else if (diffX < -minMoveX) {
+        this.prevImage();
+      }
+    },
+
+    showModal(e) {
       const targetIndex = e.target.id;
       this.currentIndex = targetIndex;
       this.viewModal = true;
@@ -96,7 +121,7 @@ export default {
       this.updateModalData(targetIndex);
     },
 
-    onClickCloseModal() {
+    closeModal() {
       this.viewModal = false;
       document.body.classList.remove("scroll-disabled");
       this.modalTitle = "";
@@ -104,7 +129,7 @@ export default {
       this.modalImageLink = "";
     },
 
-    onClickNextImage() {
+    nextImage() {
       if (this.currentIndex + 1 >= this.galleryData.length) {
         this.currentIndex = 0;
         this.updateModalData(this.currentIndex);
@@ -114,7 +139,7 @@ export default {
       }
     },
 
-    onClickPrevImage() {
+    prevImage() {
       if (this.currentIndex - 1 < 0) {
         this.currentIndex = this.galleryData.length - 1;
         this.updateModalData(this.currentIndex);

@@ -6,7 +6,14 @@
 
     <h4 class="modal-header">{{ title }}</h4>
     <div class="modal-image-wrapper">
-      <img :src="image" alt="Galeriebild" class="modal-gallery-image" />
+      <img
+        @touchstart="handleTouchStart"
+        @touchend="handleTouchEnd"
+        @touchmove="handleTouchMove"
+        :src="image"
+        alt="Galeriebild"
+        class="modal-gallery-image"
+      />
     </div>
     <p class="modal-description">{{ description }}</p>
   </div>
@@ -32,6 +39,20 @@ export default {
     title: String,
     description: String,
     image: String,
+  },
+
+  methods: {
+    handleTouchStart(e) {
+      this.$emit("touchStart", e);
+    },
+
+    handleTouchEnd(e) {
+      this.$emit("touchEnd", e);
+    },
+
+    handleTouchMove(e) {
+      e.preventDefault();
+    },
   },
 };
 </script>
