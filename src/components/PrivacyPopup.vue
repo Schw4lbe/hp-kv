@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from "vuex";
 import popupIcon from "../../public/img/icons/cookie-bite.svg";
 import data from "../assets/data/content.json";
 
@@ -45,21 +46,36 @@ export default {
     };
   },
 
+  computed: {
+    ...mapGetters(["getPrivacyPopupStatus"]),
+  },
+
   created() {
-    setTimeout(() => {
-      this.showPopup();
-    }, 1000);
+    this.checkLocalStorage(this.getPrivacyPopupStatus);
   },
 
   methods: {
+    ...mapMutations(["setPrivacyPopupStatus"]),
+
+    checkLocalStorage(bool) {
+      if (bool === true) {
+        return;
+      } else {
+        this.showPopup();
+      }
+    },
+
     showPopup() {
-      this.popupVissible = true;
       setTimeout(() => {
-        document.body.classList.add("scroll-disabled");
-      }, 500);
+        this.popupVissible = true;
+        setTimeout(() => {
+          document.body.classList.add("scroll-disabled");
+        }, 500);
+      }, 2000);
     },
 
     closePopup() {
+      this.setPrivacyPopupStatus(true);
       document.body.classList.remove("scroll-disabled");
       const container = document.querySelector("#privacy-popup-container");
       const popup = document.querySelector("#privacy-popup");

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import devDummy from "../components/devDummy";
+import devDummy from "../components/development/devDummy";
 
 export default {
   name: "devView",

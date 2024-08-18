@@ -39,15 +39,25 @@ export default {
     };
   },
 
-  created() {
-    setTimeout(() => {
-      this.showPopup();
-    }, 10000);
+  computed: {
+    privacyPopupStatus() {
+      return this.$store.state.privacyPopupStatus;
+    },
+  },
+
+  watch: {
+    privacyPopupStatus(newValue) {
+      if (newValue === true) {
+        this.showPopup();
+      }
+    },
   },
 
   methods: {
     showPopup() {
-      this.popupVissible = true;
+      setTimeout(() => {
+        this.popupVissible = true;
+      }, 10000);
     },
 
     closePopup() {

@@ -4,7 +4,7 @@
       @touchstart="touchStart"
       @touchmove="touchMove"
       @touchend="touchEnd"
-      src="../../public/img/galleryImg/galleryimg01.jpg"
+      src="../../../public/img/galleryImg/galleryimg01.jpg"
       alt=""
     />
   </div>

@@ -1,6 +1,6 @@
 <template>
   <section class="section-main-container" id="section1">
-    <button class="dev-button-cache-reset">reset states</button>
+    <devResetStateButton />
     <div class="section-main-banner-container">
       <div class="section-main-logo">
         <img class="logo" :src="logo" alt="Firmenlogo" />
@@ -21,9 +21,14 @@
 <script>
 import data from "../assets/data/content.json";
 import Logo from "../../public/img/logo.png";
+import devResetStateButton from "./development/devResetStateButton.vue";
 
 export default {
   name: "MainSection",
+
+  components: {
+    devResetStateButton,
+  },
 
   data() {
     return {
@@ -33,14 +38,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.dev-button-cache-reset {
-  position: absolute;
-  top: 100px;
-  padding: 0.5rem 1rem;
-  border: none;
-  background: tomato;
-  color: white;
-}
-</style>

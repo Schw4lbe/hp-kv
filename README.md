@@ -4,15 +4,7 @@
 
 ### new pot. elements
 
-- Intro Animation scene? even wanted?
-
-# flow for popups
-
-1. privacy popup
-2. on click ok start timer second popup
-3. on click close or contact no more popups
-4. disable timer while in modal img
-5. after closing modal activate contact popup directly
+- Intro Animation scene? even wanted? tbd
 
 # Element Status & to-dos:
 
@@ -24,8 +16,7 @@
 
 ### ContactPopup
 
-- assign contact popup state for persistant reaction
-- create timer (tbd with costumer)
+- create timer and conditions for popup (tbd with costumer)
 
 ### ContactSection
 
