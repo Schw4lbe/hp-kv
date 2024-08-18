@@ -45,7 +45,7 @@
 
 ### ImgModal
 
-- redesign responsive icons for image control
+- check fullscreen requests on modal to avoid browser bar taking space from image
 
 ### KnowledgeBaseSection
 

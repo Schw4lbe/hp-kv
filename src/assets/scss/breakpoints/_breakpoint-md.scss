@@ -1,6 +1,19 @@
-$screen-md-max: 992px;
+@use "../abstracts/" as *;
 
 @media (max-width: $screen-md-max) {
+  // section main
+  .section-main-container {
+    .section-main-banner-container {
+      .section-main-banner {
+        .banner-content {
+          padding: 1rem;
+          font-size: 33px !important;
+        }
+      }
+    }
+  }
+
+  // section gallery
   .section-gallery-container {
     .gallery-container {
       .img-gallery {
@@ -10,37 +23,6 @@ $screen-md-max: 992px;
           padding: 1rem 0;
         }
       }
-
-      // .modal-render-container {
-      //   .modal-container {
-      //     .close-modal-btn,
-      //     .next-image,
-      //     .prev-image {
-      //       height: 20px;
-      //       width: 20px;
-      //       background: none;
-      //       border: none;
-      //     }
-
-      //     .close-modal-btn {
-      //       position: fixed;
-      //       top: 25px;
-      //       right: 25px;
-      //     }
-
-      //     .next-image {
-      //       position: fixed;
-      //       top: 50%;
-      //       right: 15px;
-      //     }
-
-      //     .prev-image {
-      //       position: fixed;
-      //       top: 50%;
-      //       left: 15px;
-      //     }
-      //   }
-      // }
     }
   }
 

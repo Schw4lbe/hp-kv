@@ -22,9 +22,9 @@
 @use "partials/helper";
 
 // Breakpoints:
-@use "breakpoints/breakpoint-xs";
-@use "breakpoints/breakpoint-sm";
 @use "breakpoints/breakpoint-md";
+@use "breakpoints/breakpoint-sm";
+@use "breakpoints/breakpoint-xs";
 
 * {
   margin: 0;

@@ -1,7 +1,5 @@
 @use "../abstracts/" as *;
 
-$screen-xs-max: 576px;
-
 @media (max-width: $screen-xs-max) {
   // globals
   .section-header {
@@ -51,7 +49,7 @@ $screen-xs-max: 576px;
         .banner-content {
           text-align: center;
           padding: 5px;
-          font-size: 30px;
+          font-size: 30px !important;
         }
       }
     }
@@ -115,36 +113,46 @@ $screen-xs-max: 576px;
         }
       }
 
-      // .modal-render-container {
-      //   .modal-container {
-      //     .close-modal-btn,
-      //     .next-image,
-      //     .prev-image {
-      //       height: 20px;
-      //       width: 20px;
-      //       background: none;
-      //       border: none;
-      //     }
+      .modal-render-container {
+        .modal-container {
+          .close-modal-btn,
+          .next-image-btn,
+          .prev-image-btn {
+            padding: 1rem;
+            transition: all 0.2s;
+            &:hover {
+              filter: invert(0%);
+            }
+          }
 
-      //     .close-modal-btn {
-      //       position: fixed;
-      //       top: 25px;
-      //       right: 25px;
-      //     }
+          .close-modal-btn {
+            background-image: url("../img/icons/close.svg");
+            background-repeat: no-repeat;
+            background-size: 70% 70%;
+            background-position: center center;
+            top: 25px;
+            right: 15px;
+          }
 
-      //     .next-image {
-      //       position: fixed;
-      //       top: 80%;
-      //       right: 15px;
-      //     }
+          .next-image-btn {
+            background-image: url("../img/icons/arrow-next.svg");
+            background-repeat: no-repeat;
+            background-size: 70% 70%;
+            background-position: center center;
+            right: 15px;
+            transform: translateY(-50%);
+          }
 
-      //     .prev-image {
-      //       position: fixed;
-      //       top: 80%;
-      //       left: 15px;
-      //     }
-      //   }
-      // }
+          .prev-image-btn {
+            background-image: url("../img/icons/arrow-prev.svg");
+            background-repeat: no-repeat;
+            background-size: 70% 70%;
+            background-position: center center;
+            left: 15px;
+            transform: translateY(-50%);
+          }
+        }
+      }
     }
   }
 

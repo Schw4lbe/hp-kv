@@ -1,6 +1,19 @@
-$screen-sm-max: 768px;
+@use "../abstracts/" as *;
 
 @media (max-width: $screen-sm-max) {
+  // section main
+  .section-main-container {
+    .section-main-banner-container {
+      .section-main-banner {
+        .banner-content {
+          padding: 1rem;
+          font-size: 22px !important;
+        }
+      }
+    }
+  }
+
+  // section gallery
   .section-gallery-container {
     .gallery-container {
       .img-gallery {
@@ -8,39 +21,53 @@ $screen-sm-max: 768px;
         gap: 10px;
       }
 
-      // .modal-render-container {
-      //   .modal-container {
-      //     .close-modal-btn,
-      //     .next-image,
-      //     .prev-image {
-      //       height: 20px;
-      //       width: 20px;
-      //       background: none;
-      //       border: none;
-      //     }
+      .modal-render-container {
+        .modal-container {
+          .close-modal-btn,
+          .next-image-btn,
+          .prev-image-btn {
+            position: fixed;
+            padding: 1rem !important;
+            background: rgba($color: $clr-secondary-dark-1, $alpha: 0.9);
+            border-radius: 100%;
+            transition: all 0.2s;
+            &:hover {
+              filter: invert(0%) !important;
+            }
+          }
 
-      //     .close-modal-btn {
-      //       position: fixed;
-      //       top: 25px;
-      //       right: 25px;
-      //     }
+          .close-modal-btn {
+            background-image: url("../img/icons/close.svg");
+            background-repeat: no-repeat;
+            background-size: 70% 70%;
+            background-position: center center;
+            top: 15px;
+            right: 15px;
+          }
 
-      //     .next-image {
-      //       position: fixed;
-      //       top: 50%;
-      //       right: 15px;
-      //     }
+          .next-image-btn {
+            background-image: url("../img/icons/arrow-next.svg");
+            background-repeat: no-repeat;
+            background-size: 70% 70%;
+            background-position: center center;
+            right: 15px;
+            transform: translateY(-50%);
+          }
 
-      //     .prev-image {
-      //       position: fixed;
-      //       top: 50%;
-      //       left: 15px;
-      //     }
-      //   }
-      // }
+          .prev-image-btn {
+            background-image: url("../img/icons/arrow-prev.svg");
+            background-repeat: no-repeat;
+            background-size: 70% 70%;
+            background-position: center center;
+            left: 15px;
+            transform: translateY(-50%);
+          }
+        }
+      }
     }
   }
 
+  // section knowledge
   .section-knowledge-container {
     .card-container {
       grid-template-columns: 1fr !important;

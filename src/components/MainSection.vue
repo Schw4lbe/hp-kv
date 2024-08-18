@@ -1,5 +1,6 @@
 <template>
   <section class="section-main-container" id="section1">
+    <button class="dev-button-cache-reset">reset states</button>
     <div class="section-main-banner-container">
       <div class="section-main-logo">
         <img class="logo" :src="logo" alt="Firmenlogo" />
@@ -32,3 +33,14 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.dev-button-cache-reset {
+  position: absolute;
+  top: 100px;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: tomato;
+  color: white;
+}
+</style>

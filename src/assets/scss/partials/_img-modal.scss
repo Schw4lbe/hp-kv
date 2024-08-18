@@ -14,40 +14,23 @@
   color: $clr-primary-light-1;
   z-index: 99;
 
-  .modal-control-btn {
-    position: fixed;
-    background: none;
-    border: none;
-    cursor: pointer;
-    &:hover .modal-control-icon {
-      filter: invert(40%);
-    }
-  }
-
-  .close-modal-btn {
-    height: 30px;
-    width: 30px;
-  }
-
-  .next-image-btn,
-  .prev-image-btn {
-    top: 50%;
-    height: 70px;
-    width: 70px;
-  }
   .close-modal-btn,
   .next-image-btn,
   .prev-image-btn {
     position: fixed;
-    padding: 2rem;
+    padding: 25px;
     background: rgba($color: $clr-secondary-dark-1, $alpha: 0.9);
     border-radius: 100%;
+    transition: all 0.2s;
+    &:hover {
+      filter: invert(20%);
+    }
   }
 
   .close-modal-btn {
     background-image: url("../img/icons/close.svg");
     background-repeat: no-repeat;
-    background-size: 70% 70%;
+    background-size: 50% 50%;
     background-position: center center;
     top: 25px;
     right: 25px;
