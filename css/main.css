@@ -788,9 +788,10 @@
 .privacy-popup-container {
   z-index: 999;
   position: fixed;
-  bottom: 0;
+  top: 0;
+  left: 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
@@ -799,8 +800,6 @@
 }
 .privacy-popup-container .privacy-popup {
   position: relative;
-  bottom: 20%;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -808,11 +807,11 @@
   background: rgba(17, 17, 17, 0.9);
   color: #fff;
   height: max-content;
-  padding: 1rem;
   max-height: 300px;
   width: 100%;
   min-width: 300px;
   max-width: 650px;
+  padding: 1rem;
 }
 .privacy-popup-container .privacy-popup .privacy-popup-content {
   display: flex;
