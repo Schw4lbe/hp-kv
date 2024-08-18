@@ -29,3 +29,20 @@
   font-family: "Amatic";
   letter-spacing: 4px;
 }
+
+.separator-container {
+  height: 80px;
+  width: 100%;
+  max-width: 1200px;
+
+  #test,
+  #test2,
+  #test3 {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    max-width: 1200px;
+    border-radius: 1rem;
+    filter: sepia(100%);
+  }
+}

@@ -218,7 +218,7 @@
 }
 
 .section-service-container {
-  padding-top: 80px;
+  padding-top: 2rem;
   background: #333;
   display: flex;
   justify-content: center;
@@ -272,7 +272,7 @@
 }
 
 .section-gallery-container {
-  padding-top: 80px;
+  padding-top: 2rem;
   padding-bottom: 3rem;
   background: #333;
   display: flex;
@@ -286,7 +286,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: 80px;
+  padding-top: 2rem;
   min-height: 85vh;
   display: flex;
   justify-content: flex-start;
@@ -435,8 +435,8 @@
 }
 
 .section-knowledge-container {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background: #333;
   display: flex;
   justify-content: center;
@@ -898,6 +898,22 @@
   letter-spacing: 4px;
 }
 
+.separator-container {
+  height: 80px;
+  width: 100%;
+  max-width: 1200px;
+}
+.separator-container #test,
+.separator-container #test2,
+.separator-container #test3 {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  max-width: 1200px;
+  border-radius: 1rem;
+  filter: sepia(100%);
+}
+
 .scroll-disabled {
   overflow: hidden;
 }
@@ -927,6 +943,11 @@
 }
 
 @media (max-width: 992px) {
+  .separator-container #test,
+  .separator-container #test2,
+  .separator-container #test3 {
+    border-radius: 0px;
+  }
   .section-main-container .section-main-banner-container .section-main-banner .banner-content {
     padding: 1rem;
     font-size: 33px !important;
@@ -942,6 +963,11 @@
   }
 }
 @media (max-width: 768px) {
+  .separator-container #test,
+  .separator-container #test2,
+  .separator-container #test3 {
+    border-radius: 0px;
+  }
   .section-main-container .section-main-banner-container .section-main-banner .banner-content {
     padding: 1rem;
     font-size: 22px !important;
@@ -996,6 +1022,15 @@
   .section-header {
     font-size: 35px;
     letter-spacing: 4px;
+  }
+  .section-subheader {
+    font-size: 30px;
+    padding: 1rem 1rem 0 1rem;
+  }
+  .separator-container #test,
+  .separator-container #test2,
+  .separator-container #test3 {
+    border-radius: 0px;
   }
   .navbar-container .navbar-items {
     gap: 0px;
@@ -1106,10 +1141,6 @@
     background-position: center center;
     left: 15px;
     transform: translateY(-50%);
-  }
-  .section-contact-container .section-subheader {
-    font-size: 30px;
-    padding: 1rem 1rem 0 1rem;
   }
   .section-contact-container .section-contact-content .enable-contanct-info-container .enable-contact-info-description {
     padding: 1rem 0.5rem 0 0.5rem;

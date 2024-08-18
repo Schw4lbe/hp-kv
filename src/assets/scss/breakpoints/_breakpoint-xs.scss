@@ -7,6 +7,19 @@
     letter-spacing: 4px;
   }
 
+  .section-subheader {
+    font-size: 30px;
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  .separator-container {
+    #test,
+    #test2,
+    #test3 {
+      border-radius: 0px;
+    }
+  }
+
   // navbar
   .navbar-container {
     .navbar-items {
@@ -158,12 +171,6 @@
 
   // section contact
   .section-contact-container {
-    // global
-    .section-subheader {
-      font-size: 30px;
-      padding: 1rem 1rem 0 1rem;
-    }
-
     .section-contact-content {
       .enable-contanct-info-container {
         .enable-contact-info-description {

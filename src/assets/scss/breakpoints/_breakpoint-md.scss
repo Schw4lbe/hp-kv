@@ -1,6 +1,15 @@
 @use "../abstracts/" as *;
 
 @media (max-width: $screen-md-max) {
+  // globals
+  .separator-container {
+    #test,
+    #test2,
+    #test3 {
+      border-radius: 0px;
+    }
+  }
+
   // section main
   .section-main-container {
     .section-main-banner-container {
