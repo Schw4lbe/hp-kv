@@ -10,7 +10,7 @@
 
 ### ContactCaptcha
 
-- assign captcha state for solving persistant
+- ok
 
 ### ContactPopup
 
