@@ -3,6 +3,7 @@
     <span class="captcha"> {{ phraseForHmtl }} </span>
     <span class="description">{{ captchaDescription }}</span>
     <input
+      @keyup="checkSolutionLength"
       v-model="solution"
       id="captcha"
       type="text"
@@ -14,8 +15,6 @@
       type="text"
       placeholder="Lösung erneut eingeben"
     />
-    <input @click="onSubmitCaptcha" type="submit" value="senden" />
-
     <div v-if="captchaSolved != null" class="captcha-result">
       <span v-if="captchaSolved === true" class="success">Ok.</span>
       <span v-if="captchaSolved === false" class="error">Fehler!</span>
@@ -46,10 +45,16 @@ export default {
   },
 
   methods: {
-    onSubmitCaptcha(e) {
-      e.preventDefault();
-      const solution = document.querySelector("#captcha").value.toLowerCase();
+    checkSolutionLength() {
+      if (this.solution.length >= 4) {
+        this.submitCaptcha();
+      }
+    },
+
+    submitCaptcha() {
+      const solution = this.solution.toLocaleLowerCase().trim();
       const honeypot = document.querySelector("#captcha-repeat").value;
+
       if (solution === this.captchaPhrase && honeypot === "") {
         this.captchaSolved = true;
         setTimeout(() => {
