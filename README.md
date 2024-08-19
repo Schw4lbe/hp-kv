@@ -34,7 +34,7 @@
 
 ### ImgModal
 
-- check fullscreen requests on modal to avoid browser bar taking space from image
+- ok
 
 ### KnowledgeBaseSection
 
@@ -71,8 +71,5 @@
 
 ### General for Production
 
-- embedd post css and gulp
-- create compressed css
-- consider using uglyfier
 - refactor components and outsource duplicate functions into utils.js
 - refactor scss and create global styling partial for repeating element stylings (header, container)
