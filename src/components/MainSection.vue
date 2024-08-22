@@ -20,7 +20,7 @@
 
 <script>
 import data from "../assets/data/content.json";
-import Logo from "../../public/img/logo.png";
+import Logo from "../../public/img/logo2.png";
 import devResetStateButton from "./development/devResetStateButton.vue";
 
 export default {

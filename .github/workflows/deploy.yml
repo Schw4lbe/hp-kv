@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # or master, depending on your default branch name
+      - main # depending on your default branch name
 
 jobs:
   build:
@@ -21,7 +21,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Run Gulp Task
+      - name: Run Gulp Task # add additional tasks if needed
         run: npx gulp css
 
       - name: Build the Project
