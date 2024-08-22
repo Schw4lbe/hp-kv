@@ -1,7 +1,7 @@
 <template>
   <section class="section-knowledge-container" id="section5">
     <div class="separator-container">
-      <img src="../../public/img/separator.jpg" alt="" id="test3" />
+      <img src="../../public/img/branch.png" alt="" id="test3" />
     </div>
     <h3 class="section-knowledge-header section-header">
       {{ header }}
@@ -71,3 +71,17 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.separator-container {
+  filter: invert(100%) sepia(100%);
+}
+
+#test3 {
+  margin-top: -70px;
+  height: 250px !important;
+  width: 100% !important;
+  object-fit: contain !important;
+  transform: rotate(60deg);
+}
+</style>
