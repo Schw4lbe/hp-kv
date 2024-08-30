@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import data from "../assets/data/content.json";
+import data from "../../public/content.json";
 import ImgModal from "@/components/ImgModal";
 
 export default {

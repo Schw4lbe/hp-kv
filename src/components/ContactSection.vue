@@ -67,7 +67,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import data from "../assets/data/content.json";
+import data from "../../public/content.json";
 import EnableBtnIcon from "../../public/img/icons/contact-btn-icon.svg";
 import ListIcon from "../../public/img/icons/list-icon.svg";
 import MailIcon from "../../public/img/icons/navIcons/04nav-contact.svg";

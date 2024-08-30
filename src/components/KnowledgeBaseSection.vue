@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import data from "../assets/data/content.json";
+import data from "../../public/content.json";
 
 export default {
   name: "devDummy",

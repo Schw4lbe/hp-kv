@@ -1,6 +1,9 @@
 <template>
   <section class="section-main-container" id="section1">
-    <devResetStateButton />
+    <div class="dev-button-container">
+      <devResetStateButton />
+      <NetlifyIdent />
+    </div>
     <div class="section-main-banner-container">
       <div class="section-main-logo">
         <img class="logo" :src="logo" alt="Firmenlogo" />
@@ -19,15 +22,17 @@
 </template>
 
 <script>
-import data from "../assets/data/content.json";
+import data from "../../public/content.json";
 import Logo from "../../public/img/logo2.png";
 import devResetStateButton from "./development/devResetStateButton.vue";
+import NetlifyIdent from "./netlify/NetlifyIdent.vue";
 
 export default {
   name: "MainSection",
 
   components: {
     devResetStateButton,
+    NetlifyIdent,
   },
 
   data() {
@@ -38,3 +43,22 @@ export default {
   },
 };
 </script>
+
+<style>
+.dev-button-container {
+  position: absolute;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.dev-button-container button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: tomato;
+  color: white;
+  margin: 0.5rem;
+}
+</style>
