@@ -83,11 +83,15 @@
   "serviceItemData": [
     {
       "header": "service header CMS Test",
-      "description": "Pixel\n"
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum! "
     },
     {
       "header": "service header",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
+    },
+    {
+      "header": "test",
+      "description": "test"
     }
   ],
   "popupContact": [
