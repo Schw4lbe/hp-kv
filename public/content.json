@@ -1,202 +1,202 @@
 {
-    "sectionHeaders": [
-        {
-            "serviceSectionHeader": "Meine Dienste & Services",
-            "imgGalleryHeader": "Lassen Sie sich inspirieren",
-            "contactSectionHeader": "Kontaktieren Sie mich",
-            "knowledgeSectionHeader": "Für alle Pflanzenfreunde"
-        }
-    ],
-    "knowledgeData": [
-        {
-            "header": "header 1",
-            "teaser": "This is a short teaser.",
-            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, adratione iusto, numquam ab obcaecati consequuntur fugiat consequatur nam beatae mollitia ipsam esse illo? Sit doloribus quod iure necessitatibus maiores."
-        },
-        {
-            "header": "header 2",
-            "teaser": "This is a short teaser.",
-            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, adratione iusto, numquam ab obcaecati consequuntur fugiat consequatur nam beatae mollitia ipsam esse illo? Sit doloribus quod iure necessitatibus maiores."
-        }
-    ],
-    "bannerItemData": [
-        {
-            "content": "Grünanlagenpflege"
-        },
-        {
-            "content": "Baumschnitt"
-        },
-        {
-            "content": "Industrieklettern"
-        }
-    ],
-    "navbarMain": [
-        {
-            "title": "Startseite",
-            "sectionId": "section1"
-        },
-        {
-            "title": "Service",
-            "sectionId": "section2"
-        },
-        {
-            "title": "Gallerie",
-            "sectionId": "section3"
-        },
-        {
-            "title": "Kontakt",
-            "sectionId": "section4"
-        },
-        {
-            "title": "Wissen",
-            "sectionId": "section5"
-        }
-    ],
-    "contactData": [
-        {
-            "header": "Die nächsten Schritte",
-            "descriptions": [
-                {
-                    "description": "Vorstellungen und Wünschen können sehr individuell ausfallen. Lassen Sie uns gern im Vorfeld unverbindlich miteinander sprechen."
-                },
-                {
-                    "description": "Für eine optimale Gesprächsvorbereitung, benötige ich im besten Fall die folgenden Infos."
-                }
-            ],
-            "infoOptions": [
-                {
-                    "option": "präzise Beschreibung der Arbeit"
-                },
-                {
-                    "option": "Bilder, Pläne & Co. der Szenerie"
-                },
-                {
-                    "option": "geschätze Preisvorstellung"
-                },
-                {
-                    "option": "Anschrift und Parkmöglichkeit"
-                }
-            ],
-            "email": "some@one.de"
-        }
-    ],
-    "serviceItemData": [
-        {
-            "header": "service header",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
-        },
-        {
-            "header": "service header",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
-        }
-    ],
-    "popupContact": [
-        {
-            "button1": "Kontakt",
-            "button2": "später",
-            "content": [
-                {
-                    "text": "Schon einen Termin vereinbart?"
-                },
-                {
-                    "text": "Nehmen Sie Kontakt mit mir auf."
-                }
-            ]
-        }
-    ],
-    "enableCaptcha": [
-        {
-            "header": "Haben Sie Fragen?",
-            "descriptions": [
-                {
-                    "description": "Schreiben Sie mir gern eine E-Mail."
-                },
-                {
-                    "description": "Nutzen Sie die folgende Schaltfläche zur Anzeige meiner Kontaktdaten."
-                }
-            ],
-            "button": "Kontaktinfo anzeigen",
-            "captchaDescription": "Name der Farbe?"
-        }
-    ],
-    "footerItemData": [
-        {
-            "title": "Impressum",
-            "url": "/imprint"
-        },
-        {
-            "title": "Datenschutz",
-            "url": "/privacy"
-        },
-        {
-            "title": "DEV",
-            "url": "/dev"
-        }
-    ],
-    "verification": [
-        {
-            "header": "Verifizierung",
-            "descriptions": [
-                {
-                    "description": "Bitte lösen Sie die folgende Aufgabe zur Verifizierung."
-                },
-                {
-                    "description": "Groß- und Kleinschreibung spielt dabei keine Rolle."
-                }
-            ]
-        }
-    ],
-    "galleryImgData": [
-        {
-            "title": "img title 01",
-            "description": "you will find a description of the shown image here, to tell you what this image is about."
-        },
-        {
-            "title": "img title 02",
-            "description": "you will find a description of the shown image here, to tell you what this image is about."
-        },
-        {
-            "title": "img title 03",
-            "description": "you will find a description of the shown image here, to tell you what this image is about."
-        },
-        {
-            "title": "img title 04",
-            "description": "you will find a description of the shown image here, to tell you what this image is about."
-        },
-        {
-            "title": "img title 05",
-            "description": ""
-        },
-        {
-            "title": "img title 06",
-            "description": ""
-        },
-        {
-            "title": "img title 07",
-            "description": ""
-        },
-        {
-            "title": "img title 08",
-            "description": ""
-        },
-        {
-            "title": "img title 09",
-            "description": ""
-        }
-    ],
-    "popupPrivacy": [
-        {
-            "header": "Wo sind die Cookies?",
-            "button": "Los gehts!"
-        }
-    ],
-    "captcha": {
-        "phrases": [
-            "blau",
-            "grün",
-            "gelb",
-            "grau",
-            "gold"
-        ]
+  "sectionHeaders": [
+    {
+      "serviceSectionHeader": "Meine Dienste & Services",
+      "imgGalleryHeader": "Lassen Sie sich inspirieren",
+      "contactSectionHeader": "Kontaktieren Sie mich",
+      "knowledgeSectionHeader": "Für alle Pflanzenfreunde"
     }
+  ],
+  "knowledgeData": [
+    {
+      "header": "header 1",
+      "teaser": "This is a short teaser.",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, adratione iusto, numquam ab obcaecati consequuntur fugiat consequatur nam beatae mollitia ipsam esse illo? Sit doloribus quod iure necessitatibus maiores."
+    },
+    {
+      "header": "header 2",
+      "teaser": "This is a short teaser.",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, adratione iusto, numquam ab obcaecati consequuntur fugiat consequatur nam beatae mollitia ipsam esse illo? Sit doloribus quod iure necessitatibus maiores."
+    }
+  ],
+  "bannerItemData": [
+    {
+      "content": "Grünanlagenpflege"
+    },
+    {
+      "content": "Baumschnitt"
+    },
+    {
+      "content": "Industrieklettern"
+    }
+  ],
+  "navbarMain": [
+    {
+      "title": "Startseite",
+      "sectionId": "section1"
+    },
+    {
+      "title": "Service",
+      "sectionId": "section2"
+    },
+    {
+      "title": "Gallerie",
+      "sectionId": "section3"
+    },
+    {
+      "title": "Kontakt",
+      "sectionId": "section4"
+    },
+    {
+      "title": "Wissen",
+      "sectionId": "section5"
+    }
+  ],
+  "contactData": [
+    {
+      "header": "Die nächsten Schritte",
+      "descriptions": [
+        {
+          "description": "Vorstellungen und Wünschen können sehr individuell ausfallen. Lassen Sie uns gern im Vorfeld unverbindlich miteinander sprechen."
+        },
+        {
+          "description": "Für eine optimale Gesprächsvorbereitung, benötige ich im besten Fall die folgenden Infos."
+        }
+      ],
+      "infoOptions": [
+        {
+          "option": "präzise Beschreibung der Arbeit"
+        },
+        {
+          "option": "Bilder, Pläne & Co. der Szenerie"
+        },
+        {
+          "option": "geschätze Preisvorstellung"
+        },
+        {
+          "option": "Anschrift und Parkmöglichkeit"
+        }
+      ],
+      "email": "some@one.de"
+    }
+  ],
+  "serviceItemData": [
+    {
+      "header": "service header CMS Test",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
+    },
+    {
+      "header": "service header",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
+    }
+  ],
+  "popupContact": [
+    {
+      "button1": "Kontakt",
+      "button2": "später",
+      "content": [
+        {
+          "text": "Schon einen Termin vereinbart?"
+        },
+        {
+          "text": "Nehmen Sie Kontakt mit mir auf."
+        }
+      ]
+    }
+  ],
+  "enableCaptcha": [
+    {
+      "header": "Haben Sie Fragen?",
+      "descriptions": [
+        {
+          "description": "Schreiben Sie mir gern eine E-Mail."
+        },
+        {
+          "description": "Nutzen Sie die folgende Schaltfläche zur Anzeige meiner Kontaktdaten."
+        }
+      ],
+      "button": "Kontaktinfo anzeigen",
+      "captchaDescription": "Name der Farbe?"
+    }
+  ],
+  "footerItemData": [
+    {
+      "title": "Impressum",
+      "url": "/imprint"
+    },
+    {
+      "title": "Datenschutz",
+      "url": "/privacy"
+    },
+    {
+      "title": "DEV",
+      "url": "/dev"
+    }
+  ],
+  "captcha": {
+    "phrases": [
+      "blau",
+      "grün",
+      "gelb",
+      "grau",
+      "gold"
+    ]
+  },
+  "verification": [
+    {
+      "header": "Verifizierung",
+      "descriptions": [
+        {
+          "description": "Bitte lösen Sie die folgende Aufgabe zur Verifizierung."
+        },
+        {
+          "description": "Groß- und Kleinschreibung spielt dabei keine Rolle."
+        }
+      ]
+    }
+  ],
+  "galleryImgData": [
+    {
+      "title": "img title 01",
+      "description": "you will find a description of the shown image here, to tell you what this image is about."
+    },
+    {
+      "title": "img title 02",
+      "description": "you will find a description of the shown image here, to tell you what this image is about."
+    },
+    {
+      "title": "img title 03",
+      "description": "you will find a description of the shown image here, to tell you what this image is about."
+    },
+    {
+      "title": "img title 04",
+      "description": "you will find a description of the shown image here, to tell you what this image is about."
+    },
+    {
+      "title": "img title 05",
+      "description": ""
+    },
+    {
+      "title": "img title 06",
+      "description": ""
+    },
+    {
+      "title": "img title 07",
+      "description": ""
+    },
+    {
+      "title": "img title 08",
+      "description": ""
+    },
+    {
+      "title": "img title 09",
+      "description": ""
+    }
+  ],
+  "popupPrivacy": [
+    {
+      "header": "Wo sind die Cookies?",
+      "button": "Los gehts!"
+    }
+  ]
 }
