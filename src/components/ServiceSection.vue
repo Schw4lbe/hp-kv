@@ -34,7 +34,7 @@ export default {
 
   data() {
     return {
-      header: data.serviceSection.header,
+      header: data.serviceItemData.header,
       serviceContent: this.importKnowledgeBaseData(),
     };
   },
@@ -51,7 +51,7 @@ export default {
 
     importKnowledgeBaseData() {
       const images = this.importAllImages();
-      const content = data.serviceSection.itemData;
+      const content = data.serviceItemData;
 
       return images.map((image, index) => ({
         image,

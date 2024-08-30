@@ -1,53 +1,49 @@
 {
-    "navbarMain": {
-        "itemData": [
-            {
-                "title": "Startseite",
-                "sectionId": "section1"
-            },
-            {
-                "title": "Service",
-                "sectionId": "section2"
-            },
-            {
-                "title": "Gallerie",
-                "sectionId": "section3"
-            },
-            {
-                "title": "Kontakt",
-                "sectionId": "section4"
-            },
-            {
-                "title": "Wissen",
-                "sectionId": "section5"
-            }
-        ]
-    },
-    "mainSection": {
-        "bannerItemData": [
-            {
-                "content": "Grünanlagenpflege"
-            },
-            {
-                "content": "Baumschnitt"
-            },
-            {
-                "content": "Industrieklettern"
-            }
-        ]
-    },
+    "navbarMain": [
+        {
+            "title": "Startseite",
+            "sectionId": "section1"
+        },
+        {
+            "title": "Service",
+            "sectionId": "section2"
+        },
+        {
+            "title": "Gallerie",
+            "sectionId": "section3"
+        },
+        {
+            "title": "Kontakt",
+            "sectionId": "section4"
+        },
+        {
+            "title": "Wissen",
+            "sectionId": "section5"
+        }
+    ],
+    "bannerItemData": [
+        {
+            "content": "Grünanlagenpflege"
+        },
+        {
+            "content": "Baumschnitt"
+        },
+        {
+            "content": "Industrieklettern"
+        }
+    ],
+    "serviceItemData": [
+        {
+            "header": "service header",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
+        },
+        {
+            "header": "service header",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
+        }
+    ],
     "serviceSection": {
-        "header": "Meine Dienste & Services",
-        "itemData": [
-            {
-                "header": "service header",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
-            },
-            {
-                "header": "service header",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
-            }
-        ]
+        "header": "Meine Dienste & Services"
     },
     "imgGallery": {
         "header": "Lassen Sie sich inspirieren",

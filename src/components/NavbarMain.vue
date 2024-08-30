@@ -41,7 +41,7 @@ export default {
 
     importAllIconsWithData() {
       const icons = this.importAllIcons();
-      const navData = data.navbarMain.itemData;
+      const navData = data.navbarMain;
       return icons.map((icon, index) => ({
         icon,
         title: navData[index].title,

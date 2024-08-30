@@ -1,7 +1,6 @@
 backend:
-  name: proxy
+  name: git-gateway
   branch: main
-  proxy_url: "http://localhost:8081/api/v1"
 
 media_folder: "public/img"
 public_folder: "/img"
@@ -23,4 +22,28 @@ collections:
                 widget: "string"
               - label: "Section ID"
                 name: "sectionId"
+                widget: "string"
+          - label: "Banner Items"
+            name: "bannerItemData"
+            widget: "list"
+            fields:
+              - label: "Kern Kompetenz"
+                name: "content"
+                widget: "string"
+  - name: "test"
+    label: "TEST"
+    files:
+      - label: "Service"
+        name: "service"
+        file: "public/content.json"
+        fields:
+          - label: "Service Items"
+            name: "serviceItemData"
+            widget: "list"
+            fields:
+              - label: "Header"
+                name: "header"
+                widget: "string"
+              - label: "Description"
+                name: "description"
                 widget: "string"
