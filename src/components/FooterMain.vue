@@ -22,7 +22,7 @@ export default {
 
   data() {
     return {
-      footerItems: data.footer.itemData,
+      footerItems: data.footerItemData,
     };
   },
 };

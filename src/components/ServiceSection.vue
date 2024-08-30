@@ -34,8 +34,8 @@ export default {
 
   data() {
     return {
-      header: data.serviceItemData.header,
-      serviceContent: this.importKnowledgeBaseData(),
+      header: data.sectionHeaders[0].serviceSectionHeader,
+      serviceContent: this.importServiceData(),
     };
   },
 
@@ -49,7 +49,7 @@ export default {
       return context.keys().map(context);
     },
 
-    importKnowledgeBaseData() {
+    importServiceData() {
       const images = this.importAllImages();
       const content = data.serviceItemData;
 

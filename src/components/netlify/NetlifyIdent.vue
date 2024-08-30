@@ -1,9 +1,9 @@
-<template>
+<!-- <template>
   <button @click="openIdentityModal">DEV Login</button>
   <div id="netlify-modal"></div>
-</template>
+</template> -->
 
-<script>
+<!-- <script>
 import netlifyIdentity from "netlify-identity-widget";
 
 export default {
@@ -42,4 +42,4 @@ export default {
     },
   },
 };
-</script>
+</script> -->

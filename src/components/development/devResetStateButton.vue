@@ -14,6 +14,7 @@ export default {
     onClickResetStates() {
       this.resetPrivacyPopupStatus(false);
       this.resetUserVerified(false);
+      console.log("state reset.");
     },
   },
 };

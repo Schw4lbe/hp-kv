@@ -9,11 +9,11 @@
       >
         <h4 class="section-subheader">{{ enableCaptchaData.header }}</h4>
         <p
-          v-for="(item, index) in enableCaptchaData.description"
+          v-for="(item, index) in enableCaptchaData.descriptions"
           :key="index"
           class="enable-contact-info-description"
         >
-          {{ item }}
+          {{ item.description }}
         </p>
         <button @click="enableCaptcha" class="enable-contact-info-btn">
           <img
@@ -31,11 +31,11 @@
       >
         <h4 class="section-subheader">{{ verificationData.header }}</h4>
         <p
-          v-for="(item, index) in verificationData.description"
+          v-for="(item, index) in verificationData.descriptions"
           :key="index"
           class="captcha-render-description"
         >
-          {{ item }}
+          {{ item.description }}
         </p>
         <ContactCaptcha @show-contact="showContactInfo" />
       </div>
@@ -43,16 +43,16 @@
       <div v-if="contactVissible === true" class="contact-info-container">
         <h4 class="section-subheader">{{ infoData.header }}</h4>
         <p
-          v-for="(item, index) in infoData.description"
+          v-for="(item, index) in infoData.descriptions"
           :key="index"
           class="contact-info-description"
         >
-          {{ item }}
+          {{ item.description }}
         </p>
         <ul class="contact-info-list">
           <li v-for="(item, index) in infoData.infoOptions" :key="index">
             <img :src="listIcon" alt="List Icon" class="list-icon-front" />{{
-              item
+              item.option
             }}
           </li>
         </ul>
@@ -83,17 +83,17 @@ export default {
 
   data() {
     return {
-      header: data.contactSection.content.header,
+      header: data.sectionHeaders[0].contactSectionHeader,
 
       // enable captcha
-      enableCaptchaData: data.contactSection.content.enableCaptcha,
+      enableCaptchaData: data.enableCaptcha[0],
       enableBtnIcon: EnableBtnIcon,
 
       // verification
-      verificationData: data.contactSection.content.verification,
+      verificationData: data.verification[0],
 
       // contact info
-      infoData: data.contactSection.content.infoData,
+      infoData: data.contactData[0],
       listIcon: ListIcon,
       mailIcon: MailIcon,
 

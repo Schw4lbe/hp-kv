@@ -37,7 +37,7 @@ export default {
 
   data() {
     return {
-      header: data.knowledgeSection.header,
+      header: data.sectionHeaders[0].knowledgeSectionHeader,
       knowledgeBaseData: this.importKnowledgeBaseData(),
     };
   },
@@ -54,7 +54,7 @@ export default {
 
     importKnowledgeBaseData() {
       const images = this.importAllImages();
-      const content = data.knowledgeSection.knowledgeData;
+      const content = data.knowledgeData;
 
       return images.map((image, index) => ({
         image,

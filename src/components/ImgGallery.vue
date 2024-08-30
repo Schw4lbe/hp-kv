@@ -46,7 +46,7 @@ export default {
 
   data() {
     return {
-      header: data.imgGallery.header,
+      header: data.sectionHeaders[0].imgGalleryHeader,
       galleryData: this.importAllImagesWithMetaData(),
 
       // Modal info storage:
@@ -84,7 +84,7 @@ export default {
     importAllImagesWithMetaData() {
       const thumbnails = this.importAllThumbnails();
       const images = this.importAllImages();
-      const metadata = data.imgGallery.galleryImgData;
+      const metadata = data.galleryImgData;
 
       return images.map((image, index) => ({
         image,
@@ -150,11 +150,9 @@ export default {
     },
 
     updateModalData(index) {
-      this.modalTitle =
-        data.imgGallery.galleryImgData[index]?.title || "Default Title";
+      this.modalTitle = data.galleryImgData[index]?.title || "Default Title";
       this.modalDescription =
-        data.imgGallery.galleryImgData[index]?.description ||
-        "Default Description";
+        data.galleryImgData[index]?.description || "Default Description";
       this.modalImageLink = this.importAllImages()[index];
     },
   },

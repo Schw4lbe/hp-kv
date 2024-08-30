@@ -1,8 +1,8 @@
-<template>
+<!-- <template>
   <NetlifyCMS />
-</template>
+</template> -->
 
-<script>
+<!-- <script>
 import NetlifyCMS from "../components/netlify/NetlifyCMS.vue";
 
 export default {
@@ -11,4 +11,4 @@ export default {
     NetlifyCMS,
   },
 };
-</script>
+</script> -->

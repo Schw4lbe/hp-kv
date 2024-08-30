@@ -41,8 +41,8 @@ export default {
     return {
       popupVissible: false,
       icon: popupIcon,
-      header: data.popups.privacy.header,
-      button: data.popups.privacy.button,
+      header: data.popupPrivacy[0].header,
+      button: data.popupPrivacy[0].button,
     };
   },
 

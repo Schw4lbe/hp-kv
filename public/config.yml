@@ -1,3 +1,4 @@
+# local_backend: true
 backend:
   name: git-gateway
   branch: main
@@ -6,39 +7,57 @@ media_folder: "public/img"
 public_folder: "/img"
 
 collections:
-  - name: "content"
-    label: "Content"
+  - label: "Navbar"
+    name: "navbar"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines that are specific to a collection.
     files:
-      - label: "Navbar"
-        name: "navbar"
+      - label: "Navbar Items"
+        name: "navbarItems"
         file: "public/content.json"
         fields:
-          - label: "Navbar Items"
+          - label: "Navbar Item Titel"
             name: "navbarMain"
+            allow_add: false
             widget: "list"
             fields:
               - label: "Title"
                 name: "title"
                 widget: "string"
-              - label: "Section ID"
-                name: "sectionId"
-                widget: "string"
-          - label: "Banner Items"
-            name: "bannerItemData"
-            widget: "list"
-            fields:
-              - label: "Kern Kompetenz"
-                name: "content"
-                widget: "string"
-  - name: "test"
-    label: "TEST"
+
+  - label: "Banner"
+    name: "banner"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines that are specific to a collection.
     files:
-      - label: "Service"
-        name: "service"
+      - label: "Banner Items"
+        name: "bannerItems"
         file: "public/content.json"
         fields:
-          - label: "Service Items"
+          - label: "Banner Item Data"
+            name: "bannerItemData"
+            allow_add: false
+            widget: "list"
+            fields:
+              - label: "Content"
+                name: "content"
+                widget: "string"
+
+  - label: "Service"
+    name: "service"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines that are specific to a collection.
+    files:
+      - label: "Service Items"
+        name: "serviceItems"
+        file: "public/content.json"
+        fields:
+          - label: "Service Item Data"
             name: "serviceItemData"
+            allow_add: true
             widget: "list"
             fields:
               - label: "Header"
@@ -46,4 +65,207 @@ collections:
                 widget: "string"
               - label: "Description"
                 name: "description"
+                widget: "text"
+
+  - label: "Gallery"
+    name: "gallery"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines that are specific to a collection.
+    files:
+      - label: "Gallery Img"
+        name: "galleryImg"
+        file: "public/content.json"
+        fields:
+          - label: "Gallery Img Data"
+            name: "galleryImgData"
+            allow_add: true
+            widget: "list"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Description"
+                name: "description"
+                required: false
+                widget: "text"
+
+  - label: "Contact"
+    name: "contact"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines that are specific to a collection.
+    files:
+      - label: "Contact Data"
+        name: "contactData"
+        file: "public/content.json"
+        allow_add: false
+        widget: "list"
+        fields:
+          - label: "Enable Captcha"
+            name: "enableCaptcha"
+            allow_add: false
+            widget: "list"
+            fields:
+              - label: "Header"
+                name: "header"
+                widget: "string"
+              - label: "Descriptions"
+                name: "descriptions"
+                allow_add: false
+                widget: "list"
+                fields:
+                  - { label: Description, name: description, widget: string }
+              - label: "Button"
+                name: "button"
+                widget: "string"
+              - label: "Captcha Description"
+                name: "captchaDescription"
+                widget: "string"
+
+          - label: "Verification"
+            name: "verification"
+            allow_add: false
+            widget: "list"
+            fields:
+              - label: "Header"
+                name: "header"
+                widget: "string"
+              - label: "Descriptions"
+                name: "descriptions"
+                allow_add: false
+                widget: "list"
+                fields:
+                  - { label: Description, name: description, widget: string }
+
+          - label: "Contact Data"
+            name: "contactData"
+            allow_add: false
+            widget: "list"
+            fields:
+              - label: "Header"
+                name: "header"
+                widget: "string"
+              - label: "Descriptions"
+                name: "descriptions"
+                allow_add: false
+                widget: "list"
+                fields:
+                  - { label: Description, name: description, widget: string }
+              - label: "Info Options"
+                name: "infoOptions"
+                allow_add: false
+                widget: "list"
+                fields:
+                  - { label: Option, name: option, widget: string }
+              - label: "E Mail"
+                name: "email"
+                widgeht: "string"
+
+  - label: "Knowledge Base"
+    name: "knowledgeBase"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines that are specific to a collection.
+    files:
+      - label: "Knowledge Data"
+        name: "knowledgeData"
+        file: "public/content.json"
+        allow_add: false
+        widget: "list"
+        fields:
+          - label: "Knowledge Data"
+            name: "knowledgeData"
+            allow_add: true
+            widget: "list"
+            fields:
+              - { label: Header, name: header, widget: string }
+              - { label: Teaser, name: teaser, widget: string }
+              - { label: Description, name: description, widget: text }
+
+  - label: "Footer"
+    name: "footer"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines that are specific to a collection.
+    files:
+      - label: "Footer Item Data"
+        name: "footerItemData"
+        file: "public/content.json"
+        allow_add: false
+        widget: "list"
+        fields:
+          - label: "Footer Item Data"
+            name: "footerItemData"
+            allow_add: true
+            widget: "list"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Url, name: url, widget: string }
+
+  - label: "Popups"
+    name: "popups"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines that are specific to a collection.
+    files:
+      - label: "Popups"
+        name: "popups"
+        file: "public/content.json"
+        fields:
+          - label: "Popup Contact"
+            name: "popupContact"
+            allow_add: false
+            widget: "list"
+            fields:
+              - label: "Button1"
+                name: "button1"
+                widget: "string"
+              - label: "Button2"
+                name: "button2"
+                widget: "string"
+              - label: "Content"
+                name: "content"
+                widget: "list"
+                fields:
+                  - { label: Text, name: text, widget: string }
+
+          - label: "Popup Privacy"
+            name: "popupPrivacy"
+            allow_add: false
+            widget: "list"
+            fields:
+              - label: "Header"
+                name: "header"
+                widget: "string"
+              - label: "Button"
+                name: "button"
+                widget: "string"
+
+  - label: "Section Headers"
+    name: "sectionHeaders"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines that are specific to a collection.
+    files:
+      - label: "Section Headers"
+        name: "sectionHeaders"
+        file: "public/content.json"
+        allow_add: false
+        fields:
+          - label: "Section Headers"
+            name: "sectionHeaders"
+            widget: "list"
+            fields:
+              - label: "Service Section Header"
+                name: "serviceSectionHeader"
+                widget: "string"
+              - label: "Img Gallery Header"
+                name: "imgGalleryHeader"
+                widget: "string"
+              - label: "Contact Section Header"
+                name: "contactSectionHeader"
+                widget: "string"
+              - label: "Knowledge Section Header"
+                name: "knowledgeSectionHeader"
                 widget: "string"

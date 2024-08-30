@@ -34,8 +34,8 @@ export default {
       solution: "",
       honeypot: "",
       captchaSolved: null,
-      captchaPhrases: data.contactSection.captcha.phrases,
-      captchaDescription: data.contactSection.captcha.description,
+      captchaPhrases: data.captcha.phrases,
+      captchaDescription: data.enableCaptcha.description,
       captchaPhrase: "",
       phraseForHmtl: "",
     };

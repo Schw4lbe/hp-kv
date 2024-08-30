@@ -11,7 +11,7 @@
           :key="index"
           class="contact-popup-description"
         >
-          {{ item }}
+          {{ item.text }}
         </p>
         <div class="contact-popup-btn-container">
           <button @click="visitContactSection" class="contact-btn">
@@ -33,9 +33,9 @@ export default {
   data() {
     return {
       popupVissible: false,
-      texts: data.popups.contact.content,
-      button1: data.popups.contact.button1,
-      button2: data.popups.contact.button2,
+      texts: data.popupContact[0].content,
+      button1: data.popupContact[0].button1,
+      button2: data.popupContact[0].button2,
     };
   },
 

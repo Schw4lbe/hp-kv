@@ -1,8 +1,8 @@
-<template>
+<!-- <template>
   <slot />
-</template>
+</template> -->
 
-<script>
+<!-- <script>
 import CMS from "netlify-cms";
 
 export default {
@@ -15,4 +15,4 @@ export default {
     });
   },
 };
-</script>
+</script> -->
