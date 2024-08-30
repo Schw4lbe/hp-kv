@@ -51,10 +51,13 @@ export default {
 
     importServiceData() {
       const images = this.importAllImages();
+      const imageLastIndex = images.length - 1;
       const content = data.serviceItemData;
+      const maxLength = Math.max(images.length, content.length);
 
-      return images.map((image, index) => ({
-        image,
+      return Array.from({ length: maxLength }).map((_, index) => ({
+        image:
+          images[index] !== undefined ? images[index] : images[imageLastIndex],
         header: content[index]?.header || "Default Title",
         description: content[index]?.description || "Default Description",
       }));
