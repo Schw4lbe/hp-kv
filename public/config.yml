@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
+  name: proxy
   branch: main
+  proxy_url: "http://localhost:8081/api/v1"
 
 media_folder: "public/img"
 public_folder: "/img"
@@ -14,7 +15,7 @@ collections:
         file: "public/content.json"
         fields:
           - label: "Navbar Items"
-            name: "navbarMain.itemData"
+            name: "navbarMain"
             widget: "list"
             fields:
               - label: "Title"

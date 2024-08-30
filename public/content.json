@@ -2,9 +2,176 @@
     "navbarMain": {
         "itemData": [
             {
-                "title": "Test",
-                "sectionId": "testSection"
+                "title": "Startseite",
+                "sectionId": "section1"
+            },
+            {
+                "title": "Service",
+                "sectionId": "section2"
+            },
+            {
+                "title": "Gallerie",
+                "sectionId": "section3"
+            },
+            {
+                "title": "Kontakt",
+                "sectionId": "section4"
+            },
+            {
+                "title": "Wissen",
+                "sectionId": "section5"
             }
         ]
+    },
+    "mainSection": {
+        "bannerItemData": [
+            {
+                "content": "Grünanlagenpflege"
+            },
+            {
+                "content": "Baumschnitt"
+            },
+            {
+                "content": "Industrieklettern"
+            }
+        ]
+    },
+    "serviceSection": {
+        "header": "Meine Dienste & Services",
+        "itemData": [
+            {
+                "header": "service header",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
+            },
+            {
+                "header": "service header",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aperiam expedita accusamus officiis illum quis ullam rem! Cupiditate, temporibus animi a totam velit, molestiae sequi, cum officiis voluptatibus deleniti ipsum!"
+            }
+        ]
+    },
+    "imgGallery": {
+        "header": "Lassen Sie sich inspirieren",
+        "galleryImgData": [
+            {
+                "title": "img title 01",
+                "description": "you will find a description of the shown image here, to tell you what this image is about."
+            },
+            {
+                "title": "img title 02",
+                "description": "you will find a description of the shown image here, to tell you what this image is about."
+            },
+            {
+                "title": "img title 03",
+                "description": "you will find a description of the shown image here, to tell you what this image is about."
+            },
+            {
+                "title": "img title 04",
+                "description": "you will find a description of the shown image here, to tell you what this image is about."
+            },
+            {
+                "title": "img title 05"
+            },
+            {
+                "title": "img title 06"
+            },
+            {
+                "title": "img title 07"
+            },
+            {
+                "title": "img title 08"
+            },
+            {
+                "title": "img title 09"
+            }
+        ]
+    },
+    "contactSection": {
+        "content": {
+            "header": "Kontaktieren Sie mich",
+            "enableCaptcha": {
+                "header": "Haben Sie Fragen?",
+                "description": [
+                    "Schreiben Sie mir gern eine E-Mail.",
+                    "Nutzen Sie die folgende Schaltfläche zur Anzeige meiner Kontaktdaten."
+                ],
+                "button": "Kontaktinfo anzeigen"
+            },
+            "verification": {
+                "header": "Verifizierung",
+                "description": [
+                    "Bitte lösen Sie die folgende Aufgabe zur Verifizierung.",
+                    "Groß- und Kleinschreibung spielt dabei keine Rolle."
+                ]
+            },
+            "infoData": {
+                "header": "Die nächsten Schritte",
+                "description": [
+                    "Vorstellungen und Wünschen können sehr individuell ausfallen. Lassen Sie uns gern im Vorfeld unverbindlich miteinander sprechen.",
+                    "Für eine optimale Gesprächsvorbereitung, benötige ich im besten Fall die folgenden Infos."
+                ],
+                "infoOptions": [
+                    "präzise Beschreibung der Arbeit",
+                    "Bilder, Pläne & Co. der Szenerie",
+                    "geschätze Preisvorstellung",
+                    "Anschrift und Parkmöglichkeit"
+                ],
+                "email": "some@one.de"
+            }
+        },
+        "captcha": {
+            "phrases": [
+                "blau",
+                "grün",
+                "gelb",
+                "grau",
+                "gold"
+            ],
+            "description": "Name der Farbe?"
+        }
+    },
+    "knowledgeSection": {
+        "header": "Für alle Pflanzenfreunde",
+        "knowledgeData": [
+            {
+                "header": "header 1",
+                "teaser": "This is a short teaser.",
+                "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, adratione iusto, numquam ab obcaecati consequuntur fugiat consequatur nam beatae mollitia ipsam esse illo? Sit doloribus quod iure necessitatibus maiores."
+            },
+            {
+                "header": "header 2",
+                "teaser": "This is a short teaser.",
+                "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, adratione iusto, numquam ab obcaecati consequuntur fugiat consequatur nam beatae mollitia ipsam esse illo? Sit doloribus quod iure necessitatibus maiores."
+            }
+        ]
+    },
+    "footer": {
+        "itemData": [
+            {
+                "title": "Impressum",
+                "url": "/imprint"
+            },
+            {
+                "title": "Datenschutz",
+                "url": "/privacy"
+            },
+            {
+                "title": "DEV",
+                "url": "/dev"
+            }
+        ]
+    },
+    "popups": {
+        "contact": {
+            "content": [
+                "Schon einen Termin vereinbart?",
+                "Nehmen Sie Kontakt mit mir auf."
+            ],
+            "button1": "Kontakt",
+            "button2": "später"
+        },
+        "privacy": {
+            "header": "Wo sind die Cookies?",
+            "button": "Los gehts!"
+        }
     }
 }
