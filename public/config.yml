@@ -1,4 +1,4 @@
-# local_backend: true
+local_backend: true
 backend:
   name: git-gateway
   branch: main
@@ -7,13 +7,12 @@ media_folder: "public/img"
 public_folder: "/img"
 
 collections:
-  - label: "Navbar"
+  - label: "Navigation"
     name: "navbar"
     description: >
-      The description is a great place for tone setting, high level information, and editing
-      guidelines that are specific to a collection.
+      In diesem Bereich, können die Texte der Navigationsleiste angepasst werden, welche sich am oberen Bildschirmrand befindet.
     files:
-      - label: "Navbar Items"
+      - label: "Navigation anzeigen und bearbeiten"
         name: "navbarItems"
         file: "public/content.json"
         fields:
@@ -22,17 +21,16 @@ collections:
             allow_add: false
             widget: "list"
             fields:
-              - label: "Title"
+              - label: "Text für Navigations Menüpunkt"
                 name: "title"
                 widget: "string"
 
-  - label: "Banner"
+  - label: "Kompetenzen Startseite"
     name: "banner"
     description: >
-      The description is a great place for tone setting, high level information, and editing
-      guidelines that are specific to a collection.
+      Auf der Startseite befinden sich aktuell 3 Kernkompetenzen unterhalb des Logos. Diese können hier eingesehen und angepasst werden.
     files:
-      - label: "Banner Items"
+      - label: "Kompetenzen anzeigen und bearbeiten"
         name: "bannerItems"
         file: "public/content.json"
         fields:
@@ -41,17 +39,16 @@ collections:
             allow_add: false
             widget: "list"
             fields:
-              - label: "Content"
+              - label: "Beschreibung für Kernkompetenz"
                 name: "content"
                 widget: "string"
 
-  - label: "Service"
+  - label: "Service & Dienstleistung"
     name: "service"
     description: >
-      The description is a great place for tone setting, high level information, and editing
-      guidelines that are specific to a collection.
+      In diesem Abschnitt können die Überschriften und Inhaltstexte zur Beschreibung der Dienstleistungen angepasst werden. Es ist auch möglich neue Inhalte mit auf zu nehmen. Bilder werden aktuell in Dummy form Automatisch über das Backend eingepflegt.
     files:
-      - label: "Service Items"
+      - label: "Services & Dienstleistungen anzeigen und bearbeiten"
         name: "serviceItems"
         file: "public/content.json"
         fields:
@@ -60,20 +57,20 @@ collections:
             allow_add: true
             widget: "list"
             fields:
-              - label: "Header"
+              - label: "Überschrift / Titel der Dienstleistung"
                 name: "header"
                 widget: "string"
-              - label: "Description"
+              - label: "Beschreibung der Dienstleistung"
                 name: "description"
                 widget: "text"
 
-  - label: "Gallery"
+  - label: "Gallerie Bilder Texte"
     name: "gallery"
     description: >
-      The description is a great place for tone setting, high level information, and editing
-      guidelines that are specific to a collection.
+      Zur Anpassung der Bildbeschreibungen kann dieser Bereich verwendet werden. Aktuell ist es nur vorgesehen Titel und Beschreibung zu editieren. Die Bilder werden zu einem späteren Zeitpunkt verknüpft.
+      WICHTIG: BITTE KEINE EINTRÄGE LÖSCHEN, DA AKTUELL DIE ARTIKELANZAHL BESTIMMT WIEVIELE BILDER ANGEZEIGT WERDEN! BITTE VORHER UM RÜCKSPRACHE FÜR ÄNDERUNGEN!
     files:
-      - label: "Gallery Img"
+      - label: "Texte der Bilder anzeigen und bearbeiten"
         name: "galleryImg"
         file: "public/content.json"
         fields:
@@ -82,178 +79,177 @@ collections:
             allow_add: true
             widget: "list"
             fields:
-              - label: "Title"
+              - label: "Bildüberschrift / Beschreibung"
                 name: "title"
                 widget: "string"
-              - label: "Description"
+              - label: "Kurze Erläuterung was auf dem Bild zu sehen ist"
                 name: "description"
                 required: false
                 widget: "text"
 
-  - label: "Contact"
+  - label: "Kontakt & Captcha"
     name: "contact"
     description: >
-      The description is a great place for tone setting, high level information, and editing
-      guidelines that are specific to a collection.
+      Zur Anpassung der Beschreibungstexte zur Kontaktaufnahme, zur Anpassung der Erklärung des Captchas und zur Änderung der Kontaktinformationen ist dieser Bereich vorgesehen. Er ist in drei Gruppen gegliedert. Kontaktaufnahme, Captcha Abfrage, Infos die angzeigt werden.
     files:
-      - label: "Contact Data"
+      - label: "Kontaktdaten & Beschreibungstexte anzeigen und bearbeiten"
         name: "contactData"
         file: "public/content.json"
         allow_add: false
         widget: "list"
         fields:
-          - label: "Enable Captcha"
+          - label: "Kontaktaufnahme - Captcha triggern"
             name: "enableCaptcha"
             allow_add: false
             widget: "list"
             fields:
-              - label: "Header"
+              - label: "Überschrift Innerhalb des Kontaktblocks"
                 name: "header"
                 widget: "string"
-              - label: "Descriptions"
+              - label: "Erläuterung der weiteren Schritte / Teaser"
                 name: "descriptions"
                 allow_add: false
                 widget: "list"
                 fields:
-                  - { label: Description, name: description, widget: string }
-              - label: "Button"
+                  - { label: Beschreibung, name: description, widget: string }
+              - label: "Text der Schaltfläche, um Captcha zu aktivieren"
                 name: "button"
                 widget: "string"
-              - label: "Captcha Description"
+              - label: "Lösungshinweis für angezeigtes Wort"
                 name: "captchaDescription"
                 widget: "string"
 
-          - label: "Verification"
+          - label: "Verifizierung erforderlich"
             name: "verification"
             allow_add: false
             widget: "list"
             fields:
-              - label: "Header"
+              - label: "Überschrift Innerhalb des Kontaktblocks"
                 name: "header"
                 widget: "string"
-              - label: "Descriptions"
+              - label: "Beschreibung Aufgabe und Lösung"
                 name: "descriptions"
                 allow_add: false
                 widget: "list"
                 fields:
-                  - { label: Description, name: description, widget: string }
+                  - { label: Beschreibung, name: description, widget: string }
 
-          - label: "Contact Data"
+          - label: "Kontaktdaten und Weiterführende Informationen"
             name: "contactData"
             allow_add: false
             widget: "list"
             fields:
-              - label: "Header"
+              - label: "Überschrift Innerhalb des Kontaktblocks"
                 name: "header"
                 widget: "string"
-              - label: "Descriptions"
+              - label: "Kurze Einleitung und aufforderung zur Mitwirkung"
                 name: "descriptions"
                 allow_add: false
                 widget: "list"
                 fields:
-                  - { label: Description, name: description, widget: string }
-              - label: "Info Options"
+                  - { label: Beschreibung, name: description, widget: string }
+              - label: "Aufzählung von Nützlichen Informationen"
                 name: "infoOptions"
                 allow_add: false
                 widget: "list"
                 fields:
-                  - { label: Option, name: option, widget: string }
-              - label: "E Mail"
+                  - { label: Info Beschreibung, name: option, widget: string }
+              - label: "angzeigte Email adresse"
                 name: "email"
                 widgeht: "string"
 
-  - label: "Knowledge Base"
+  - label: "Wissensdatenbank"
     name: "knowledgeBase"
     description: >
-      The description is a great place for tone setting, high level information, and editing
-      guidelines that are specific to a collection.
+      Hier können die Wendekacheln im letzten Abschnitt der Seite bearbeitet werden.
     files:
-      - label: "Knowledge Data"
+      - label: "Wissensartikel anzeigen und bearbeiten"
         name: "knowledgeData"
         file: "public/content.json"
         allow_add: false
         widget: "list"
         fields:
-          - label: "Knowledge Data"
+          - label: "Aktuell vorhandene Artikel"
             name: "knowledgeData"
             allow_add: true
             widget: "list"
             fields:
-              - { label: Header, name: header, widget: string }
-              - { label: Teaser, name: teaser, widget: string }
-              - { label: Description, name: description, widget: text }
+              - { label: Teaser auf Vorderseite, name: teaser, widget: string }
+              - { label: Überschrift Rückseite, name: header, widget: string }
+              - {
+                  label: Beschreibung auf Rückseite,
+                  name: description,
+                  widget: text,
+                }
 
   - label: "Footer"
     name: "footer"
     description: >
-      The description is a great place for tone setting, high level information, and editing
-      guidelines that are specific to a collection.
+      Hier können die Eintragungen in der Fußzeile angepasst und ergänzt werden.
     files:
-      - label: "Footer Item Data"
+      - label: "Fußzeile anzeigen und bearbeiten"
         name: "footerItemData"
         file: "public/content.json"
         allow_add: false
         widget: "list"
         fields:
-          - label: "Footer Item Data"
+          - label: "Footer Navigationselemente"
             name: "footerItemData"
             allow_add: true
             widget: "list"
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Beschreibung, name: title, widget: string }
               - { label: Url, name: url, widget: string }
 
   - label: "Popups"
     name: "popups"
     description: >
-      The description is a great place for tone setting, high level information, and editing
-      guidelines that are specific to a collection.
+      Alle vorhandenen Popups auf der Seite können hier bearbeitet werden. Dies gilt beispielsweise für den Datenschutz- / Cookie hinweis beim ersten Besuch der Seite, sowie der Info zur Kontaktaufnahme.
     files:
-      - label: "Popups"
+      - label: "Popups anzeigen und bearbeiten"
         name: "popups"
         file: "public/content.json"
         fields:
-          - label: "Popup Contact"
+          - label: "Popup Zur Kontaktaufnahme"
             name: "popupContact"
             allow_add: false
             widget: "list"
             fields:
-              - label: "Button1"
+              - label: "1. Schalfläche Beschreibung"
                 name: "button1"
                 widget: "string"
-              - label: "Button2"
+              - label: "2. Schalfläche Beschreibung"
                 name: "button2"
                 widget: "string"
-              - label: "Content"
+              - label: "Inhalt / Fragen im Popupfenster"
                 name: "content"
                 widget: "list"
                 fields:
                   - { label: Text, name: text, widget: string }
 
-          - label: "Popup Privacy"
+          - label: "Popup Datenschutz & Cookies"
             name: "popupPrivacy"
             allow_add: false
             widget: "list"
             fields:
-              - label: "Header"
+              - label: "Überschrift"
                 name: "header"
                 widget: "string"
-              - label: "Button"
+              - label: "Schaltfläche zur Bestätigung"
                 name: "button"
                 widget: "string"
 
-  - label: "Section Headers"
+  - label: "Überschriften"
     name: "sectionHeaders"
     description: >
-      The description is a great place for tone setting, high level information, and editing
-      guidelines that are specific to a collection.
+      Die Seite ist in mehrere Sektionen aufgeteilt und jede Sektion trägt eine Überschrift. Diese Überschriften können hier für jede Sektion angepasst werden.
     files:
-      - label: "Section Headers"
+      - label: "Überschriften anzeigen und bearbeiten"
         name: "sectionHeaders"
         file: "public/content.json"
         allow_add: false
         fields:
-          - label: "Section Headers"
+          - label: "Überschriften"
             name: "sectionHeaders"
             widget: "list"
             fields:
