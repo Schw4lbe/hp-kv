@@ -43,22 +43,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.dev-button-container {
-  position: absolute;
-  top: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.dev-button-container button {
-  padding: 0.5rem 1rem;
-  border: none;
-  background: tomato;
-  color: white;
-  margin: 0.5rem;
-}
-</style>

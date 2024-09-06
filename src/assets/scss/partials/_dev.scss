@@ -1,25 +1,8 @@
 @use "../abstracts/" as *;
 
-.dev,
-.img-gallery {
+.dev {
   background: #333;
   height: 100%;
   width: 100%;
   padding: 3rem;
-
-  .carousel {
-    .carousel-inner {
-      height: 400px;
-      width: 600px;
-      .carousel-item {
-        height: 400px;
-        width: 600px;
-        img {
-          height: 400px;
-          width: 600px;
-          object-fit: cover;
-        }
-      }
-    }
-  }
 }
