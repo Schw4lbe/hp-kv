@@ -29,8 +29,8 @@
               @click="showModal"
             />
             <div class="carousel-caption d-none d-sm-block">
-              <h5>{{ item.title }}</h5>
-              <p>{{ item.description }}</p>
+              <h5 class="img-header">{{ item.title }}</h5>
+              <p class="img-description">{{ item.description }}</p>
             </div>
           </div>
         </div>
