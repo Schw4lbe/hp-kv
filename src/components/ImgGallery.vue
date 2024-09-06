@@ -28,7 +28,7 @@
               :id="index"
               @click="showModal"
             />
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-sm-block">
               <h5>{{ item.title }}</h5>
               <p>{{ item.description }}</p>
             </div>

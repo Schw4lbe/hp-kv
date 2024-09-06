@@ -24,6 +24,15 @@
 
   // section gallery
   .section-gallery-container {
+    .img-gallery {
+      .carousel {
+        .carousel-inner {
+          height: 300px;
+          width: 500px;
+        }
+      }
+    }
+
     .gallery-container {
       .img-gallery {
         grid-template-columns: 1fr 1fr;

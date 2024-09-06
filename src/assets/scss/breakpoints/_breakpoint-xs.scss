@@ -108,6 +108,15 @@
 
   // section gallery
   .section-gallery-container {
+    .img-gallery {
+      .carousel {
+        .carousel-inner {
+          height: 250px;
+          width: 350px;
+        }
+      }
+    }
+
     .gallery-container {
       .img-gallery {
         gap: 0.5rem;
