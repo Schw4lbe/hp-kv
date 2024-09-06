@@ -1,25 +1,38 @@
 <template>
   <section class="section-service-container" id="section2">
-    <!-- <div class="separator-container">
-      <img src="../../public/img/branch.png" alt="" id="test" />
-    </div> -->
     <h3 class="section-service-header section-header">{{ header }}</h3>
-    <div class="section-service-items">
+
+    <div
+      class="section-service-accordion accordion accordion-flush"
+      id="accordionPanelsStayOpenExample"
+    >
       <div
         v-for="(item, index) in serviceContent"
         :key="index"
-        class="service-item"
+        class="accordion-item"
       >
-        <div class="service-content-container">
-          <h4 class="service-item-header">{{ item.header }}</h4>
-          <p class="service-item-description">{{ item.description }}</p>
-        </div>
-        <div class="service-item-image-container">
-          <img
-            class="service-item-image"
-            :src="item.image"
-            alt="Bild Dienstleistung"
-          />
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            :class="{ collapsed: index > 0 }"
+            type="button"
+            data-bs-toggle="collapse"
+            :data-bs-target="`#panelsStayOpen-${index}`"
+            :aria-expanded="index === 0 ? 'true' : 'false'"
+            :aria-controls="`panelsStayOpen-${index}`"
+          >
+            {{ item.header }}
+          </button>
+        </h2>
+        <div
+          :id="`panelsStayOpen-${index}`"
+          class="accordion-collapse collapse"
+          :class="{ show: index === 0 }"
+        >
+          <div class="accordion-body">
+            <p>{{ item.description }}</p>
+            <img :src="item.image" alt="Bild Dienstleistung" />
+          </div>
         </div>
       </div>
     </div>
@@ -66,15 +79,14 @@ export default {
 };
 </script>
 <style scoped>
-.separator-container {
-  filter: invert(100%) sepia(100%);
+.accordion-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-#test {
-  margin-top: -70px;
-  height: 250px !important;
-  width: 100% !important;
-  object-fit: contain !important;
-  transform: rotate(60deg);
+img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
 }
 </style>

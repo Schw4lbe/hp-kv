@@ -9,6 +9,10 @@
   flex-direction: column;
   align-items: center;
 
+  .section-service-accordion {
+    max-width: 1200px;
+  }
+
   .section-service-items {
     display: flex;
     justify-content: center;

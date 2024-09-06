@@ -1,5 +1,6 @@
 <template>
   <div class="gallery-container">
+    <h3 class="gallery-header section-header">{{ header }}</h3>
     <div class="img-gallery">
       <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
         <div class="carousel-indicators">
