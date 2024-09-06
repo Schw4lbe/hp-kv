@@ -3,7 +3,7 @@
 .gallery-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
 
   color: $clr-primary;
   height: 100%;
@@ -11,9 +11,11 @@
   max-width: 1200px;
 
   .img-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // gap: 2rem;
+    display: flex;
+    justify-content: center;
 
     .gallery-item {
       max-height: auto;

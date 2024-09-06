@@ -1,8 +1,8 @@
 <template>
   <NavbarMain />
   <MainSection />
-  <ServiceSection />
   <GallerySection />
+  <ServiceSection />
   <ContactSection />
   <KnowledgeBaseSection />
   <FooterMain />

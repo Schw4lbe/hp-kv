@@ -82,7 +82,7 @@ export default {
   data() {
     return {
       header: data.sectionHeaders[0].imgGalleryHeader,
-      galleryData: this.importAllImagesWithMetaData(),
+      galleryData: this.initGalleryData(),
 
       // bootstrap control:
       carouselItemCount: null,
@@ -105,9 +105,17 @@ export default {
   },
 
   methods: {
-    getCarouselItemCount() {
-      this.carouselItemCount = this.galleryData.length;
-      console.log(this.carouselItemCount);
+    initGalleryData() {
+      const thumbnails = this.importAllThumbnails();
+      const images = this.importAllImages();
+      const metadata = data.galleryImgData;
+
+      return images.map((image, index) => ({
+        image,
+        thumbnail: thumbnails[index],
+        title: metadata[index]?.title || "Default Title",
+        description: metadata[index]?.description || "Default Description",
+      }));
     },
 
     importAllImages() {
@@ -128,20 +136,10 @@ export default {
       return context.keys().map(context);
     },
 
-    importAllImagesWithMetaData() {
-      const thumbnails = this.importAllThumbnails();
-      const images = this.importAllImages();
-      const metadata = data.galleryImgData;
-
-      return images.map((image, index) => ({
-        image,
-        thumbnail: thumbnails[index],
-        title: metadata[index]?.title || "Default Title",
-        description: metadata[index]?.description || "Default Description",
-      }));
+    getCarouselItemCount() {
+      this.carouselItemCount = this.galleryData.length;
     },
 
-    // move to modal if possible to keep component more separated in logic
     setTouchStartX(e) {
       this.touchStartX = e.touches[0].clientX;
     },
@@ -162,16 +160,14 @@ export default {
     },
 
     showModal(e) {
-      const targetIndex = e.target.id;
+      const targetIndex = parseInt(e.target.id);
       this.currentIndex = targetIndex;
       this.viewModal = true;
-      // document.body.classList.add("scroll-disabled");
       this.updateModalData(targetIndex);
     },
 
     closeModal() {
       this.viewModal = false;
-      document.body.classList.remove("scroll-disabled");
       this.modalTitle = "";
       this.modalDescription = "";
       this.modalImageLink = "";
