@@ -16,3 +16,21 @@ $clr-secondary-dark-2: #000;
 
 $clr-success: #6dfc6d;
 $clr-error: #ff6347;
+
+// Bootstrap Override
+// accordion
+$accordion-button-color: $clr-secondary-light-4;
+$accordion-button-color-active: $clr-secondary;
+$accordion-button-active-bg: $clr-primary-dark-1;
+$accordion-button-focus-box-shadow: 0 0 0 2px
+  rgba(
+    $color: $clr-primary-dark-4,
+    $alpha: 1,
+  );
+
+.accordion {
+  --bs-accordion-btn-color: #{$accordion-button-color};
+  --bs-accordion-active-color: #{$accordion-button-color-active};
+  --bs-accordion-active-bg: #{$accordion-button-active-bg};
+  --bs-accordion-btn-focus-box-shadow: #{$accordion-button-focus-box-shadow};
+}
