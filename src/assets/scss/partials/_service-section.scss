@@ -6,16 +6,16 @@
 }
 
 .section-service-container {
-  padding-top: $navbar-scroll-buffer;
-
-  background: $clr-secondary-light-1;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
+  padding-top: $navbar-scroll-buffer;
+  padding-bottom: 4rem;
+  background: $clr-secondary-light-1;
 
   .section-service-accordion {
-    min-width: 100%;
+    width: 100%;
     max-width: 1200px;
   }
 
