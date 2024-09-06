@@ -27,45 +27,5 @@
 
     width: 100%;
     color: $clr-primary;
-
-    .service-item {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      width: 100%;
-      max-width: 1200px;
-      padding: 1rem;
-      background: rgba($color: $clr-secondary-dark-1, $alpha: 1);
-      &:nth-of-type(1) {
-        margin-bottom: 2rem;
-      }
-
-      .service-content-container {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 2rem;
-
-        .service-item-header {
-          font-size: 1.5rem;
-          padding-bottom: 1rem;
-        }
-        .service-item-description {
-          line-height: 1.7;
-        }
-      }
-      .service-item-image-container {
-        display: flex;
-        justify-content: flex-end;
-
-        .service-item-image {
-          display: block;
-          object-fit: contain;
-          max-width: 100%;
-          height: auto;
-          flex-shrink: 1;
-          border-radius: 2rem;
-        }
-      }
-    }
   }
 }
