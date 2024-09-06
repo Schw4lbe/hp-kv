@@ -1,18 +1,57 @@
 <template>
   <div class="navbar-container">
-    <nav class="navbar-items">
-      <RouterLink
-        @click="onClickScrollIntoView(item.sectionId)"
-        v-for="(item, index) in navItemData"
-        :key="index"
-        to="/"
-        class="nav-item"
-        :data-section="item.sectionId"
-      >
-        <img :src="item.icon" alt="Icon" class="nav-item-icon" />
-        <span>{{ item.title }}</span>
-        <RouterLink to="/"></RouterLink>
-      </RouterLink>
+    <nav class="navbar navbar-expand-sm">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              menu mobile header
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav">
+              <li
+                v-for="(item, index) in navItemData"
+                :key="index"
+                class="nav-item"
+              >
+                <RouterLink
+                  @click="onClickScrollIntoView(item.sectionId)"
+                  to="/"
+                  class="nav-link active"
+                  :data-section="item.sectionId"
+                  aria-current="page"
+                >
+                  <i :class="item.icon" class="nav-link-icon"></i>
+                  <span class="nav-link-text">{{ item.title }}</span>
+                  <RouterLink to="/"></RouterLink>
+                </RouterLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </nav>
   </div>
 </template>
@@ -25,30 +64,11 @@ export default {
 
   data() {
     return {
-      navItemData: this.importAllIconsWithData(),
+      navItemData: data.navbarMain,
     };
   },
 
   methods: {
-    importAllIcons() {
-      const context = require.context(
-        "../../public/img/icons/navIcons",
-        false,
-        /\.(png|jpe?g|svg)$/
-      );
-      return context.keys().map(context);
-    },
-
-    importAllIconsWithData() {
-      const icons = this.importAllIcons();
-      const navData = data.navbarMain;
-      return icons.map((icon, index) => ({
-        icon,
-        title: navData[index].title,
-        sectionId: navData[index].sectionId,
-      }));
-    },
-
     onClickScrollIntoView(sectionId) {
       const targetElement = document.getElementById(sectionId);
       if (targetElement === null) {

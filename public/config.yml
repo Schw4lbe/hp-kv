@@ -24,6 +24,9 @@ collections:
               - label: "Text für Navigations Menüpunkt"
                 name: "title"
                 widget: "string"
+              - label: "FontAwesome icon class"
+                name: "title"
+                widget: "string"
 
   - label: "Kompetenzen Startseite"
     name: "banner"

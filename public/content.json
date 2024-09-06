@@ -33,23 +33,28 @@
     "navbarMain": [
         {
             "title": "Startseite",
-            "sectionId": "section1"
-        },
-        {
-            "title": "Service",
-            "sectionId": "section2"
+            "sectionId": "section1",
+            "icon": "fa-solid fa-house"
         },
         {
             "title": "Gallerie",
-            "sectionId": "section3"
+            "sectionId": "section3",
+            "icon": "fa-solid fa-image"
+        },
+        {
+            "title": "Service",
+            "sectionId": "section2",
+            "icon": "fa-solid fa-seedling"
         },
         {
             "title": "Kontakt",
-            "sectionId": "section4"
+            "sectionId": "section4",
+            "icon": "fa-solid fa-envelope"
         },
         {
             "title": "Wissen",
-            "sectionId": "section5"
+            "sectionId": "section5",
+            "icon": "fa-solid fa-book"
         }
     ],
     "contactData": [

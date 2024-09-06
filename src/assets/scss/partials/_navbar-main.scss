@@ -5,39 +5,43 @@
   position: fixed;
   display: flex;
   justify-content: center;
-  height: max-content;
+  height: 60px;
   width: 100%;
   background: rgba($color: $clr-secondary-dark-2, $alpha: 0.9);
 
-  .navbar-items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px;
-    max-width: max-content;
+  .navbar {
+    padding: 0;
 
-    .nav-item {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .container-fluid {
+      .offcanvas {
+        .offcanvas-body {
+          .navbar-nav {
+            .nav-item {
+              padding: 0 5px;
+              .nav-link {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 75px;
+                color: $clr-primary;
+                transition: all 0.4s;
+                &:hover {
+                  color: $clr-primary-dark-4;
+                  background: rgba($color: $clr-secondary, $alpha: 0.9);
+                }
 
-      height: 70px;
-      padding: 5px;
-      text-align: center;
-      text-decoration: none;
-      color: $clr-primary-dark-2;
-      font-size: 14px;
-      transition: all 0.3s;
+                .nav-link-icon {
+                  font-size: 1.1rem;
+                  padding: 3px;
+                }
 
-      &:hover {
-        background: $clr-secondary-dark-1;
-        color: $clr-primary-light-1;
-      }
-
-      .nav-item-icon {
-        padding: 5px;
-        height: 35px;
-        width: 35px;
+                .nav-link-text {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

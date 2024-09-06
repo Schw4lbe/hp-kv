@@ -7,7 +7,11 @@
       {{ header }}
     </h3>
     <div class="card-container">
-      <div v-for="(item, index) in knowledgeBaseData" :key="index" class="card">
+      <div
+        v-for="(item, index) in knowledgeBaseData"
+        :key="index"
+        class="card-item"
+      >
         <div class="card-inner">
           <div class="card-front">
             <p class="item-teaser">{{ item.teaser }}</p>
@@ -65,7 +69,7 @@ export default {
     },
 
     flipCard(e) {
-      const card = e.target.closest(".card");
+      const card = e.target.closest(".card-item");
       card.classList.toggle("flipped");
     },
   },

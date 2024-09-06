@@ -23,7 +23,7 @@ export default {
 <style>
 .dev-button-container {
   position: absolute;
-  top: 100px;
+  top: 60px;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -31,9 +31,10 @@ export default {
 }
 
 .dev-button-container button {
-  padding: 0.5rem 1rem;
+  font-size: 10px;
+  padding: 2px 4px;
   border: none;
-  background: tomato;
+  background: black;
   color: white;
   margin: 0.5rem;
 }

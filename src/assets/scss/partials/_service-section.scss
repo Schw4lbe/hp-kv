@@ -17,15 +17,25 @@
   .section-service-accordion {
     width: 100%;
     max-width: 1200px;
-  }
 
-  .section-service-items {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
-    width: 100%;
-    color: $clr-primary;
+    .accordion-item {
+      .accordion-header {
+        button {
+          font-size: 18px;
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+      }
+      .accordion-collapse {
+        background: $clr-secondary-dark-1;
+        .accordion-body {
+          p {
+            color: $clr-primary-light-1;
+            margin: 0;
+            padding: 1rem;
+          }
+        }
+      }
+    }
   }
 }
