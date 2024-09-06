@@ -1,8 +1,8 @@
 <template>
   <section class="section-service-container" id="section2">
-    <div class="separator-container">
+    <!-- <div class="separator-container">
       <img src="../../public/img/branch.png" alt="" id="test" />
-    </div>
+    </div> -->
     <h3 class="section-service-header section-header">{{ header }}</h3>
     <div class="section-service-items">
       <div

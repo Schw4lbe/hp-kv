@@ -1,6 +1,5 @@
 <template>
   <div class="dev-container">
-    <h2 class="dev-header">DEV COMPONENT</h2>
     <devDummy />
   </div>
 </template>

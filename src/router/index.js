@@ -25,11 +25,6 @@ const routes = [
     name: "development",
     component: devView,
   },
-  // {
-  //   path: "/cms",
-  //   name: "cms",
-  //   component: () => import("../views/CMSView.vue"),
-  // },
 ];
 
 const router = createRouter({

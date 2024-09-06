@@ -1,21 +1,56 @@
 <template>
   <div class="gallery-container">
-    <h3 class="gallery-header section-header">{{ header }}</h3>
     <div class="img-gallery">
-      <div
-        v-for="(item, index) in galleryData"
-        :key="index"
-        class="gallery-item"
-      >
-        <h4 class="gallery-item-header">{{ item.title }}</h4>
-        <img
-          @click="showModal"
-          :src="item.thumbnail"
-          alt="Galeriebild"
-          class="gallery-item-image"
-          :id="index"
-        />
-        <p class="gallery-item-description">{{ item.description }}</p>
+      <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+        <div class="carousel-indicators">
+          <button
+            v-for="count in carouselItemCount"
+            :key="count"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            :data-bs-slide-to="count - 1"
+            :aria-label="'Slide ' + count"
+            :class="{ active: count === 1 }"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div
+            v-for="(item, index) in galleryData"
+            :key="index"
+            class="carousel-item"
+            :class="{ active: index === 0 }"
+          >
+            <img
+              :src="item.thumbnail"
+              class="d-block w-100"
+              alt="Galerie Bild"
+              :id="index"
+              @click="showModal"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>{{ item.title }}</h5>
+              <p>{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
     <div v-if="viewModal === true" class="modal-render-container">
@@ -49,6 +84,9 @@ export default {
       header: data.sectionHeaders[0].imgGalleryHeader,
       galleryData: this.importAllImagesWithMetaData(),
 
+      // bootstrap control:
+      carouselItemCount: null,
+
       // Modal info storage:
       viewModal: false,
       currentIndex: null,
@@ -56,13 +94,22 @@ export default {
       modalDescription: "",
       modalImageLink: "",
 
-      // touch events
+      // touch events:
       touchStartX: 0,
       touchEndX: 0,
     };
   },
 
+  mounted() {
+    this.getCarouselItemCount();
+  },
+
   methods: {
+    getCarouselItemCount() {
+      this.carouselItemCount = this.galleryData.length;
+      console.log(this.carouselItemCount);
+    },
+
     importAllImages() {
       const context = require.context(
         "../../public/img/galleryImg",
@@ -94,6 +141,7 @@ export default {
       }));
     },
 
+    // move to modal if possible to keep component more separated in logic
     setTouchStartX(e) {
       this.touchStartX = e.touches[0].clientX;
     },

@@ -1,8 +1,8 @@
 <template>
   <section class="section-gallery-container" id="section3">
-    <div class="separator-container">
+    <!-- <div class="separator-container">
       <img src="../../public/img/branch.png" alt="" id="test2" />
-    </div>
+    </div> -->
     <ImgGallery />
   </section>
 </template>

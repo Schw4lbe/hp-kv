@@ -1,8 +1,8 @@
 <template>
   <section class="section-knowledge-container" id="section5">
-    <div class="separator-container">
+    <!-- <div class="separator-container">
       <img src="../../public/img/branch.png" alt="" id="test3" />
-    </div>
+    </div> -->
     <h3 class="section-knowledge-header section-header">
       {{ header }}
     </h3>
